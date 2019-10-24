@@ -17,7 +17,7 @@ import ConfigParser
 
 CONFIG_OBJECT = ConfigParser.ConfigParser()
 CONFIG_OBJECT.optionxform = str
-CONFIG_OBJECT.read("config/config.cnf")
+CONFIG_OBJECT.read("config.cnf")
 # ------------------------------Functions---------------------------------------------------
 
 
