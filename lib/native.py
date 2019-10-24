@@ -17,7 +17,7 @@ import ConfigParser
 
 CONFIG_OBJECT = ConfigParser.ConfigParser()
 CONFIG_OBJECT.optionxform = str
-CONFIG_OBJECT.read("config.cnf")
+CONFIG_OBJECT.read("/root/installation_launchpad/config.cnf")
 jenkins_job_trigger_url = CONFIG_OBJECT.get('JENKINS', 'JOB_TRIGGER_URL')
 perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
 print jenkins_job_trigger_url
