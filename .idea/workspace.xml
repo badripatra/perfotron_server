@@ -16,9 +16,11 @@
       <file leaf-file-name="native.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/native.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="360">
+              <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+              <folding>
+                <element signature="e#284#299#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,7 +174,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/native.py</url>
+          <line>8</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -194,9 +204,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/native.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding>
+            <element signature="e#284#299#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

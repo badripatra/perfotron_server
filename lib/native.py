@@ -14,14 +14,12 @@ import subprocess
 import sys
 import ConfigParser
 
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIG_OBJECT = ConfigParser.ConfigParser()
 CONFIG_OBJECT.optionxform = str
-CONFIG_OBJECT.read("/root/installation_launchpad/config.cnf")
-jenkins_job_trigger_url = CONFIG_OBJECT.get('JENKINS', 'JOB_TRIGGER_URL')
-perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
-print jenkins_job_trigger_url
-print perf_dashboard_url
+CONFIG_OBJECT.read(os.path.join(CURRENT_DIR,"config.cnf"))
+
 # ------------------------------Functions---------------------------------------------------
 
 
@@ -430,7 +428,7 @@ def setup(root_project_directory, input_map):
 
 
 if __name__ == "__main__":
-    CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+
     os.chdir(CURRENT_DIR)
 
     INPUT_MAP = {}
