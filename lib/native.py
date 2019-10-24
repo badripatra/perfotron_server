@@ -427,6 +427,8 @@ def setup(root_project_directory, input_map):
 
 if __name__ == "__main__":
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(CURRENT_DIR)
+    
     INPUT_MAP = {}
     for arg in sys.argv:
         if ":" in arg:
