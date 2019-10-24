@@ -1,0 +1,35 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>This a sample jenkins job used for demo</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <authToken>sample-job</authToken>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cp ~/actual_demo_jmeter_script.jmx .
+~/apache-jmeter-5.1.1/bin/jmeter -n -t actual_demo_jmeter_script.jmx -l jmeter_transactions.log -e -o result_folder
+zip -r results.zip  *.csv jmeter_transactions.log result_folder
+mkdir -p ~/results/demo_app/$BUILD_ID/
+cp results.zip ~/results/demo_app/$BUILD_ID/
+cp actual_demo_jmeter_script.jmx ~/results/demo_app/$BUILD_ID/
+echo &quot;Results is stored in : $HOME/results/demo_app/$BUILD_ID/&quot; </command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.37">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+      <disableDeferredWipeout>false</disableDeferredWipeout>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

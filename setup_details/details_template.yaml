@@ -1,0 +1,25 @@
+Grafana:
+- monitoring_url: http://[grafana_ip]:3000/login
+  user_name: admin
+  password: admin
+  sample_dashboard: http://[grafana_ip]:3000/d/sample-dashboard/sample-dashboard?orgId=1
+
+Influx:
+- host: [influx_ip]
+  port: 8086
+  database: jmeter
+  measurement: jmeter
+  user: lnp_automation
+  password: lnp_automation
+
+Sample_API:
+- Built_on: Python-Flask
+  GET_URL: http://[hosting_server_ip]:9003/demo_api_get
+  POST_URL: http://[hosting_server_ip]:9003/demo_api_post
+  post_param: 'any text'
+
+Jenkins:
+- dashboard_url: http://[jenkins_ip]:8080
+  user_name: admin
+  password: admin
+  sample_job_details: http://[jenkins_ip]:8080/job/sample-job/

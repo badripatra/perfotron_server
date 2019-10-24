@@ -1,0 +1,28 @@
+Pre-requisites :
+i.Empty repository
+ii. git installed on your system
+
+1. Create a bitbucket / git repository
+2. Clone the repository : git clone <repo url>
+3. Copy , Paste your jmeter script and dependent files inside newly created repository folder
+4. Add all files in the Local Repository : git add -A
+5. Commit Changes : git commit -m "Intial Commit"
+6. Push changes to the Remote repository : git push
+7. Login to Jenkins
+8. Click on "New Item"
+9. Enter a name for your Job
+10. Select 'Freestyle project'
+11. Click 'ok'
+12. Select 'Git' under Source Code Management section.
+13. Enter <repo url>
+14. Click on 'Add' button to add your bitbucket / git credentials.
+15. Select 'Delete workspace before build starts' in Build Environment section
+16. Click on 'Add build step' under Build section
+17. Select 'Execute Shell' from the dropdown
+18. Enter the command as below:
+    /var/lib/jenkins/apache-jmeter-5.1.1/bin/jmeter -n -t <your_jmeter_script_name.extension>
+
+19.Click on Save
+20.Click 'Build Now' in left navigation bar
+21.Click on Build Link , the Console Output to check for current build status
+22. You can further configure to send emails to you. Refer Jenkins Help for the same.

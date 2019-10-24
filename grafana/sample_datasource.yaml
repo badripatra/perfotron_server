@@ -1,0 +1,13 @@
+datasources:
+ - name: jmeter
+   type: influxdb
+   access: proxy
+   orgId: 1
+   url: http://localhost:8086
+   database: jmeter
+   basicAuth: true
+   user: lnp_automation
+   password: lnp_automation
+   version: 1
+   editable: true
+   isDefault: true

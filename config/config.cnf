@@ -1,0 +1,20 @@
+[DASHBOARD]
+URL=http://ip_address:3000/d/sample_dashboard/performance-dashboard?orgId=1
+
+[JENKINS]
+JOB_URL = http:/jenkins_ip:8080/job/sample-job/1/console
+JOB_TRIGGER_URL = curl http://admin:admin@jenkins_ip:8080/job/sample-job/build?token=sample-job
+
+[AWS]
+CHECK_PORT_CMD = aws ec2 describe-security-groups --group-ids gid --query 'SecurityGroups[].port_type'|grep port
+ADD_PORT_CMD = aws ec2 authorize-security-group-type --group-name sgname --protocol tcp --port port_no --cidr 0.0.0.0/0
+GET_SG_NAME_CMD = aws ec2 describe-instances --instance-ids inst_id --query 'Reservations[].Instances[].SecurityGroups[].GroupName[]' --output text
+GET_SG_ID_CMD = aws ec2 describe-instances --instance-ids inst_id --query 'Reservations[].Instances[].SecurityGroups[].GroupId[]' --output text
+
+[GCP]
+CHECK_PORT_IN_CMD = gcloud compute firewall-rules list|grep app-incoming|grep tcp|grep port_number
+CHECK_PORT_OUT_CMD = gcloud compute firewall-rules list|grep app-outgoing|grep tcp|grep port_number
+ADD_PORT_IN_CMD = gcloud compute firewall-rules create app-incoming --allow tcp:port_number --direction=IN
+ADD_PORT_OUT_CMD = gcloud compute firewall-rules create app-outgoing --allow tcp:port_number --direction=OUT
+INSTANCE_DETAILS_CMD = gcloud compute instances list --filter="ip AND http-server"
+
