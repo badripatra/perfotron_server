@@ -19,7 +19,7 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIG = ConfigParser.ConfigParser()
 CONFIG.optionxform = str
-CONFIG.read(os.path.join(CURRENT_DIR,"config.cnf"))
+CONFIG.read(os.path.join(CURRENT_DIR, "config", "config.cnf"))
 
 
 def get_command_output(command):

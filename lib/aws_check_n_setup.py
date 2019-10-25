@@ -20,7 +20,7 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIG = ConfigParser.ConfigParser()
 CONFIG.optionxform = str
-CONFIG.read(os.path.join(CURRENT_DIR,"config.cnf"))
+CONFIG.read(os.path.join(CURRENT_DIR, "config", "config.cnf"))
 
 CHECK_PORT = CONFIG.get('AWS', 'CHECK_PORT_CMD')
 ADD_PORT = CONFIG.get('AWS', 'ADD_PORT_CMD')
