@@ -12,8 +12,6 @@ then
     sudo cp -R apache-jmeter-5.1.1 /var/lib/jenkins/
     sudo chown -R jenkins:jenkins /var/lib/jenkins/apache-jmeter-5.1.1
     sudo cp actual_demo_jmeter_script.jmx /var/lib/jenkins/
-    sudo cp Config.cfg /var/lib/jenkins/
-    sudo cp generate_report.py /var/lib/jenkins/
     sudo cp Email_Content_template.html /var/lib/jenkins/
     sudo chown -R jenkins:jenkins /var/lib/jenkins/
     sudo mkdir -p /var/lib/jenkins/results/
