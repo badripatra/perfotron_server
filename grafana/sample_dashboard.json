@@ -3908,7 +3908,7 @@
         }
       ],
       "repeat": null,
-      "title": "System Stats",
+      "title": "Perfotron Server Stats",
       "type": "row"
     }
   ],

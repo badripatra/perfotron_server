@@ -215,7 +215,6 @@ def native_initiator(install_jenkins):
 
     if install_jenkins == "true":
         os.system("cp jenkins/jenkins_job_setup.sh ~/installation_launchpad")
-        os.system("cp docs_and_templates/Email_Content_template.html ~/installation_launchpad")
         os.system("cp jenkins/config.xml ~/installation_launchpad")
         os.system("cp lib/native.py  ~/installation_launchpad")
         os.system("cp lib/selenium_jenkins.py  ~/installation_launchpad")
