@@ -15,9 +15,11 @@ import ConfigParser
 HOSTNAME = socket.gethostname()
 IP = socket.gethostbyname(HOSTNAME)
 
-CONFIG = ConfigParser.ConfigParser()
-CONFIG.optionxform = str
-CONFIG.read("config.cnf")
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+CONFIG_OBJECT = ConfigParser.ConfigParser()
+CONFIG_OBJECT.optionxform = str
+CONFIG_OBJECT.read(os.path.join(CURRENT_DIR,"config.cnf"))
 
 
 def get_command_output(command):
