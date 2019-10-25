@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/aws_check_n_setup.py" afterPath="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" afterPath="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" />
     </list>
@@ -27,21 +26,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="google_cloud_check_n_setup.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="google_cloud_check_n_setup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/google_cloud_check_n_setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+            <state relative-caret-position="188">
+              <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            <state relative-caret-position="324">
+              <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -85,8 +84,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/native.py" />
-        <option value="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" />
         <option value="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
+        <option value="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" />
       </list>
     </option>
   </component>
@@ -262,18 +261,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/google_cloud_check_n_setup.py">
+    <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+        <state relative-caret-position="324">
+          <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
+    <entry file="file://$PROJECT_DIR$/lib/google_cloud_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        <state relative-caret-position="188">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>
