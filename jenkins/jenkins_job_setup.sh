@@ -16,9 +16,6 @@ then
     sudo chown -R jenkins:jenkins /var/lib/jenkins/
     sudo mkdir -p /var/lib/jenkins/results/
     sudo chmod -R 777 /var/lib/jenkins/results/
-    sudo pip install numpy==1.15.1
-    sudo pip install statistics
-    sudo pip install pandas==0.22.0
 else
     echo "Skipping Step : Jenkins JOb Setup as installer identified a existing Jenkins Setup. "
 fi

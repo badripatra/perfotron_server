@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jenkins/jenkins_email_setup.sh" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jenkins/jenkins_job_setup.sh" afterPath="$PROJECT_DIR$/jenkins/jenkins_job_setup.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +58,8 @@
       <file leaf-file-name="jenkins_job_setup.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jenkins/jenkins_job_setup.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,12 +122,7 @@
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="docs_and_templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,8 +319,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jenkins/jenkins_job_setup.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
