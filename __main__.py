@@ -290,7 +290,7 @@ if __name__ == '__main__':
 
         print "------------------Started Executing Jmeter Script ------------------------------"
 
-        JMX_FILE = add_backend_listner(IP)
+        JMX_FILE = add_backend_listner()
 
         RESULT_FOLDER = str(datetime.datetime.now())
         RESULT_FOLDER = RESULT_FOLDER.replace(" ", "_")
