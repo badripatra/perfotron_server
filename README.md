@@ -23,7 +23,7 @@ It also facilitate setting up Jenkins to run Jmeter Tests.
 ## Sequence of steps performed for setting up the environment
 
 ``` 
-1. Enabling Required Ports ( 3000 for Grafana, 8086 & 8088 for Influx, 9003 for demo api, 8080 for jenkins)
+1. Enabling Required Ports ( 3000 for Grafana, 8086 & 8088 for Influx, 9003 for demo api)
 2. Installing influx
 3. Installing and setting up Grafana Server (Including setting up default data source and dashboard)
 4. Setting up demo_jmeter script
