@@ -40,7 +40,7 @@ def dependency_resolution():
     elif PACKAGE_MANAGER == "dpkg":
         os.system("sudo apt-get install python-pip -qqq")
 
-    os.system("pip install -r requirements.txt")
+    os.system("pip -q install -r requirements.txt")
 
     '''os.system("sudo pip install flask -qqq")
     os.system("sudo pip -q install inquirer")
