@@ -14,6 +14,7 @@ sudo yum -y update
 sudo yum -y install influxdb
 sudo cp influxdb.conf /etc/influxdb/influxdb.conf
 sudo service influxdb start
+sudo influxd -config /etc/influxdb/influxdb.conf
 sleep 5
 sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE DATABASE jmeter"
 sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE USER lnp_automation WITH PASSWORD 'lnp_automation' WITH ALL PRIVILEGES"
