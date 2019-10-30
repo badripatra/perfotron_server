@@ -28,17 +28,22 @@ def dependency_resolution():
 
     print "Resolving  dependencies"
     print "1. pip"
-    print "2. flask (python module)"
-    print "3. inquirer (python module)"
-    print "4. influxdb (python module)"
-    print "5. selenium (python module)"
-    print "6. pyvirtualdisplay (python module)"
+    print "2. jdk (8)"
+    print "3. flask (python module)"
+    print "4. inquirer (python module)"
+    print "5. influxdb (python module)"
+    print "6. selenium (python module)"
+    print "7. pyvirtualdisplay (python module)"
 
     if PACKAGE_MANAGER == "rpm":
         os.system("sudo yum -q -y install python-pip")
+        os.system("sudo yum -q -y install java-1.8.0-openjdk-devel")
 
     elif PACKAGE_MANAGER == "dpkg":
-        os.system("sudo apt-get install python-pip -qqq")
+        os.system("sudo apt-get -y install python-pip -qqq")
+        os.system("sudo add-apt-repository -y ppa:openjdk-r/ppa")
+        os.system("sudo apt-get update")
+        os.system("sudo apt-get -y install openjdk-8-jdk -qqq")
 
     os.system("pip -q install -r requirements.txt")
 
@@ -214,6 +219,8 @@ def native_initiator(install_jenkins):
     os.system("cp lib/system_monitor.py ~/installation_launchpad")
 
     os.system("cp lib/config/config.cnf ~/installation_launchpad")
+
+    os.system("cp influx/influxdb.conf ~/installation_launchpad")
 
     if install_jenkins == "true":
         os.system("cp jenkins/jenkins_job_setup.sh ~/installation_launchpad")

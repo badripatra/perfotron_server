@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__main__.py" afterPath="$PROJECT_DIR$/__main__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +20,8 @@
       <file leaf-file-name="native.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/native.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="117" column="22" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+            <state relative-caret-position="90">
+              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding>
                 <element signature="e#284#299#0" expanded="true" />
               </folding>
@@ -25,31 +29,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="392">
+              <caret line="222" column="63" lean-forward="false" selection-start-line="222" selection-start-column="63" selection-end-line="222" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__main__.py">
+      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+            <state relative-caret-position="252">
+              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grafana_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/grafana_setup.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="288">
+              <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jenkins_installation.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/jenkins_installation.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_grafana_dashboard.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grafana/add_grafana_dashboard.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grafana_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/grafana_setup.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,6 +157,9 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/__main__.py" />
         <option value="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
       </list>
     </option>
   </component>
@@ -125,12 +192,35 @@
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="grafana" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
               <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="amazon-linux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="centos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="rhel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
@@ -415,28 +505,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__main__.py">
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/enable_jenkins_ports.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/enable_ports.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/grafana_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/native.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="117" column="22" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+        <state relative-caret-position="90">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="e#284#299#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="222" column="63" lean-forward="false" selection-start-line="222" selection-start-column="63" selection-end-line="222" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/jenkins_installation.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grafana/add_grafana_dashboard.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="252">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/grafana_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding />
         </state>
       </provider>
