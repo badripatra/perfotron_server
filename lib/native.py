@@ -370,7 +370,7 @@ def demorun_local(project_dir, ip_address):
     print "Perfotron dashboard  URL : " + perf_dashboard_url
     print "\n"
 
-    print "Starting Demo Load Test from Local System"
+    print "Starting Demo Load Test."
     jmeter_cmd = jmeter_executable + " -n -t " + jmx_file + " -l "+jtl_file+" -e -o "+result_folder
     print "Jmeter Command : " + jmeter_cmd
     print "\n"

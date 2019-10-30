@@ -222,7 +222,7 @@ def native_initiator(install_jenkins):
         os.system("cp setup_details/details_template.yaml ~/installation_launchpad")
         os.system("sudo python ~/installation_launchpad/native.py install_jekins:true")
     else:
-        print "Downloading Jmeter to run the demo locally"
+        print "Downloading Jmeter"
 
         os.system("cp lib/native.py  ~/installation_launchpad")
 
