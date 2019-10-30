@@ -13,7 +13,7 @@ then
 	sudo service influxdb start
 	sudo apt install -y influxdb-client
 	sudo service influxdb start
-    sleep 5
+    sleep 10
 	sudo sed -i -e 's/  # Determines whether HTTP endpoint is enabled.\n  # enabled = true/  # Determines whether HTTP endpoint is enabled.\n  enabled = true/g' /etc/influxdb/influxdb.conf
 	sudo sed -i -e 's/auth-enabled = false/auth-enabled = true/g' /etc/influxdb/influxdb.conf
 	sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE DATABASE jmeter"
