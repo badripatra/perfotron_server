@@ -225,16 +225,11 @@ def native_initiator(install_jenkins):
         print "Downloading Jmeter"
 
         os.system("cp lib/native.py  ~/installation_launchpad")
-
-        os.system("sudo wget --quiet"
-                  " http://mirrors.ocf.berkeley.edu/apache/jmeter/binaries/apache-jmeter-5.1.1.tgz"
-                  " -P  ~/installation_launchpad")
-
+        os.system("cp apache-jmeter-5.1.1.tgz ~/installation_launchpad")
         os.system("sudo tar -xf  ~/installation_launchpad/apache-jmeter-5.1.1.tgz"
                   " -C ~/installation_launchpad")
 
         os.chdir(HOME)
-
         os.system("sudo python ~/installation_launchpad/native.py install_jekins:false")
 
     os.system("sudo chown `id -un`:`id -gn` ~/installation_launchpad/*.*")
