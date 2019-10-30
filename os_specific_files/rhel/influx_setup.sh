@@ -14,7 +14,6 @@ sudo yum -y update
 sudo yum -y install influxdb
 sudo cp influxdb.conf /etc/influxdb/influxdb.conf
 sudo service influxdb start
-sudo apt install -y influxdb-client
 sudo influxd -config /etc/influxdb/influxdb.conf
 sleep 5
 sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE DATABASE jmeter"
