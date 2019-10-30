@@ -1,0 +1,5 @@
+Flask==1.1.1
+influxdb==5.2.3
+selenium==3.141.0
+inquirer==2.6.3
+PyVirtualDisplay==0.2.4

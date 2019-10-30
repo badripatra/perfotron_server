@@ -40,11 +40,13 @@ def dependency_resolution():
     elif PACKAGE_MANAGER == "dpkg":
         os.system("sudo apt-get install python-pip -qqq")
 
-    os.system("sudo pip install flask -qqq")
+    os.system("pip install -r requirements.txt")
+
+    '''os.system("sudo pip install flask -qqq")
     os.system("sudo pip -q install inquirer")
     os.system("sudo pip -q install influxdb")
     os.system("sudo pip -q install selenium")
-    os.system("sudo pip -q install pyvirtualdisplay")
+    os.system("sudo pip -q install pyvirtualdisplay")'''
     print "Resolved All  dependencies"
 
 
