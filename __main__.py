@@ -83,14 +83,16 @@ def get_command_output(command):
 def check_tool_installations():
     """ This function is responsible for check if Perfotron dashboard is already installed or not"""
 
-    chk_jmeter_influx = 'sudo curl -G "http://localhost:8086/query"' \
+    '''chk_jmeter_influx = 'sudo curl -G "http://localhost:8086/query"' \
                         ' --data-urlencode "q=show databases"'
-    influx = "jmeter" in get_command_output(chk_jmeter_influx)
+    influx = "jmeter" in get_command_output(chk_jmeter_influx)'''
 
     check_grafana_dashboard = 'ls -lrth /var/lib/grafana/dashboards/sample_dashboard.json'
     grafana = "sample_dashboard" in get_command_output(check_grafana_dashboard)
 
-    perf_dashboard_installed = bool(influx and grafana)
+    #perf_dashboard_installed = bool(influx and grafana)
+
+    perf_dashboard_installed = bool(grafana)
 
     return perf_dashboard_installed
 
@@ -264,7 +266,7 @@ if __name__ == '__main__':
             print "\033[1;33;40m '--jmx' or '--uninstall' " \
                   "options are only possible after Perfotron Dashboard is installed"
 
-            print " Run 'python perf_dashboard' command to install the Perfotron Dashboard"
+            print " Run 'python perfotron' command to install the Perfotron Dashboard"
             print " Exiting now\033[0;37;40m"
             sys.exit()
 
