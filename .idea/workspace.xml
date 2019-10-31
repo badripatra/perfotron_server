@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,10 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state relative-caret-position="378">
+              <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -63,10 +65,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/__main__.py" />
-        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
-        <option value="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
-        <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
       </list>
     </option>
   </component>
@@ -116,18 +118,6 @@
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
               <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
               <item name="amazon-linux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
-              <item name="centos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
-              <item name="rhel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
@@ -524,30 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -566,10 +532,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
+    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/centos/grafana_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
           <folding />
         </state>
       </provider>
