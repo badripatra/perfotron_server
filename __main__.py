@@ -332,7 +332,6 @@ if __name__ == '__main__':
         with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
             print About.read()
 
-        dependency_resolution()
 
         if 'Google' in BIOS_TYPE:
             SYSTEM_TYPE = "google_cloud"
@@ -344,6 +343,7 @@ if __name__ == '__main__':
             import aws_check_n_setup
             aws_check_n_setup.check_n_setup()
 
+        dependency_resolution()
 
         import get_user_input
         USER_INPUT_DATA = get_user_input.user_input()
