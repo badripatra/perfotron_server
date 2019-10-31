@@ -23,6 +23,27 @@ os.chdir(CURRENT_DIR)
 HOME = os.path.expanduser("~")
 
 
+def dependency_resolution():
+    """ This function is responsible to install dependent packages """
+
+    print "-----------------Resolving Dependencies--------------------------"
+    file_name = os.path.join(CURRENT_DIR, "os_specific_files", OS_TYPE, "install_dependency.sh")
+    log_file_name = os.path.join(HOME, "installation_launchpad", "Installation_details.log")
+    command = file_name + " >> " + log_file_name + " 2>&1"
+    os.system(command)
+
+    print "1. pip"
+    print "2. jdk (8)"
+    print "3. flask (python module)"
+    print "4. inquirer (python module)"
+    print "5. influxdb (python module)"
+    print "6. selenium (python module)"
+    print "7. pyvirtualdisplay (python module)"
+    print "\n"
+
+    print "-----------------Resolving Dependencies--------------------------"
+
+
 def get_ip():
     """ This function is responsible to identify clouder provider from BIOS """
 
