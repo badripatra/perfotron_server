@@ -26,11 +26,10 @@ HOME = os.path.expanduser("~")
 def dependency_resolution():
     """ This function is responsible to install dependent packages """
 
-    print "-----------------Resolving Dependencies--------------------------"
+    print "-----------------Resolving Dependencies-----------------------------"
     dependency_details = os.path.join(CURRENT_DIR, "os_specific_files", OS_TYPE,
                                       "install_dependency.sh")
     cmd = dependency_details + " > /dev/null 2>&1"
-    os.system(cmd)
 
     print "1. pip"
     print "2. jdk (8)"
@@ -39,9 +38,10 @@ def dependency_resolution():
     print "5. influxdb (python module)"
     print "6. selenium (python module)"
     print "7. pyvirtualdisplay (python module)"
-    print "\n"
 
-    print "-----------------Resolving Dependencies--------------------------"
+    os.system(cmd)
+
+    print "-----------------Resolving Dependencies------------------------------"
 
 
 def get_ip():
