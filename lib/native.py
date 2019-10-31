@@ -34,8 +34,9 @@ def dependency_resolution(project_dir):
     print "5. influxdb (python module)"
     print "6. selenium (python module)"
     print "7. pyvirtualdisplay (python module)"
+    print "\n"
 
-    print "Resolving Dependencies"
+    print "-----------------Resolving Dependencies--------------------------"
     file_name = os.path.join(project_dir, "install_dependency.sh")
     log_file_name = os.path.join(project_dir, "Installation_details.log")
 
@@ -49,7 +50,7 @@ def dependency_resolution(project_dir):
     end_time = datetime.datetime.now()
     timer_logger(start_time, end_time, "DEPENDENCY", "DEPENDENCY RESOLUTION")
 
-    print "Resolved All  dependencies"
+    print "-----------------Resolving Dependencies--------------------------"
 
 
 def timer_logger(start_time, end_time, component, acitivity):
