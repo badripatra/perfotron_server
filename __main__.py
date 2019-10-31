@@ -309,8 +309,6 @@ if __name__ == '__main__':
 
     OS_TYPE = get_command_output("python -mplatform")
 
-    dependency_resolution()
-
     if "Ubuntu" in OS_TYPE:
         OS_TYPE = "ubuntu"
         PACKAGE_MANAGER = "dpkg"
@@ -335,6 +333,23 @@ if __name__ == '__main__':
 
         with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
             print About.read()
+
+        print "-----------------Resolving Dependencies--------------------------"
+        file_name = os.path.join(CURRENT_DIR, "os_specific_files", OS_TYPE, "install_dependency.sh")
+        log_file_name = os.path.join(HOME, "installation_launchpad", "Installation_details.log")
+        command = file_name + " >> " + log_file_name + " 2>&1"
+        os.system(command)
+
+        print "1. pip"
+        print "2. jdk (8)"
+        print "3. flask (python module)"
+        print "4. inquirer (python module)"
+        print "5. influxdb (python module)"
+        print "6. selenium (python module)"
+        print "7. pyvirtualdisplay (python module)"
+        print "\n"
+
+        print "-----------------Resolving Dependencies--------------------------"
 
 
         if 'Google' in BIOS_TYPE:
