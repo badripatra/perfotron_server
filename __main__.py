@@ -311,7 +311,11 @@ if __name__ == '__main__':
 
     print "-----------------Resolving Dependencies--------------------------"
     file_name = os.path.join(CURRENT_DIR, "os_specific_files", OS_TYPE, "install_dependency.sh")
+    print "1"
+    print file_name
     log_file_name = os.path.join(HOME, "installation_launchpad", "Installation_details.log")
+    print "2"
+    print log_file_name
     command = file_name + " >> " + log_file_name + " 2>&1"
     print command
     os.system(command)
