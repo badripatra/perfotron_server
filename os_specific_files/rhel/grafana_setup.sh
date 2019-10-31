@@ -14,6 +14,7 @@ then
     sudo yum -y install freetype*
     sudo yum -y install urw-fonts
     sudo grafana-cli plugins install grafana-clock-panel
+    sudo chown -R grafana:grafana  /etc/grafana/
     sudo service grafana-server restart
 else
     echo "Skipping Step : Grafana Server setup as installer identified a existing Grafana-Server Setup. "

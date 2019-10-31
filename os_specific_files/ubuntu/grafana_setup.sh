@@ -17,6 +17,7 @@ then
 	sudo systemctl start grafana-server
 	sudo systemctl enable grafana-server.service
 	sudo grafana-cli plugins install grafana-clock-panel
+	sudo chown -R grafana:grafana  /etc/grafana/
 	sudo service grafana-server restart
 else
     echo "Skipping Step : Grafana Server setup as installer identified a existing Grafana-Server Setup. "
