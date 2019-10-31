@@ -29,8 +29,7 @@ def dependency_resolution():
     print "-----------------Resolving Dependencies--------------------------"
     dependency_details = os.path.join(CURRENT_DIR, "os_specific_files", OS_TYPE,
                                       "install_dependency.sh")
-    cmd = dependency_details + " >/dev/null 2>&1"
-    print cmd
+    cmd = dependency_details + " > /dev/null 2>&1"
     os.system(cmd)
 
     print "1. pip"
