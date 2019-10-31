@@ -17,9 +17,3 @@ Sample_API:
   GET_URL: http://[hosting_server_ip]:9003/demo_api_get
   POST_URL: http://[hosting_server_ip]:9003/demo_api_post
   post_param: 'any text'
-
-Jenkins:
-- dashboard_url: http://[jenkins_ip]:8080
-  user_name: admin
-  password: admin
-  sample_job_details: http://[jenkins_ip]:8080/job/sample-job/
