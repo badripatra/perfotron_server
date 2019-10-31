@@ -244,7 +244,7 @@ if __name__ == '__main__':
                              " Example: python perfenv_e2e --jmx sample_user_testplan.jmx")
     ARGS = PARSER.parse_args()
 
-    dependency_resolution()
+
 
     BIOS_TYPE = get_command_output("sudo dmidecode -s bios-version")
     IP = get_ip()
@@ -308,6 +308,8 @@ if __name__ == '__main__':
         sys.exit()
 
     OS_TYPE = get_command_output("python -mplatform")
+
+    dependency_resolution()
 
     if "Ubuntu" in OS_TYPE:
         OS_TYPE = "ubuntu"
