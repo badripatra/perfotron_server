@@ -23,39 +23,6 @@ os.chdir(CURRENT_DIR)
 HOME = os.path.expanduser("~")
 
 
-def dependency_resolution():
-    """ This function is responsible to install dependent python packages """
-
-    print "Resolving  dependencies"
-    print "1. pip"
-    print "2. jdk (8)"
-    print "3. flask (python module)"
-    print "4. inquirer (python module)"
-    print "5. influxdb (python module)"
-    print "6. selenium (python module)"
-    print "7. pyvirtualdisplay (python module)"
-
-    if PACKAGE_MANAGER == "rpm":
-        os.system("sudo yum -q -y install python-pip")
-        os.system("sudo yum -q -y install java-1.8.0-openjdk-devel")
-
-    elif PACKAGE_MANAGER == "dpkg":
-        os.system("sudo apt-get -y install python-pip -qqq")
-        os.system("sudo add-apt-repository -y ppa:openjdk-r/ppa -qqq")
-        os.system("sudo apt-get update -qqq")
-        os.system("sudo apt-get -y install openjdk-8-jdk -qqq")
-
-    os.system("pip -q install -r requirements.txt")
-
-    '''os.system("sudo pip install flask -qqq")
-    os.system("sudo pip -q install inquirer")
-    os.system("sudo pip -q install influxdb")
-    os.system("sudo pip -q install selenium")
-    os.system("sudo pip -q install pyvirtualdisplay")'''
-    print "Resolved All  dependencies"
-
-
-
 def get_ip():
     """ This function is responsible to identify clouder provider from BIOS """
 
@@ -199,6 +166,8 @@ def native_initiator(install_jenkins):
     os.system("mkdir -p ~/installation_launchpad")
 
     os.system("cp -r os_specific_files/"+OS_TYPE+"/*.* ~/installation_launchpad")
+
+    os.system ("cp requirements.txt ~/installation_launchpad")
 
     os.system("cp -r grafana/*.* ~/installation_launchpad")
 
@@ -353,7 +322,6 @@ if __name__ == '__main__':
             import aws_check_n_setup
             aws_check_n_setup.check_n_setup()
 
-        dependency_resolution()
 
         import get_user_input
         USER_INPUT_DATA = get_user_input.user_input()
