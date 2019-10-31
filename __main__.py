@@ -332,6 +332,8 @@ if __name__ == '__main__':
         with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
             print About.read()
 
+        dependency_resolution()
+
         if 'Google' in BIOS_TYPE:
             SYSTEM_TYPE = "google_cloud"
             import google_cloud_check_n_setup
