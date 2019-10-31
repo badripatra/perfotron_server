@@ -423,7 +423,7 @@ def setup(root_project_directory, input_map):
     start_time = datetime.datetime.now()
     print "-----------------------Progress---------------------------------------"
 
-    dependency_resolution(root_project_directory)
+    #dependency_resolution(root_project_directory)
     enable_ports(root_project_directory)
     influx_setup(root_project_directory)
     grafana_setup(root_project_directory)
