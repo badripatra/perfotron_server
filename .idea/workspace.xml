@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/native.py" afterPath="$PROJECT_DIR$/lib/native.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="native.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="native.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/native.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
@@ -30,6 +30,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
               <caret line="202" column="9" lean-forward="true" selection-start-line="202" selection-start-column="9" selection-end-line="202" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -77,16 +97,16 @@
         <option value="$PROJECT_DIR$/docs_and_templates/About.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
-        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" />
         <option value="$PROJECT_DIR$/__main__.py" />
         <option value="$PROJECT_DIR$/lib/native.py" />
+        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
       </list>
     </option>
   </component>
@@ -540,14 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/os_specific_files/centos/grafana_setup.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -560,14 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -619,6 +623,22 @@
           <folding>
             <element signature="e#284#299#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

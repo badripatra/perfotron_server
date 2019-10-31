@@ -13,7 +13,9 @@ EOF
 sudo yum -y update
 sudo yum -y install influxdb
 sudo service influxdb start
+sleep 5
 sudo influxd -config /etc/influxdb/influxdb.conf
+sleep 5
 sudo sed -i -e 's/  # Determines whether HTTP endpoint is enabled.\n  # enabled = true/  # Determines whether HTTP endpoint is enabled.\n  enabled = true/g' /etc/influxdb/influxdb.conf
 sudo sed -i -e 's/auth-enabled = false/auth-enabled = true/g' /etc/influxdb/influxdb.conf
 sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE DATABASE jmeter"
