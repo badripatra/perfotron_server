@@ -313,6 +313,7 @@ if __name__ == '__main__':
     file_name = os.path.join(CURRENT_DIR, "os_specific_files", OS_TYPE, "install_dependency.sh")
     log_file_name = os.path.join(HOME, "installation_launchpad", "Installation_details.log")
     command = file_name + " >> " + log_file_name + " 2>&1"
+    print command
     os.system(command)
 
     print "1. pip"
