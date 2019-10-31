@@ -23,34 +23,6 @@ CONFIG_OBJECT.read(os.path.join(CURRENT_DIR,"config.cnf"))
 # ------------------------------Functions---------------------------------------------------
 
 
-def dependency_resolution(project_dir):
-    """ This function is responsible to install dependent packages """
-
-    print "Resolving  dependencies"
-    print "1. pip"
-    print "2. jdk (8)"
-    print "3. flask (python module)"
-    print "4. inquirer (python module)"
-    print "5. influxdb (python module)"
-    print "6. selenium (python module)"
-    print "7. pyvirtualdisplay (python module)"
-    print "\n"
-
-    print "-----------------Resolving Dependencies--------------------------"
-    file_name = os.path.join(project_dir, "install_dependency.sh")
-    log_file_name = os.path.join(project_dir, "Installation_details.log")
-
-    current_time = str(datetime.datetime.now())
-    detailed_logger(current_time, "Resolving Dependencies", log_file_name)
-
-    command = file_name + " >> " + log_file_name + " 2>&1"
-
-    start_time = datetime.datetime.now()
-    os.system(command)
-    end_time = datetime.datetime.now()
-    timer_logger(start_time, end_time, "DEPENDENCY", "DEPENDENCY RESOLUTION")
-
-    print "-----------------Resolving Dependencies--------------------------"
 
 
 def timer_logger(start_time, end_time, component, acitivity):
