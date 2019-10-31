@@ -38,8 +38,8 @@
       <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="317" column="23" lean-forward="false" selection-start-line="317" selection-start-column="23" selection-end-line="317" selection-end-column="23" />
+            <state relative-caret-position="252">
+              <caret line="29" column="80" lean-forward="true" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -95,6 +95,7 @@
       <find>dependency resolution</find>
       <find>dependency</find>
       <find>dependency_resolution</find>
+      <find>command</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -514,6 +515,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -655,8 +657,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="317" column="23" lean-forward="false" selection-start-line="317" selection-start-column="23" selection-end-line="317" selection-end-column="23" />
+        <state relative-caret-position="252">
+          <caret line="29" column="80" lean-forward="true" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
           <folding />
         </state>
       </provider>
