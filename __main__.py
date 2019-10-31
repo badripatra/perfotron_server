@@ -244,6 +244,8 @@ if __name__ == '__main__':
                              " Example: python perfenv_e2e --jmx sample_user_testplan.jmx")
     ARGS = PARSER.parse_args()
 
+    dependency_resolution()
+
     BIOS_TYPE = get_command_output("sudo dmidecode -s bios-version")
     IP = get_ip()
 
@@ -343,7 +345,7 @@ if __name__ == '__main__':
             import aws_check_n_setup
             aws_check_n_setup.check_n_setup()
 
-        dependency_resolution()
+
 
         import get_user_input
         USER_INPUT_DATA = get_user_input.user_input()

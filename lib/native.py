@@ -23,8 +23,6 @@ CONFIG_OBJECT.read(os.path.join(CURRENT_DIR,"config.cnf"))
 # ------------------------------Functions---------------------------------------------------
 
 
-
-
 def timer_logger(start_time, end_time, component, acitivity):
     """ This function is used for logging """
     log_line = [str(start_time), str(end_time), str(end_time - start_time), component, acitivity]
