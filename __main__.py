@@ -191,7 +191,6 @@ def native_initiator(install_jenkins):
 
     os.system("cp lib/config/config.cnf ~/installation_launchpad")
 
-    os.system("cp influx/influxdb.conf ~/installation_launchpad")
 
     if install_jenkins == "true":
         os.system("cp jenkins/jenkins_job_setup.sh ~/installation_launchpad")
