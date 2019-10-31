@@ -41,8 +41,8 @@ def dependency_resolution():
 
     elif PACKAGE_MANAGER == "dpkg":
         os.system("sudo apt-get -y install python-pip -qqq")
-        os.system("sudo add-apt-repository -y ppa:openjdk-r/ppa")
-        os.system("sudo apt-get update")
+        os.system("sudo add-apt-repository -y ppa:openjdk-r/ppa -qqq")
+        os.system("sudo apt-get update -qqq")
         os.system("sudo apt-get -y install openjdk-8-jdk -qqq")
 
     os.system("pip -q install -r requirements.txt")

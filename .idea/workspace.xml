@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" afterPath="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__main__.py" afterPath="$PROJECT_DIR$/__main__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +13,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
               <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/__main__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -64,11 +72,11 @@
         <option value="$PROJECT_DIR$/docs_and_templates/About.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/__main__.py" />
         <option value="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/centos/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
+        <option value="$PROJECT_DIR$/__main__.py" />
       </list>
     </option>
   </component>
@@ -97,33 +105,6 @@
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="grafana" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
-              <item name="amazon-linux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
-              <item name="ubuntu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,14 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__main__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="153" column="20" lean-forward="true" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/native.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -568,6 +541,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
           <folding />
         </state>
       </provider>
