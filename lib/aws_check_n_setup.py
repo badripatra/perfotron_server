@@ -112,15 +112,6 @@ def check_n_setup():
         print "Exiting now. Retry after configuring aws cli"
         sys.exit()
 
-    if os_type == "ubuntu":
-        os.system("sudo apt-get update")
-        os.system("sudo apt-get -y install python-pip")
-        os.system("sudo apt-get -y install python-minimal")
-
-    elif os_type == "rhel" or os_type == "centos" or os_type == "amazon-linux":
-        os.system("sudo yum check-update")
-        os.system("sudo yum -y install python-pip")
-
     instance_id = get_command_output('cat /var/lib/cloud/data/instance-id')
 
     cmd_get_security_group_name = CONFIG.get('AWS', 'GET_SG_NAME_CMD')

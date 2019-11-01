@@ -117,12 +117,4 @@ def check_n_setup():
         print "Exiting now. Retry after configuring http traffic"
         sys.exit()
 
-    if os_type == "ubuntu":
-        os.system("sudo apt-get update")
-        os.system("sudo apt-get -y install python-pip")
-
-    elif os_type == "rhel" or os_type == "centos":
-        os.system("sudo yum check-update")
-        os.system("sudo yum -y install python-pip")
-
     open_ports(CONFIG)
