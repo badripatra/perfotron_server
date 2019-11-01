@@ -136,8 +136,8 @@ def uninstall_perftool(package_manager):
         os.system("sudo yum -y remove influxdb >> ~/un-installation_details.log 2>&1")
         print "Removed Influx DB"
 
-        os.system("sudo yum -y remove jenkins >> ~/un-installation_details.log 2>&1")
-        print "Removed Jenkins"
+        # os.system("sudo yum -y remove jenkins >> ~/un-installation_details.log 2>&1")
+        # print "Removed Jenkins"
 
         os.system("sudo yum clean all >> ~/un-installation_details.log 2>&1")
 
@@ -149,8 +149,8 @@ def uninstall_perftool(package_manager):
         os.system("sudo apt-get purge remove influxdb >> ~/un-installation_details.log 2>&1")
         print "Removed Influx DB"
 
-        os.system("sudo apt-get purge remove jenkins >> ~/un-installation_details.log 2>&1")
-        print "Removed Jenkins"
+        # os.system("sudo apt-get purge remove jenkins >> ~/un-installation_details.log 2>&1")
+        # print "Removed Jenkins"
 
         os.system("sudo apt-get clean >> ~/un-installation_details.log 2>&1")
 
@@ -158,16 +158,20 @@ def uninstall_perftool(package_manager):
     os.system("kill -9 `ps -ef|grep -v grep|grep 'python demo_api.py'"
               "|awk '{print $2}'` > /dev/null 2>&1")
 
-    print "Killing existing instances of influx, grafana and jenkins"
+    # print "Killing existing instances of jenkins"
+    ''' os.system("kill $(ps aux | grep -v grep| grep 'jenkins' | "
+                  "awk '{print $2}') >> ~/un-installation_details.log 2>&1") '''
+
+    print "Killing existing instances of influx, grafana"
     os.system("kill $(ps aux | grep -v grep| grep 'influx' | "
               "awk '{print $2}') >> ~/un-installation_details.log 2>&1")
     os.system("kill $(ps aux | grep -v grep| grep 'grafana' | "
               "awk '{print $2}') >> ~/un-installation_details.log 2>&1")
-    os.system("kill $(ps aux | grep -v grep| grep 'jenkins' | "
-              "awk '{print $2}') >> ~/un-installation_details.log 2>&1")
 
-    print "Removing Files and Folder related to influx, grafana, jenkins"
-    os.system("sudo rm -rf /var/lib/jenkins >> ~/un-installation_details.log 2>&1")
+    # print "Removing Files and Folder related to jenkins"
+    # os.system("sudo rm -rf /var/lib/jenkins >> ~/un-installation_details.log 2>&1")
+
+    print "Removing Files and Folder related to influx, grafana"
     os.system("sudo rm -rf /var/lib/grafana >> ~/un-installation_details.log 2>&1")
     os.system("sudo rm -rf /etc/grafana/ >> ~/un-installation_details.log 2>&1")
     os.system("sudo rm -rf ~/installation_logs >> ~/un-installation_details.log 2>&1")

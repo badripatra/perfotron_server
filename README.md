@@ -51,7 +51,7 @@ Technology/Tools used:
 3. Jmeter
 ```
 
-How to run  the Tool and set up performance dashboard for Live Monitoring :
+How to run  the Tool and set up Perfotron dashboard for Live Monitoring :
 
 ```bash
 Step 1. Clone the Repo : git clone https://badri_patra@bitbucket.org/badri_patra/perfotron.git
@@ -59,6 +59,29 @@ Step 2. To start the setup : python perfotron
 Step 3. Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation details
 Step 4. Check the Grafana URL for Live Monitoring of Load Test
 Step 5. Check Env Details from env_details.yaml
-Step 6. To convert your jmx to run in this env, use the command "python perfotron --jmx sample_user_testplan.jmx"
-Step 7. To uninstall the Tool, use command "python perfotron --uninstall"
+```
+How to convert your Jmeter Script to be shown in Perfotron Dashboard :
+
+```bash
+Pre-rquisite. Perfotron Dashboard should be installed
+Step 1. To convert your jmx to run in this env, use the command "python perfotron --jmx <Jmeter_TestPlan_Complete Path>"
+Step 2. The converted jmx & test results are is stored in '~/user_jmx_run_results/<Current_Date_Time_Stamp_Folder>
+
+How this option internally works :
+1. Perfotron adds influxdb back-end listner to your Script
+2. Save it as a new script in ~/user_jmx_run_results/<Current_Date_Time_Stamp_Folder> location
+3. Triggers the Load Test and stores results in the same folder
+```
+
+How to uninstall Perfotron Dashboard :
+
+```bash
+Pre-rquisite. Perfotron Dashboard should be installed
+Step 1. To uninstall the Perfotron, use command "python perfotron --uninstall"
+
+How this option internally works :
+1. Uninstallation of  Influx
+2. Uninstallation of  Grafana
+3. Kill existing instances of Influx, Grafana
+4. Removing Files and Folder related to Influx, Grafana 
 ```

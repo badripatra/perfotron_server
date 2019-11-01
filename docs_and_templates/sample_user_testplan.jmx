@@ -261,7 +261,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">get_transaction_${__time(dd-MM-yyyy_hh-mm-ss)}.csv</stringProp>
+          <stringProp name="filename">get_transaction.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
@@ -516,7 +516,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">post_transaction_${__time(dd-MM-yyyy_hh-mm-ss)}.csv</stringProp>
+          <stringProp name="filename">post_transaction.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

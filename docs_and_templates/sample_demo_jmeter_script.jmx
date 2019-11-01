@@ -261,7 +261,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">sample_api_get_${__time(dd-MM-yyyy_hh-mm-ss))}.csv</stringProp>
+          <stringProp name="filename">sample_api_get.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
@@ -589,7 +589,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">sample_api_post_${__time(dd-MM-yyyy_hh-mm-ss))}.csv</stringProp>
+          <stringProp name="filename">sample_api_post.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
