@@ -70,8 +70,8 @@ def open_ports(security_group_name, security_group_id):
     check_n_create_firewall_rule("3000", "incoming", security_group_name, security_group_id)
     check_n_create_firewall_rule("3000", "outgoing", security_group_name, security_group_id)
 
-    check_n_create_firewall_rule("8080", "incoming", security_group_name, security_group_id)
-    check_n_create_firewall_rule("8080", "outgoing", security_group_name, security_group_id)
+    # check_n_create_firewall_rule("8080", "incoming", security_group_name, security_group_id)
+    # check_n_create_firewall_rule("8080", "outgoing", security_group_name, security_group_id)
 
     check_n_create_firewall_rule("9003", "incoming", security_group_name, security_group_id)
     check_n_create_firewall_rule("9003", "outgoing", security_group_name, security_group_id)

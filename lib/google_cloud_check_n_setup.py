@@ -70,8 +70,8 @@ def open_ports(config):
     check_n_create_firewallrule("3000", "incoming", "grafana", config)
     check_n_create_firewallrule("3000", "outgoing", "grafana", config)
 
-    check_n_create_firewallrule("8080", "incoming", "jenkins", config)
-    check_n_create_firewallrule("8080", "outgoing", "jenkins", config)
+    # check_n_create_firewallrule("8080", "incoming", "jenkins", config)
+    # check_n_create_firewallrule("8080", "outgoing", "jenkins", config)
 
     check_n_create_firewallrule("9003", "incoming", "demoapi", config)
     check_n_create_firewallrule("9003", "outgoing", "demoapi", config)
