@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/aws_check_n_setup.py" afterPath="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" afterPath="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" afterPath="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install_dependency.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="install_dependency.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
@@ -94,11 +93,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
               <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install_dependency.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,7 +165,6 @@
         <option value="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh" />
-        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/ubuntu/influx_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/rhel/influx_setup.sh" />
         <option value="$PROJECT_DIR$/lib/native.py" />
@@ -172,6 +180,7 @@
         <option value="$PROJECT_DIR$/lib/system_monitor.py" />
         <option value="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" />
         <option value="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
+        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" />
       </list>
     </option>
   </component>
@@ -216,6 +225,12 @@
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
               <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
               <item name="rhel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="ubuntu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
@@ -523,14 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -690,14 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/google_cloud_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -710,6 +709,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
