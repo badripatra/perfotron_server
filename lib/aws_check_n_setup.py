@@ -106,7 +106,7 @@ def check_n_setup():
         sys.exit()
 
     aws_cli = get_command_output("curl http://checkip.amazonaws.com")
-    if IP not in aws_cli:
+    if not aws_cli:
         print "aws cli is not configured on your instance"
         print "Refer https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html"
         print "Exiting now. Retry after configuring aws cli"

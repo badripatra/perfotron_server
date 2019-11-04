@@ -26,8 +26,8 @@
       <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-936">
-              <caret line="34" column="19" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="22" />
+            <state relative-caret-position="396">
+              <caret line="108" column="11" lean-forward="false" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
               <folding>
                 <element signature="e#271#281#0" expanded="true" />
               </folding>
@@ -665,8 +665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-936">
-          <caret line="34" column="19" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="22" />
+        <state relative-caret-position="396">
+          <caret line="108" column="11" lean-forward="false" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
           <folding>
             <element signature="e#271#281#0" expanded="true" />
           </folding>
