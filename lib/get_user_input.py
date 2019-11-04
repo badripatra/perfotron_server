@@ -10,8 +10,8 @@ import sys
 import inquirer
 
 
-def user_input():
-    """ This function is responsible for taking user input before setting up perf dashboard"""
+def user_input_installation():
+    """ This function is responsible for taking user input before setting up perfotron dashboard"""
 
     user_choice = {}
     print "\nPlease answer the questions below to get started \n"
@@ -48,3 +48,30 @@ def user_input():
     # -------------------------------------------------------------------------------------------- #
 
     return user_choice
+
+
+def user_input_uninstallation():
+    """ This function is responsible for taking user input before uninstalling up perfotron dashboard"""
+
+    user_choice = {}
+
+    # ---------------------------------------------------------------------------------------- #
+
+    uninstllation_perfotron_dashboard = [
+        inquirer.List('confirmation',
+                      message="Do you want to uninstall perfotron dashboard ? ",
+                      choices=['yes', 'no'])]
+
+    user_selection_perf_dashboard = inquirer.prompt(uninstllation_perfotron_dashboard)
+
+    # ------------------------------------------------------------------------------------------ #
+
+    # ------------------------------------------------------------------------------------------- #
+
+    if user_selection_perf_dashboard["confirmation"] == 'no':
+        print "Exiting, as you selected not to proceed with un-installation."
+        sys.exit()
+
+    # -------------------------------------------------------------------------------------------- #
+
+    return

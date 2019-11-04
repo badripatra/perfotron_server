@@ -248,8 +248,6 @@ if __name__ == '__main__':
                              " Example: python perfenv_e2e --jmx sample_user_testplan.jmx")
     ARGS = PARSER.parse_args()
 
-
-
     BIOS_TYPE = get_command_output("sudo dmidecode -s bios-version")
     IP = get_ip()
 
@@ -329,7 +327,11 @@ if __name__ == '__main__':
         OS_TYPE = "amazon-linux"
         PACKAGE_MANAGER = "rpm"
 
+    dependency_resolution()  # Install all dependent modules
+    import get_user_input   # Import user input lib
+
     if ARGS.uninstall:
+        get_user_input.user_input_uninstallation()
         uninstall_perftool(PACKAGE_MANAGER)
         sys.exit()
 
@@ -337,8 +339,6 @@ if __name__ == '__main__':
 
         with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
             print About.read()
-
-        dependency_resolution()
 
         if 'Google' in BIOS_TYPE:
             SYSTEM_TYPE = "google_cloud"
@@ -350,10 +350,7 @@ if __name__ == '__main__':
             import aws_check_n_setup
             aws_check_n_setup.check_n_setup()
 
-
-
-        import get_user_input
-        USER_INPUT_DATA = get_user_input.user_input()
+        USER_INPUT_DATA = get_user_input.user_input_installation()
 
         if USER_INPUT_DATA["jenkins"] == "yes":
             INSTALL_JENKINS = "true"

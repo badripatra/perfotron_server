@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/aws_check_n_setup.py" afterPath="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/config/config.cnf" afterPath="$PROJECT_DIR$/lib/config/config.cnf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__main__.py" afterPath="$PROJECT_DIR$/__main__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/get_user_input.py" afterPath="$PROJECT_DIR$/lib/get_user_input.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,24 +14,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+            <state relative-caret-position="360">
+              <caret line="330" column="51" lean-forward="false" selection-start-line="330" selection-start-column="51" selection-end-line="330" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_user_input.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/get_user_input.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="27" />
               <folding>
                 <element signature="e#271#281#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enable_ports.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/enable_ports.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,8 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CONFIG</find>
-      <find>lib</find>
       <find>cnf</find>
       <find>add_backend_listner</find>
       <find>System</find>
@@ -63,7 +91,6 @@
       <find>influx_setup</find>
       <find>uninstall_perftool</find>
       <find>sudo rm -rf ~/Desktop/</find>
-      <find>uninstall</find>
       <find>sh</find>
       <find>print</find>
       <find>influx</find>
@@ -72,7 +99,6 @@
       <find>dependency resolution</find>
       <find>dependency</find>
       <find>command</find>
-      <find>dependency_resolution</find>
       <find>--jmx</find>
       <find>Uninstall</find>
       <find>csv</find>
@@ -80,6 +106,10 @@
       <find>8080</find>
       <find>get_command_output</find>
       <find>IP</find>
+      <find>firewall</find>
+      <find>uninstall</find>
+      <find>user_input</find>
+      <find>dependency_resolution</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -90,7 +120,6 @@
       <list>
         <option value="$PROJECT_DIR$/grafana/sample_dashboard.json" />
         <option value="$PROJECT_DIR$/jenkins/jenkins_job_setup.sh" />
-        <option value="$PROJECT_DIR$/lib/get_user_input.py" />
         <option value="$PROJECT_DIR$/docs_and_templates/About.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh" />
@@ -103,7 +132,6 @@
         <option value="$PROJECT_DIR$/os_specific_files/centos/grafana_setup.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/grafana_setup.sh" />
         <option value="$PROJECT_DIR$/setup_details/details_template.yaml" />
-        <option value="$PROJECT_DIR$/__main__.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/docs_and_templates/sample_demo_jmeter_script.jmx" />
         <option value="$PROJECT_DIR$/docs_and_templates/sample_user_testplan.jmx" />
@@ -115,6 +143,8 @@
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
         <option value="$PROJECT_DIR$/lib/config/config.cnf" />
         <option value="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
+        <option value="$PROJECT_DIR$/lib/get_user_input.py" />
+        <option value="$PROJECT_DIR$/__main__.py" />
       </list>
     </option>
   </component>
@@ -248,11 +278,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1922" height="1031" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3412527" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3409091" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -311,16 +340,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/native.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="e#284#299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/google_cloud_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -435,13 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/get_user_input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs_and_templates/About.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -474,13 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -665,14 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__main__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/config/config.cnf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -683,11 +680,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="27" />
           <folding>
             <element signature="e#271#281#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/enable_ports.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/get_user_input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="330" column="51" lean-forward="false" selection-start-line="330" selection-start-column="51" selection-end-line="330" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
