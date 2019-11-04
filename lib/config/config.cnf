@@ -8,7 +8,7 @@ JOB_TRIGGER_URL = curl http://admin:admin@jenkins_ip:8080/job/sample-job/build?t
 [AWS]
 CHECK_PORT_CMD = aws ec2 describe-security-groups --group-ids gid --query 'SecurityGroups[].port_type'|grep port_number
 ADD_PORT_IN_CMD = aws ec2 authorize-security-group-type --group-name sgname --protocol tcp --port port_no --cidr 0.0.0.0/0
-ADD_PORT_OUT_CMD = aws ec2 authorize-security-group-type --group-name sgname --group-id gid --protocol tcp --port port_no --cidr 0.0.0.0/0
+ADD_PORT_OUT_CMD = aws ec2 authorize-security-group-type --group-id gid --protocol tcp --port port_no --cidr 0.0.0.0/0
 GET_SG_NAME_CMD = aws ec2 describe-instances --instance-ids inst_id --query 'Reservations[].Instances[].SecurityGroups[].GroupName[]' --output text
 GET_SG_ID_CMD = aws ec2 describe-instances --instance-ids inst_id --query 'Reservations[].Instances[].SecurityGroups[].GroupId[]' --output text
 

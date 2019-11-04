@@ -63,7 +63,6 @@ def check_n_create_firewall_rule(port_number, port_type, security_group_name, se
         res = get_command_output(cmd_check_port)
 
         cmd = add_port.replace("type", "egress")
-        cmd = cmd.replace("sgname", security_group_name)
         cmd = cmd.replace("port_no", port_number)
         cmd = cmd.replace("gid", security_group_id)
         print cmd
