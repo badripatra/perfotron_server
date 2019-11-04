@@ -43,6 +43,7 @@ def check_n_create_firewall_rule(port_number, port_type, security_group_name, se
         cmd_check_port = CHECK_PORT.replace("port_type", 'IpPermissions[]')
         cmd_check_port = cmd_check_port.replace("gid", security_group_id)
         cmd_check_port = cmd_check_port.replace("port_number", port_number)
+        print cmd_check_port
         res = get_command_output(cmd_check_port)
 
         cmd = ADD_PORT.replace("type", "ingress")
