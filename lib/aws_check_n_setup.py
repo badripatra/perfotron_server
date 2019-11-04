@@ -105,7 +105,7 @@ def check_n_setup():
         print "Exiting now. Retry after installing aws cli"
         sys.exit()
 
-    aws_cli = get_command_output("aws ec2 describe-instances|grep 'PrivateIpAddress'| head -1")
+    aws_cli = get_command_output("curl http://checkip.amazonaws.com")
     if IP not in aws_cli:
         print "aws cli is not configured on your instance"
         print "Refer https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html"
