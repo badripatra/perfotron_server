@@ -263,6 +263,10 @@ if __name__ == '__main__':
             print " Exiting now\033[0;37;40m"
             sys.exit()
 
+        else:
+            with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
+                print About.read()
+
     if ARGS.jmx and ARGS.uninstall:
 
         print "\033[1;33;40m '--jmx' and '--uninstall' options can not selected together."
@@ -336,9 +340,6 @@ if __name__ == '__main__':
         sys.exit()
 
     if not PERF_DASHBOARD:
-
-        with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
-            print About.read()
 
         if 'Google' in BIOS_TYPE:
             SYSTEM_TYPE = "google_cloud"
