@@ -26,13 +26,13 @@ CONFIG.read(os.path.join(CURRENT_DIR, "config", "config.cnf"))
 def get_command_output(command):
     """ This function is responsible for running a command on Shell & return output"""
 
+    cmd_value = ""
+
     cmd = Popen(command, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
     for line in cmd.stdout:
         cmd_value = line.rstrip()
     sys.stdout.flush()
 
-    if not cmd_value:
-        cmd_value = ""
     return cmd_value
 
 
