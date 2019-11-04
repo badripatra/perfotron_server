@@ -35,10 +35,9 @@ def get_command_output(command):
 def check_n_create_firewall_rule(port_number, port_type, security_group_name, security_group_id):
     """ This function is responsible for check and add a port in aws security group"""
 
-    check_port = CONFIG.get('AWS', 'CHECK_PORT_CMD')
-    add_port = CONFIG.get('AWS', 'ADD_PORT_CMD')
-
     if port_type == "incoming":
+        check_port = CONFIG.get('AWS', 'CHECK_PORT_CMD')
+        add_port = CONFIG.get('AWS', 'ADD_PORT_CMD')
 
         cmd_check_port = check_port.replace("port_type", 'IpPermissions[]')
         cmd_check_port = cmd_check_port.replace("gid", security_group_id)
@@ -51,10 +50,13 @@ def check_n_create_firewall_rule(port_number, port_type, security_group_name, se
         cmd = cmd.replace("port_no", port_number)
 
     if port_type == "outgoing":
+        check_port = CONFIG.get('AWS', 'CHECK_PORT_CMD')
+        add_port = CONFIG.get('AWS', 'ADD_PORT_CMD')
 
         cmd_check_port = check_port.replace("port_type", 'IpPermissionsEgress[]')
         cmd_check_port = cmd_check_port.replace("gid", security_group_id)
         cmd_check_port = cmd_check_port.replace("port_number", port_number)
+        print cmd_check_port
         res = get_command_output(cmd_check_port)
 
         cmd = add_port.replace("type", "egress")
