@@ -331,7 +331,7 @@ if __name__ == '__main__':
         print "---------------------Finished Executing Jmeter Script -----------------------------"
         sys.exit()
 
-     import get_user_input   # Import user input lib
+    import get_user_input   # Import user input lib
 
     if ARGS.uninstall:
         get_user_input.user_input_uninstallation()
