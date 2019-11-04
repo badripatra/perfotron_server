@@ -267,6 +267,8 @@ if __name__ == '__main__':
             with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
                 print About.read()
 
+            dependency_resolution()  # Install all dependent modules
+
     if ARGS.jmx and ARGS.uninstall:
 
         print "\033[1;33;40m '--jmx' and '--uninstall' options can not selected together."
@@ -331,7 +333,6 @@ if __name__ == '__main__':
         OS_TYPE = "amazon-linux"
         PACKAGE_MANAGER = "rpm"
 
-    dependency_resolution()  # Install all dependent modules
     import get_user_input   # Import user input lib
 
     if ARGS.uninstall:
