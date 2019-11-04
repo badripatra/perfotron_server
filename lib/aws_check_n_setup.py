@@ -41,31 +41,32 @@ def check_n_create_firewall_rule(port_number, port_type, security_group_name, se
 
     if port_type == "incoming":
         check_port = CONFIG.get('AWS', 'CHECK_PORT_CMD')
-        add_port = CONFIG.get('AWS', 'ADD_PORT_CMD')
+        add_port = CONFIG.get('AWS', 'ADD_PORT_IN_CMD')
 
         cmd_check_port = check_port.replace("port_type", 'IpPermissions[]')
         cmd_check_port = cmd_check_port.replace("gid", security_group_id)
         cmd_check_port = cmd_check_port.replace("port_number", port_number)
-        print cmd_check_port
         res = get_command_output(cmd_check_port)
 
         cmd = add_port.replace("type", "ingress")
         cmd = cmd.replace("sgname", security_group_name)
         cmd = cmd.replace("port_no", port_number)
+        print cmd
 
     if port_type == "outgoing":
         check_port = CONFIG.get('AWS', 'CHECK_PORT_CMD')
-        add_port = CONFIG.get('AWS', 'ADD_PORT_CMD')
+        add_port = CONFIG.get('AWS', 'ADD_PORT_OUT_CMD')
 
         cmd_check_port = check_port.replace("port_type", 'IpPermissionsEgress[]')
         cmd_check_port = cmd_check_port.replace("gid", security_group_id)
         cmd_check_port = cmd_check_port.replace("port_number", port_number)
-        print cmd_check_port
         res = get_command_output(cmd_check_port)
 
         cmd = add_port.replace("type", "egress")
         cmd = cmd.replace("sgname", security_group_name)
         cmd = cmd.replace("port_no", port_number)
+        cmd = cmd.replace("gid", security_group_id)
+        print cmd
 
     if port_number not in res:
         os.system(cmd)
