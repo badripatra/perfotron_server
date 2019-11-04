@@ -105,8 +105,8 @@ def check_n_setup():
         print "Exiting now. Retry after installing aws cli"
         sys.exit()
 
-    aws_cli = get_command_output("curl http://checkip.amazonaws.com")
-    if not aws_cli:
+    aws_cli = get_command_output("aws ec2 describe-instances")
+    if 'configure your region' in aws_cli:
         print "aws cli is not configured on your instance"
         print "Refer https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html"
         print "Exiting now. Retry after configuring aws cli"

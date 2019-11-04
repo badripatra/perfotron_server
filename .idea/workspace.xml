@@ -26,8 +26,8 @@
       <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="108" column="11" lean-forward="false" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+            <state relative-caret-position="648">
+              <caret line="108" column="41" lean-forward="false" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
               <folding>
                 <element signature="e#271#281#0" expanded="true" />
               </folding>
@@ -39,7 +39,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>config.cnf</find>
       <find>CONFIG</find>
       <find>lib</find>
       <find>cnf</find>
@@ -69,6 +68,7 @@
       <find>jenkins</find>
       <find>8080</find>
       <find>get_command_output</find>
+      <find>IP</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -665,8 +665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="108" column="11" lean-forward="false" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+        <state relative-caret-position="648">
+          <caret line="108" column="41" lean-forward="false" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
           <folding>
             <element signature="e#271#281#0" expanded="true" />
           </folding>
