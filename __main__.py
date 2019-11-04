@@ -123,7 +123,6 @@ def add_backend_listner():
 def uninstall_perftool(package_manager):
     """ This function is responsible for uninstalling Perfotron dashboard"""
 
-    print "\n"
     print "Started Uninstalling the perf tool"
 
     print "-------------------Progress-----------------------------------------------"
@@ -250,6 +249,23 @@ if __name__ == '__main__':
 
     BIOS_TYPE = get_command_output("sudo dmidecode -s bios-version")
     IP = get_ip()
+    OS_TYPE = get_command_output("python -mplatform")
+
+    if "Ubuntu" in OS_TYPE:
+        OS_TYPE = "ubuntu"
+        PACKAGE_MANAGER = "dpkg"
+
+    elif 'redhat' in OS_TYPE:
+        OS_TYPE = "rhel"
+        PACKAGE_MANAGER = "rpm"
+
+    elif 'centos' in OS_TYPE:
+        OS_TYPE = "centos"
+        PACKAGE_MANAGER = "rpm"
+
+    elif 'amz' in OS_TYPE:
+        OS_TYPE = "amazon-linux"
+        PACKAGE_MANAGER = "rpm"
 
     PERF_DASHBOARD = check_tool_installations()
 
@@ -315,25 +331,7 @@ if __name__ == '__main__':
         print "---------------------Finished Executing Jmeter Script -----------------------------"
         sys.exit()
 
-    OS_TYPE = get_command_output("python -mplatform")
-
-    if "Ubuntu" in OS_TYPE:
-        OS_TYPE = "ubuntu"
-        PACKAGE_MANAGER = "dpkg"
-
-    elif 'redhat' in OS_TYPE:
-        OS_TYPE = "rhel"
-        PACKAGE_MANAGER = "rpm"
-
-    elif 'centos' in OS_TYPE:
-        OS_TYPE = "centos"
-        PACKAGE_MANAGER = "rpm"
-
-    elif 'amz' in OS_TYPE:
-        OS_TYPE = "amazon-linux"
-        PACKAGE_MANAGER = "rpm"
-
-    import get_user_input   # Import user input lib
+     import get_user_input   # Import user input lib
 
     if ARGS.uninstall:
         get_user_input.user_input_uninstallation()
