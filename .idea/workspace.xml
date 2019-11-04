@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/config/config.cnf" afterPath="$PROJECT_DIR$/lib/config/config.cnf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/aws_check_n_setup.py" afterPath="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +26,8 @@
       <file leaf-file-name="aws_check_n_setup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="44" column="54" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="60" />
+            <state relative-caret-position="-504">
+              <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
               <folding>
                 <element signature="e#271#281#0" expanded="true" />
               </folding>
@@ -112,8 +112,8 @@
         <option value="$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
-        <option value="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
         <option value="$PROJECT_DIR$/lib/config/config.cnf" />
+        <option value="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
       </list>
     </option>
   </component>
@@ -682,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="44" column="54" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="60" />
+        <state relative-caret-position="-504">
+          <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
           <folding>
             <element signature="e#271#281#0" expanded="true" />
           </folding>
