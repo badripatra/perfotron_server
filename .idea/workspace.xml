@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__main__.py" afterPath="$PROJECT_DIR$/__main__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" afterPath="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" afterPath="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh" afterPath="$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" afterPath="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +16,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__main__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#181#190#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install_dependency.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install_dependency.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install_dependency.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install_dependency.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="system_monitor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/system_monitor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="native.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/native.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="56" column="6" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="6" />
+              <folding>
+                <element signature="e#284#299#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,54 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-              <folding>
-                <element signature="e#237#247#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enable_ports.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/enable_ports.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="influx_setup.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/influx_setup.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.cnf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/config/config.cnf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Email_Content_template</find>
-      <find>Downloading Jmeter to run the demo locally</find>
       <find>Starting Demo Load Test</find>
       <find>Download</find>
       <find>sleep</find>
@@ -107,7 +137,6 @@
       <find>API</find>
       <find>HOME</find>
       <find>dependency resolution</find>
-      <find>dependency</find>
       <find>command</find>
       <find>--jmx</find>
       <find>Uninstall</find>
@@ -124,6 +153,9 @@
       <find>CONFIG</find>
       <find>sub</find>
       <find>BIOS</find>
+      <find>requirments</find>
+      <find>requirements</find>
+      <find>dependency</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,14 +183,14 @@
         <option value="$PROJECT_DIR$/docs_and_templates/sample_user_testplan.jmx" />
         <option value="$PROJECT_DIR$/lib/system_monitor.py" />
         <option value="$PROJECT_DIR$/lib/google_cloud_check_n_setup.py" />
-        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" />
-        <option value="$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh" />
-        <option value="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" />
-        <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
         <option value="$PROJECT_DIR$/lib/config/config.cnf" />
         <option value="$PROJECT_DIR$/lib/get_user_input.py" />
         <option value="$PROJECT_DIR$/lib/aws_check_n_setup.py" />
         <option value="$PROJECT_DIR$/__main__.py" />
+        <option value="$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" />
+        <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
       </list>
     </option>
   </component>
@@ -199,6 +231,35 @@
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="amazon-linux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="centos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="rhel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="os_specific_files" type="462c0819:PsiDirectoryNode" />
+              <item name="ubuntu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -493,16 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/native.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="17" />
-          <folding>
-            <element signature="e#284#299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/grafana_setup.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -569,24 +620,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server_stats/invoke_serverstats.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/system_monitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="44" column="104" lean-forward="false" selection-start-line="44" selection-start-column="104" selection-end-line="44" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -601,34 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -684,13 +693,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/native.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="56" column="6" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="6" />
+          <folding>
+            <element signature="e#284#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/system_monitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="273">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="e#181#190#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/ubuntu/install_dependency.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/rhel/install_dependency.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
