@@ -334,7 +334,6 @@ def env_details_file(project_dir):
     print "1. Perfrotron Dashboard URL, Credentials "
     print "2. Influx DB Host name, Port, Database, Mesaurement Name"
     print "3. Sample API (which is used for demo load test) details"
-    print "4. Jenkins URL, User Name, Password (in-case opted for it)"
 
 
 def demorun_jenkins(project_dir, ip_address):
