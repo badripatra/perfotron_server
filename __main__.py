@@ -30,15 +30,15 @@ def identify_onprem_or_cloud():
     gcp=get_command_output("sudo dmidecode|grep Google|wc -l")
 
     if auzure > 0:
-        BIOS_TYPE = "auzure"
+        cloud_vendor = "auzure"
     elif aws > 0:
-        BIOS_TYPE = "aws"
+        cloud_vendor = "aws"
     elif gcp > 0:
-        BIOS_TYPE = "gcp"
+        cloud_vendor = "gcp"
     else:
-        BIOS_TYPE = "unknown"
+        cloud_vendor = "NA"
 
-    return BIOS_TYPE
+    return cloud_vendor
 
 
 def dependency_resolution():
@@ -62,10 +62,10 @@ def dependency_resolution():
     print "-----------------Resolving Dependencies------------------------------"
 
 
-def get_ip():
+def get_ip(cloud_vendor):
     """ This function is responsible to identify clouder provider from BIOS """
 
-    if 'Google' in BIOS_TYPE or 'amazon' in BIOS_TYPE:
+    if cloud_vendor != "NA":
         ip_address = get_command_output("curl -s ifconfig.me")
     else:
         hostname = socket.gethostname()
@@ -266,7 +266,7 @@ if __name__ == '__main__':
     ARGS = PARSER.parse_args()
 
     cloud_provider = identify_onprem_or_cloud()
-    IP = get_ip()
+    IP = get_ip(cloud_provider)
     OS_TYPE = get_command_output("python -mplatform")
 
     if "Ubuntu" in OS_TYPE:
