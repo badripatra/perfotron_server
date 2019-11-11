@@ -23,6 +23,24 @@ os.chdir(CURRENT_DIR)
 HOME = os.path.expanduser("~")
 
 
+def identify_onprem_or_cloud():
+    """ This function is responsible to identify if a system is part of cloud provider """
+    auzure = get_command_output("sudo dmidecode|grep Microsoft|wc -l")
+    aws = get_command_output("sudo dmidecode|grep amazon|wc -l")
+    gcp=get_command_output("sudo dmidecode|grep Google|wc -l")
+
+    if auzure > 0:
+        BIOS_TYPE = "auzure"
+    elif aws > 0:
+        BIOS_TYPE = "aws"
+    elif gcp > 0:
+        BIOS_TYPE = "gcp"
+    else:
+        BIOS_TYPE = "unknown"
+
+    return BIOS_TYPE
+
+
 def dependency_resolution():
     """ This function is responsible to install dependent packages """
 
@@ -247,7 +265,7 @@ if __name__ == '__main__':
                              " Example: python perfenv_e2e --jmx sample_user_testplan.jmx")
     ARGS = PARSER.parse_args()
 
-    BIOS_TYPE = get_command_output("sudo dmidecode -s bios-version")
+    cloud_provider = identify_onprem_or_cloud()
     IP = get_ip()
     OS_TYPE = get_command_output("python -mplatform")
 
@@ -340,12 +358,12 @@ if __name__ == '__main__':
 
     if not PERF_DASHBOARD:
 
-        if 'Google' in BIOS_TYPE:
+        if cloud_provider == "gcp":
             SYSTEM_TYPE = "google_cloud"
             import google_cloud_check_n_setup
             google_cloud_check_n_setup.check_n_setup()
 
-        elif 'amazon' in BIOS_TYPE:
+        elif cloud_provider == "aws":
             SYSTEM_TYPE = "aws"
             import aws_check_n_setup
             aws_check_n_setup.check_n_setup()
