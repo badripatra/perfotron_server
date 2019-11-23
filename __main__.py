@@ -38,6 +38,8 @@ def identify_onprem_or_cloud():
     else:
         cloud_vendor = "NA"
 
+    print "Cloud Vendor is : " + cloud_vendor
+
     return cloud_vendor
 
 
