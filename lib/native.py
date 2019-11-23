@@ -309,10 +309,10 @@ def demo_run_jenkins(jenkins_ip):
     print "Jenkins Run Details : "+jenkins_job_url
 
 
-def env_details_file(project_dir):
+def env_details_file(project_dir, cloud_vendor):
     """ Generating env details files for reference"""
 
-    ip_address = get_ip()
+    ip_address = get_ip(cloud_vendor)
 
     with open(os.path.join(project_dir, "details_template.yaml"), "r") as details_file:
         details = details_file.read()
@@ -415,7 +415,7 @@ def setup(root_project_directory, input_map):
     print "* Installation Logs"
     print "* Environment details "
     print "\n"
-    env_details_file(root_project_directory)
+    env_details_file(root_project_directory,cloud_vendor)
 
     print "-------------------Progress------------------------------------------"
 

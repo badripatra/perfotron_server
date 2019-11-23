@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__main__.py" afterPath="$PROJECT_DIR$/__main__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/native.py" afterPath="$PROJECT_DIR$/lib/native.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="native.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/native.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="309">
+              <caret line="322" column="25" lean-forward="true" selection-start-line="322" selection-start-column="25" selection-end-line="322" selection-end-column="25" />
               <folding>
                 <element signature="e#284#299#0" expanded="true" />
               </folding>
@@ -92,8 +91,8 @@
       <find>jenkins</find>
       <find>demorun_local</find>
       <find>cloud_vendor</find>
-      <find>get_ip</find>
       <find>native_initiator</find>
+      <find>get_ip</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -654,8 +653,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/native.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="309">
+          <caret line="322" column="25" lean-forward="true" selection-start-line="322" selection-start-column="25" selection-end-line="322" selection-end-column="25" />
           <folding>
             <element signature="e#284#299#0" expanded="true" />
           </folding>
