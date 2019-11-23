@@ -36,11 +36,9 @@ def detailed_logger(current_time, activity, log_file_name):
     os.system("echo " + current_time + " >> " + log_file_name)
 
 
-def get_ip():
+def get_ip(cloud_vendor):
     """ This function is responsible for getting ip address cloud / on-promise systm  """
-    bios_type = get_command_output("sudo dmidecode -s bios-version").lower()
-
-    if 'google' in bios_type or 'amazon' in bios_type:
+    if cloud_vendor != "NA":
         ip_address = get_command_output("curl -s ifconfig.me")
     else:
         hostname = socket.gethostname()
@@ -387,7 +385,9 @@ def demorun_local(project_dir, ip_address):
 def setup(root_project_directory, input_map):
     """ Main Function"""
 
-    ip_address = get_ip()
+    cloud_vendor = input_map["cloud_vendor"]
+    print cloud_vendor
+    ip_address = get_ip(cloud_vendor)
 
     start_time = datetime.datetime.now()
     print "-----------------------Progress---------------------------------------"
@@ -402,6 +402,7 @@ def setup(root_project_directory, input_map):
     deploy_stats_collector(root_project_directory)
 
     install_jekins = input_map["install_jekins"]
+
 
     if install_jekins == "true":
         demorun_jenkins(root_project_directory, ip_address)

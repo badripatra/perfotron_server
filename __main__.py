@@ -38,8 +38,6 @@ def identify_onprem_or_cloud():
     else:
         cloud_vendor = "NA"
 
-    print "Cloud Vendor is : " + cloud_vendor
-
     return cloud_vendor
 
 
@@ -203,7 +201,7 @@ def uninstall_perftool(package_manager):
     print "\n"
 
 
-def native_initiator(install_jenkins):
+def native_initiator(install_jenkins, cloud_vendor):
     """ This function is responsible for copying required files to
     installation directory and start the run"""
 
@@ -251,7 +249,8 @@ def native_initiator(install_jenkins):
                   " -C ~/installation_launchpad")
 
         os.chdir(HOME)
-        os.system("sudo python ~/installation_launchpad/native.py install_jekins:false")
+        os.system("sudo python ~/installation_launchpad/native.py install_jekins:" + install_jenkins +
+                  " cloud_vendor:"+cloud_vendor)
 
     os.system("sudo chown `id -un`:`id -gn` ~/installation_launchpad/*.*")
 
@@ -377,7 +376,7 @@ if __name__ == '__main__':
         else:
             INSTALL_JENKINS = "false"
 
-        native_initiator(INSTALL_JENKINS)
+        native_initiator(INSTALL_JENKINS, cloud_provider)
 
     else:
         print "\033[1;31;40m Perfotron Dashboard is already installed. " \
