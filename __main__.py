@@ -74,6 +74,18 @@ def get_ip(cloud_vendor):
     return ip_address
 
 
+def get_jmxchecker_output(command):
+    """ This function is responsible for running a command on Shell & return output"""
+    cmd = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    try:
+        cmd_value = str(cmd.stdout.readlines()).strip()  # Read command output
+        sys.stdout.flush()
+    except IndexError:
+        cmd_value = ""
+
+    return cmd_value
+
+
 def get_command_output(command):
     """ This function is responsible for running a command on Shell & return output"""
     cmd = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -327,7 +339,7 @@ if __name__ == '__main__':
 
         print "------------------Started Executing Jmeter Script ------------------------------"
 
-        jmx_validity = get_command_output(
+        jmx_validity = get_jmxchecker_output(
             "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx " + ARGS.jmx)
 
         print jmx_validity

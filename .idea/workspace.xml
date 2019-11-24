@@ -16,8 +16,8 @@
       <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="332" column="26" lean-forward="false" selection-start-line="332" selection-start-column="26" selection-end-line="332" selection-end-column="26" />
+            <state relative-caret-position="108">
+              <caret line="341" column="44" lean-forward="false" selection-start-line="341" selection-start-column="44" selection-end-line="341" selection-end-column="44" />
               <folding>
                 <element signature="e#181#190#0" expanded="true" />
               </folding>
@@ -39,7 +39,6 @@
       <find>Uninstall</find>
       <find>csv</find>
       <find>8080</find>
-      <find>get_command_output</find>
       <find>IP</find>
       <find>firewall</find>
       <find>user_input</find>
@@ -59,6 +58,7 @@
       <find>native_initiator</find>
       <find>--jmx</find>
       <find>jmx</find>
+      <find>get_command_output</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -563,6 +563,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="332" column="26" lean-forward="false" selection-start-line="332" selection-start-column="26" selection-end-line="332" selection-end-column="26" />
+        <state relative-caret-position="108">
+          <caret line="341" column="44" lean-forward="false" selection-start-line="341" selection-start-column="44" selection-end-line="341" selection-end-column="44" />
           <folding>
             <element signature="e#181#190#0" expanded="true" />
           </folding>
