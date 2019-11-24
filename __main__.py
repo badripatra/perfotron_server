@@ -327,6 +327,15 @@ if __name__ == '__main__':
 
         print "------------------Started Executing Jmeter Script ------------------------------"
 
+        jmx_validity = get_command_output(
+            "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx " + ARGS.jmx)
+
+        print jmx_validity
+
+        if "JMX is fine" not in jmx_validity:
+            print "The Jmeter Script is not valid. Please correct it and Retry"
+            sys.exit()
+
         JMX_FILE = add_backend_listner()
 
         RESULT_FOLDER = str(datetime.datetime.now())
