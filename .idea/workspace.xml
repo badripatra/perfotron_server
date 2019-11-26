@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/demo_api.py" afterPath="$PROJECT_DIR$/lib/demo_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/empty_file.html" afterPath="$PROJECT_DIR$/templates/empty_file.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/file_extension_not_allowed.html" afterPath="$PROJECT_DIR$/templates/file_extension_not_allowed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/upload.html" afterPath="$PROJECT_DIR$/templates/upload.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo_api.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="demo_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="626">
@@ -43,6 +45,36 @@
               <folding>
                 <element signature="e#237#246#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/upload.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="empty_file.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/empty_file.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file_extension_not_allowed.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/file_extension_not_allowed.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,10 +149,13 @@
         <option value="$PROJECT_DIR$/lib/native.py" />
         <option value="$PROJECT_DIR$/__main__.py" />
         <option value="$PROJECT_DIR$/lib/demo_api.py" />
+        <option value="$PROJECT_DIR$/templates/upload.html" />
+        <option value="$PROJECT_DIR$/templates/empty_file.html" />
+        <option value="$PROJECT_DIR$/templates/file_extension_not_allowed.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="642" />
     <option name="height" value="431" />
   </component>
@@ -154,7 +189,7 @@
             <path>
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,7 +244,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1922" height="1031" extended-state="7" />
+    <frame x="0" y="0" width="1922" height="1031" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -278,30 +313,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/__main__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3762">
-          <caret line="216" column="77" lean-forward="false" selection-start-line="216" selection-start-column="77" selection-end-line="216" selection-end-column="77" />
-          <folding>
-            <element signature="e#181#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/aws_check_n_setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grafana/sample_dashboard.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70470">
-          <caret line="3915" column="22" lean-forward="true" selection-start-line="3915" selection-start-column="22" selection-end-line="3915" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jenkins/jenkins_job_setup.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -636,6 +647,30 @@
           <folding>
             <element signature="e#237#246#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/empty_file.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/file_extension_not_allowed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
