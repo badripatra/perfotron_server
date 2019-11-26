@@ -29,21 +29,14 @@ def identify_onprem_or_cloud():
     aws = get_command_output("sudo dmidecode|grep amazon|wc -l")
     gcp=get_command_output("sudo dmidecode|grep Google|wc -l")
 
-    if auzure > 0:
+    if int(auzure) > 0:
         cloud_vendor = "auzure"
-    elif aws > 0:
+    elif int(aws) > 0:
         cloud_vendor = "aws"
-    elif gcp > 0:
+    elif int(gcp) > 0:
         cloud_vendor = "gcp"
     else:
         cloud_vendor = "NA"
-
-    print auzure
-    print aws
-    print gcp
-    print cloud_vendor
-    print "hello"
-
     return cloud_vendor
 
 
