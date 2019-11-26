@@ -96,7 +96,7 @@ def upload_file():
                 content = file.read()
                 modified_jmx_file = add_backend_listner(content)
                 print "~/installation_launchpad/"+modified_jmx_file
-                return send_file("~/installation_launchpad/"+modified_jmx_file,
+                return send_file(modified_jmx_file,
                                  attachment_filename="updated.jmx")
                 
             else:
