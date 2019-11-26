@@ -38,8 +38,8 @@
       <file leaf-file-name="demo_api.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+            <state relative-caret-position="626">
+              <caret line="99" column="52" lean-forward="false" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
               <folding>
                 <element signature="e#237#246#0" expanded="true" />
               </folding>
@@ -120,7 +120,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="642" />
     <option name="height" value="431" />
   </component>
@@ -209,7 +209,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1922" height="1031" extended-state="6" />
+    <frame x="0" y="0" width="1922" height="1031" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -631,8 +631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+        <state relative-caret-position="626">
+          <caret line="99" column="52" lean-forward="false" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
           <folding>
             <element signature="e#237#246#0" expanded="true" />
           </folding>
