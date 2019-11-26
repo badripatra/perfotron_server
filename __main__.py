@@ -42,6 +42,7 @@ def identify_onprem_or_cloud():
     print aws
     print gcp
     print cloud_vendor
+    print "hello"
 
     return cloud_vendor
 
