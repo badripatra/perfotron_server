@@ -96,9 +96,8 @@ def upload_file():
                 content = file.read()
                 modified_jmx_file = add_backend_listner(content)
                 print "~/installation_launchpad/"+modified_jmx_file
-                return send_file(modified_jmx_file,
-                                 attachment_filename=modified_jmx_file)
-                
+                return send_file(modified_jmx_file)
+
             else:
                 return render_template('file_extension_not_allowed.html')
 
