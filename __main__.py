@@ -38,6 +38,11 @@ def identify_onprem_or_cloud():
     else:
         cloud_vendor = "NA"
 
+    print auzure
+    print aws
+    print gcp
+    print cloud_vendor
+
     return cloud_vendor
 
 
@@ -342,7 +347,7 @@ if __name__ == '__main__':
         jmx_validity = get_jmxchecker_output(
             "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx " + ARGS.jmx)
 
-        print jmx_validity
+
 
         if "JMX is fine" not in jmx_validity:
             print "The Jmeter Script is not valid. Please correct it and Retry"

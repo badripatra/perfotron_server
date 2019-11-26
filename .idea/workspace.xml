@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/About.txt" afterPath="$PROJECT_DIR$/templates/About.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/PerfoTron_setup.epgz" afterPath="$PROJECT_DIR$/templates/PerfoTron_setup.epgz" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/PerfoTron_usage.epgz" afterPath="$PROJECT_DIR$/templates/PerfoTron_usage.epgz" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/Setup_Your_FirstProject.txt" afterPath="$PROJECT_DIR$/templates/Setup_Your_FirstProject.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/backend_listner.jmx" afterPath="$PROJECT_DIR$/templates/backend_listner.jmx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/perfotron_setup.png" afterPath="$PROJECT_DIR$/templates/perfotron_setup.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/perfotron_usage.png" afterPath="$PROJECT_DIR$/templates/perfotron_usage.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/sample_demo_jmeter_script.jmx" afterPath="$PROJECT_DIR$/templates/sample_demo_jmeter_script.jmx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/sample_user_testplan.jmx" afterPath="$PROJECT_DIR$/templates/sample_user_testplan.jmx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__main__.py" afterPath="$PROJECT_DIR$/__main__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/setup_jmx.py" afterPath="$PROJECT_DIR$/lib/setup_jmx.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/demo_api.py" afterPath="$PROJECT_DIR$/lib/demo_api.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +17,8 @@
       <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="313" column="0" lean-forward="false" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
+            <state relative-caret-position="366">
+              <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
               <folding>
                 <element signature="e#181#190#0" expanded="true" />
               </folding>
@@ -36,11 +26,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="native.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/native.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="387" column="16" lean-forward="false" selection-start-line="387" selection-start-column="4" selection-end-line="387" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="demo_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="380">
+              <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="52" />
               <folding>
                 <element signature="e#237#247#0" expanded="true" />
               </folding>
@@ -66,7 +66,6 @@
       <find>firewall</find>
       <find>user_input</find>
       <find>dependency_resolution</find>
-      <find>print</find>
       <find>uninstall</find>
       <find>CONFIG</find>
       <find>sub</find>
@@ -76,12 +75,13 @@
       <find>dependency</find>
       <find>jenkins</find>
       <find>demorun_local</find>
-      <find>cloud_vendor</find>
       <find>get_ip</find>
       <find>native_initiator</find>
       <find>--jmx</find>
       <find>jmx</find>
       <find>get_command_output</find>
+      <find>print</find>
+      <find>cloud_vendor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,6 +116,7 @@
         <option value="$PROJECT_DIR$/os_specific_files/centos/install_dependency.sh" />
         <option value="$PROJECT_DIR$/os_specific_files/amazon-linux/install_dependency.sh" />
         <option value="$PROJECT_DIR$/lib/native.py" />
+        <option value="$PROJECT_DIR$/lib/demo_api.py" />
         <option value="$PROJECT_DIR$/__main__.py" />
       </list>
     </option>
@@ -319,9 +320,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="e#284#299#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -353,9 +352,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#284#299#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -557,16 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#237#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/get_user_input.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -631,20 +618,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="52" />
+          <folding>
+            <element signature="e#237#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/native.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="322" column="25" lean-forward="false" selection-start-line="322" selection-start-column="25" selection-end-line="322" selection-end-column="25" />
-          <folding>
-            <element signature="e#284#299#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="387" column="16" lean-forward="false" selection-start-line="387" selection-start-column="4" selection-end-line="387" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="313" column="0" lean-forward="false" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
+        <state relative-caret-position="366">
+          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
           <folding>
             <element signature="e#181#190#0" expanded="true" />
           </folding>
