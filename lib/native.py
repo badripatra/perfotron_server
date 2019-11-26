@@ -386,7 +386,7 @@ def setup(root_project_directory, input_map):
     """ Main Function"""
 
     cloud_vendor = input_map["cloud_vendor"]
-    print cloud_vendor
+
     ip_address = get_ip(cloud_vendor)
 
     start_time = datetime.datetime.now()

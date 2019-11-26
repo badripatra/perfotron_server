@@ -244,6 +244,9 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp lib/config/config.cnf ~/installation_launchpad")
 
+    os.system("mkdir -p ~/installation_launchpad/templates")
+
+    os.system("cp templates/*.html ~/installation_launchpad/templates")
 
     if install_jenkins == "true":
         os.system("cp jenkins/jenkins_job_setup.sh ~/installation_launchpad")
