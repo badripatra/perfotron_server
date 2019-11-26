@@ -250,7 +250,7 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp templates/backend_listner.jmx ~/installation_launchpad/")
 
-    os.system("sed -i -e 's/[IP]/" + IP + "/g' ~/installation_launchpad/backend_listner.jmx")
+    os.system("sed -e 's/[IP]/" + IP + "/g' ~/installation_launchpad/backend_listner.jmx")
 
     if install_jenkins == "true":
         os.system("cp jenkins/jenkins_job_setup.sh ~/installation_launchpad")

@@ -59,7 +59,7 @@ def add_backend_listner(jmx_string):
 
     epoch_time = str(int(time.time()))
 
-    file_name = 'user_script_'+epoch_time
+    file_name = 'user_script_'+epoch_time+'.jmx'
 
     with open(file_name, "w") as user_jmx:
         user_jmx.write(ET.tostring(base_script.getroot()))
@@ -94,8 +94,10 @@ def upload_file():
         if file:
             if allowed_file(file.filename):
                 content = file.read()
-                modified_jmx = add_backend_listner(content)
-                return send_file(modified_jmx, attachment_filename=modified_jmx)
+                modified_jmx_file = add_backend_listner(content)
+                print "~/installation_launchpad/"+modified_jmx_file
+                return send_file("~/installation_launchpad/"+modified_jmx_file,
+                                 attachment_filename="updated.jmx")
                 
             else:
                 return render_template('file_extension_not_allowed.html')
