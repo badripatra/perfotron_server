@@ -75,7 +75,7 @@ def get_ip(cloud_vendor):
 
 def add_backend_listner(jmx_string):
     """ This function is responsible for adding back end listener to a existing jmx"""
-    
+
     cloud_vendor = identify_onprem_or_cloud
     IP = get_ip(cloud_vendor)
 
@@ -97,8 +97,6 @@ def add_backend_listner(jmx_string):
 
     with open('user_script.jmx', "w") as user_jmx:
         user_jmx.write(ET.tostring(base_script.getroot()))
-
-
 
 
 def allowed_file(filename):
@@ -128,8 +126,8 @@ def upload_file():
         if file:
             if allowed_file(file.filename):
                 content = file.read()
-                content_modified = add_backend_listner(content)
-                return content_modified
+                add_backend_listner(content)
+                
             else:
                 return render_template('file_extension_not_allowed.html')
 
