@@ -12,7 +12,7 @@ import os
 def prepare_actual_jmx(project_dir, ip_address):
     """ Main Function """
 
-    with open(os.path.join(project_dir, 'docs_and_templates',
+    with open(os.path.join(project_dir, 'templates',
                            'sample_demo_jmeter_script.jmx'), 'r') as sample_jmx_file:
         sample_jmx_content = sample_jmx_file.read()
 

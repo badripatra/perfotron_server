@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/About.txt" afterPath="$PROJECT_DIR$/templates/About.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/PerfoTron_setup.epgz" afterPath="$PROJECT_DIR$/templates/PerfoTron_setup.epgz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/PerfoTron_usage.epgz" afterPath="$PROJECT_DIR$/templates/PerfoTron_usage.epgz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/Setup_Your_FirstProject.txt" afterPath="$PROJECT_DIR$/templates/Setup_Your_FirstProject.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/backend_listner.jmx" afterPath="$PROJECT_DIR$/templates/backend_listner.jmx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/perfotron_setup.png" afterPath="$PROJECT_DIR$/templates/perfotron_setup.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/perfotron_usage.png" afterPath="$PROJECT_DIR$/templates/perfotron_usage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/sample_demo_jmeter_script.jmx" afterPath="$PROJECT_DIR$/templates/sample_demo_jmeter_script.jmx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs_and_templates/sample_user_testplan.jmx" afterPath="$PROJECT_DIR$/templates/sample_user_testplan.jmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__main__.py" afterPath="$PROJECT_DIR$/__main__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/setup_jmx.py" afterPath="$PROJECT_DIR$/lib/setup_jmx.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,10 +27,22 @@
       <file leaf-file-name="__main__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="341" column="44" lean-forward="false" selection-start-line="341" selection-start-column="44" selection-end-line="341" selection-end-column="44" />
+            <state relative-caret-position="168">
+              <caret line="313" column="0" lean-forward="false" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
               <folding>
                 <element signature="e#181#190#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo_api.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#237#247#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,12 +147,21 @@
               <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
               <item name="perfotron" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="demo_api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="perfotron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perfotron" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,12 +209,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1922" height="1031" extended-state="6" />
+    <frame x="0" y="0" width="1922" height="1031" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3409091" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -202,7 +236,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -265,9 +298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="e#271#281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -306,9 +336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="e#271#281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -366,7 +393,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs_and_templates/About.txt">
+    <entry file="file://$PROJECT_DIR$/templates/About.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
@@ -391,7 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -444,7 +470,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs_and_templates/backend_listner.jmx">
+    <entry file="file://$PROJECT_DIR$/templates/backend_listner.jmx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="94" lean-forward="false" selection-start-line="5" selection-start-column="86" selection-end-line="5" selection-end-column="94" />
@@ -475,14 +501,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs_and_templates/sample_demo_jmeter_script.jmx">
+    <entry file="file://$PROJECT_DIR$/templates/sample_demo_jmeter_script.jmx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="263" column="56" lean-forward="false" selection-start-line="263" selection-start-column="53" selection-end-line="263" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs_and_templates/sample_user_testplan.jmx">
+    <entry file="file://$PROJECT_DIR$/templates/sample_user_testplan.jmx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9324">
           <caret line="518" column="58" lean-forward="false" selection-start-line="518" selection-start-column="55" selection-end-line="518" selection-end-column="58" />
@@ -533,10 +559,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="419">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="e#237#247#0" expanded="false" />
+            <element signature="e#237#247#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -545,7 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -553,9 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="35" selection-end-column="20" />
-          <folding>
-            <element signature="e#271#281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/__main__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="341" column="44" lean-forward="false" selection-start-line="341" selection-start-column="44" selection-end-line="341" selection-end-column="44" />
+        <state relative-caret-position="168">
+          <caret line="313" column="0" lean-forward="false" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
           <folding>
             <element signature="e#181#190#0" expanded="true" />
           </folding>

@@ -124,7 +124,7 @@ def sigint_handler(signum, frame):
 def add_backend_listner():
     """ This function is responsible for adding back end listener to a existing jmx"""
 
-    with open(os.path.join(CURRENT_DIR, 'docs_and_templates',
+    with open(os.path.join(CURRENT_DIR, 'templates',
                            'backend_listner.jmx')) as backend_listner:
         backend_listner_data = str(backend_listner.read()).replace("[IP]", IP)
 
@@ -225,7 +225,7 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp -r grafana/*.* ~/installation_launchpad")
 
-    os.system("cp docs_and_templates/sample_demo_jmeter_script.jmx "
+    os.system("cp templates/sample_demo_jmeter_script.jmx "
               "~/installation_launchpad/actual_demo_jmeter_script.jmx")
 
     os.system('sed -i -e "s/IP_ADDRESS/'+IP+'/g" ~/installation_launchpad'
@@ -311,7 +311,7 @@ if __name__ == '__main__':
             sys.exit()
 
         else:
-            with open(os.path.join(CURRENT_DIR, 'docs_and_templates', 'About.txt')) as About:
+            with open(os.path.join(CURRENT_DIR, 'templates', 'About.txt')) as About:
                 print About.read()
 
             dependency_resolution()  # Install all dependent modules
