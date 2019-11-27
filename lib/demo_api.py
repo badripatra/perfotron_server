@@ -32,33 +32,24 @@ def get_jmxchecker_output(command):
     return cmd_value
 
 
-def get_command_output(command):
-    """ This function is responsible for running a command on Shell & return output"""
-    cmd = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    try:
-        cmd_value = str(cmd.stdout.readlines()[0]).strip()  # Read command output
-        sys.stdout.flush()
-    except IndexError:
-        cmd_value = ""
-
-    return cmd_value
-
-
 def add_backend_listner(jmx_string):
     """ This function is responsible for adding back end listener to a existing jmx"""
 
-    with open('user_script.jmx', "w") as user_jmx:
+    epoch_time = str(int(time.time()))
+
+    user_jmx_name = 'original_user_'+epoch_time+'.jmx'
+
+    with open(user_jmx_name, "w") as user_jmx:
         user_jmx.write(jmx_string)
 
     jmx_validity = get_jmxchecker_output(
-        "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx user_script.jmx")
-
-    print jmx_validity
+        "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx "+ user_jmx_name)
 
     if "JMX is fine" not in jmx_validity:
 
         print "The Jmeter Script is not valid. Please correct it and Retry"
         return "Invalid JMX"
+
     else:
 
         backend_listener = ET.parse("backend_listner.jmx")
@@ -68,9 +59,7 @@ def add_backend_listner(jmx_string):
         new_condition = backend_listener.getroot()
         existing_struct.append(new_condition)
 
-        epoch_time = str(int(time.time()))
-
-        file_name = 'user_script_'+epoch_time+'.jmx'
+        file_name = 'converted_user_'+epoch_time+'.jmx'
 
         with open(file_name, "w") as user_jmx:
             user_jmx.write(ET.tostring(base_script.getroot()))
@@ -79,30 +68,32 @@ def add_backend_listner(jmx_string):
 
 
 def allowed_file(filename):
+    """ This function is responsible checking if file name contains required extensions"""
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @FLASK_APP.route('/')
 def homepage():
-    """ This function is responsible to deploy a GET API """
+    """ This function is responsible to deploy Home Page"""
     return render_template('home.html')
 
 
 @FLASK_APP.route('/demo_api_get')
 def demo_api_get():
-    """ This function is responsible to deploy a GET API """
+    """ This function is responsible to deploy a GET API Route"""
     return "demo rest api"
 
 
 @FLASK_APP.route('/demo_api_post', methods=['POST'])
 def demo_api_post():
-    """ This function is responsible to deploy a POST API """
+    """ This function is responsible to deploy a POST API Route"""
     return request.data
 
 
 @FLASK_APP.route('/convert_jmx', methods=['GET', 'POST'])
 def convert_jmx():
+    """ This function is responsible to deploy a Convert JMX Route """
 
     if request.method == 'POST':
 
