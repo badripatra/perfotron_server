@@ -54,7 +54,7 @@ def add_backend_listner(jmx_string):
 
         backend_listener = ET.parse("backend_listner.jmx")
 
-        base_script = ET.parse('user_script.jmx')
+        base_script = ET.parse(user_jmx_name)
         existing_struct = base_script.find("./hashTree/hashTree")
         new_condition = backend_listener.getroot()
         existing_struct.append(new_condition)
