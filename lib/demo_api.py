@@ -71,6 +71,10 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@FLASK_APP.route('/')
+def homepage():
+    """ This function is responsible to deploy a GET API """
+    return render_template('home.html')
 
 @FLASK_APP.route('/demo_api_get')
 def demo_rest_api():
