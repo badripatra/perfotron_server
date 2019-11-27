@@ -1,4 +1,4 @@
-# Dynamic-LoadTest(Load & Performance Testing Platform)
+# PerfoTron(Load & Performance Testing Platform)
 
 The Tool offers setting up live performance monitoring environment for load testing suite built on jmeter.
  
@@ -51,7 +51,7 @@ Technology/Tools used:
 3. Jmeter
 ```
 
-How to run  the Tool and set up Perfotron dashboard for Live Monitoring :
+How to run  the Tool and set up PerfoTron dashboard for Live Monitoring :
 
 ```bash
 Step 1. Clone the Repo : git clone https://badri_patra@bitbucket.org/badri_patra/perfotron.git
@@ -60,11 +60,11 @@ Step 3. Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation
 Step 4. Check the Grafana URL for Live Monitoring of Load Test
 Step 5. Check Env Details from env_details.yaml
 ```
-How to convert your Jmeter Script to be shown in Perfotron Dashboard :
+How to run your Jmeter Script in PerfoTron Platform :
 
 ```bash
 Pre-rquisite. Perfotron Dashboard should be installed
-Step 1. To convert your jmx to run in this env, use the command "python perfotron --jmx <Jmeter_TestPlan_Complete Path>"
+Step 1. To run your jmx to run in this env, use the command "python perfotron --jmx <Jmeter_TestPlan_Complete Path>"
 Step 2. The converted jmx & test results are is stored in '~/user_jmx_run_results/<Current_Date_Time_Stamp_Folder>
 
 How this option internally works :
@@ -72,6 +72,22 @@ How this option internally works :
 2. Save it as a new script in ~/user_jmx_run_results/<Current_Date_Time_Stamp_Folder> location
 3. Triggers the Load Test and stores results in the same folder
 ```
+
+How to convert your Jmeter Script to be shown in PerfoTron Dashboard :
+
+```bash
+Pre-rquisite. Perfotron Dashboard should be installed
+Step 1. To convert your jmx to run in this env, hit "http://[perfoTron_server_ip]/convert_jmx
+Step 2. Select your jmx
+Step 3. Click Convert.
+Step 4. The converted jmx will be downloaded to your local system
+
+
+How this option internally works :
+1. Perfotron adds influxdb back-end listner to your Script
+2. Sends the updated script back to user using http
+```
+
 
 How to uninstall Perfotron Dashboard :
 
