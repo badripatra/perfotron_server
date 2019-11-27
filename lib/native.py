@@ -425,6 +425,12 @@ def setup(root_project_directory, input_map):
     print "Total Time Taken : " + str(end_time - start_time)
     print "\n"
 
+    convertor_url = CONFIG_OBJECT.get('API', 'CONVERTER_URL')
+    convertor_url = convertor_url.replace("ip_address", ip_address)
+
+    print "To run your own Jmeter Script in PerfoTron Platform ,  use --jmx option from cli"
+    print "To only convet your Jmeter Script, use "+ convertor_url
+    print "\n"
 # ---------------------------Functions----------------------------------------------------
 
 

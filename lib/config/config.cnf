@@ -19,3 +19,6 @@ ADD_PORT_IN_CMD = gcloud compute firewall-rules create app-incoming --allow tcp:
 ADD_PORT_OUT_CMD = gcloud compute firewall-rules create app-outgoing --allow tcp:port_number --direction=OUT
 INSTANCE_DETAILS_CMD = gcloud compute instances list --filter="ip AND http-server"
 
+[API]
+CONVERTER_URL = http://ip_address:9003/convert_jmx
+
