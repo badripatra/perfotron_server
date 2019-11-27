@@ -47,34 +47,47 @@ def get_command_output(command):
 def add_backend_listner(jmx_string):
     """ This function is responsible for adding back end listener to a existing jmx"""
 
-    with open('user_script.jmx', "w") as backend_listner:
-        backend_listner.write(jmx_string)
+    with open('user_script.jmx', "w") as user_jmx:
+        user_jmx.write(jmx_string)
 
-    backend_listener = ET.parse("backend_listner.jmx")
+    jmx_validity = get_jmxchecker_output(
+        "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx user_script.jmx")
 
-    base_script = ET.parse('user_script.jmx')
-    existing_struct = base_script.find("./hashTree/hashTree")
-    new_condition = backend_listener.getroot()
-    existing_struct.append(new_condition)
+    print jmx_validity
 
-    epoch_time = str(int(time.time()))
+    if "JMX is fine" not in jmx_validity:
 
-    file_name = 'user_script_'+epoch_time+'.jmx'
+        print "The Jmeter Script is not valid. Please correct it and Retry"
+        return "Invalid JMX"
+    else:
 
-    with open(file_name, "w") as user_jmx:
-        user_jmx.write(ET.tostring(base_script.getroot()))
+        backend_listener = ET.parse("backend_listner.jmx")
 
-    return file_name
+        base_script = ET.parse('user_script.jmx')
+        existing_struct = base_script.find("./hashTree/hashTree")
+        new_condition = backend_listener.getroot()
+        existing_struct.append(new_condition)
+
+        epoch_time = str(int(time.time()))
+
+        file_name = 'user_script_'+epoch_time+'.jmx'
+
+        with open(file_name, "w") as user_jmx:
+            user_jmx.write(ET.tostring(base_script.getroot()))
+
+        return file_name
 
 
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
 @FLASK_APP.route('/')
 def homepage():
     """ This function is responsible to deploy a GET API """
     return render_template('home.html')
+
 
 @FLASK_APP.route('/demo_api_get')
 def demo_rest_api():
@@ -93,15 +106,20 @@ def upload_file():
 
     if request.method == 'POST':
 
-        file = request.files['file']
+        file_object = request.files['file']
 
         if file:
-            if allowed_file(file.filename):
-                content = file.read()
+
+            if allowed_file(file_object.filename):
+                
+                content = file_object.read()
                 modified_jmx_file = add_backend_listner(content)
-                print "~/installation_launchpad/"+modified_jmx_file
-                return send_file(modified_jmx_file, mimetype='text/jmx',
-                                 as_attachment=True)
+
+                if modified_jmx_file == "Invalid JMX":
+                    render_template('Invalid_jmx.html')
+                else:
+                    return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
+
             else:
                 return render_template('file_extension_not_allowed.html')
 

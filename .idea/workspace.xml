@@ -16,8 +16,8 @@
       <file leaf-file-name="__main__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__main__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="252" column="22" lean-forward="false" selection-start-line="252" selection-start-column="22" selection-end-line="252" selection-end-column="22" />
+            <state relative-caret-position="378">
+              <caret line="353" column="30" lean-forward="false" selection-start-line="352" selection-start-column="8" selection-end-line="354" selection-end-column="22" />
               <folding>
                 <element signature="e#181#190#0" expanded="true" />
               </folding>
@@ -28,7 +28,7 @@
       <file leaf-file-name="native.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/native.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6876">
+            <state relative-caret-position="18">
               <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
               <folding />
             </state>
@@ -38,11 +38,21 @@
       <file leaf-file-name="demo_api.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="1292">
+              <caret line="113" column="16" lean-forward="false" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
               <folding>
                 <element signature="e#237#246#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Invalid_jmx.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Invalid_jmx.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,8 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dependency resolution</find>
-      <find>command</find>
       <find>Uninstall</find>
       <find>csv</find>
       <find>8080</find>
@@ -125,6 +133,8 @@
       <find>print</find>
       <find>cloud_</find>
       <find>IP</find>
+      <find>check</find>
+      <find>checker</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,6 +174,7 @@
         <option value="$PROJECT_DIR$/templates/empty_file.html" />
         <option value="$PROJECT_DIR$/templates/file_extension_not_allowed.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/templates/Invalid_jmx.html" />
         <option value="$PROJECT_DIR$/lib/demo_api.py" />
       </list>
     </option>
@@ -225,6 +236,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/os_specific_files/ubuntu" />
       <recent name="$PROJECT_DIR$/os_specific_files/amazon-linux" />
       <recent name="$PROJECT_DIR$/os_specific_files/centos" />
@@ -326,14 +338,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/native.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/google_cloud_check_n_setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -628,24 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/native.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6876">
-          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__main__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="252" column="22" lean-forward="false" selection-start-line="252" selection-start-column="22" selection-end-line="252" selection-end-column="22" />
-          <folding>
-            <element signature="e#181#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/upload.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -682,10 +668,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/native.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="353" column="30" lean-forward="false" selection-start-line="352" selection-start-column="8" selection-end-line="354" selection-end-column="22" />
+          <folding>
+            <element signature="e#181#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Invalid_jmx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/demo_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="1292">
+          <caret line="113" column="16" lean-forward="false" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
           <folding>
             <element signature="e#237#246#0" expanded="true" />
           </folding>
