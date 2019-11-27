@@ -183,17 +183,17 @@ def uninstall_perftool(package_manager):
         os.system("sudo apt-get clean >> ~/un-installation_details.log 2>&1")
 
     print "Stopped Demo API"
-    os.system("kill -9 `ps -ef|grep -v grep|grep 'python demo_api.py'"
+    os.system("sudo kill -9 `ps -ef|grep -v grep|grep 'python demo_api.py'"
               "|awk '{print $2}'` > /dev/null 2>&1")
 
     # print "Killing existing instances of jenkins"
-    ''' os.system("kill $(ps aux | grep -v grep| grep 'jenkins' | "
+    ''' os.system("sudo kill $(ps aux | grep -v grep| grep 'jenkins' | "
                   "awk '{print $2}') >> ~/un-installation_details.log 2>&1") '''
 
     print "Killing existing instances of influx, grafana"
-    os.system("kill $(ps aux | grep -v grep| grep 'influx' | "
+    os.system("sudo kill $(ps aux | grep -v grep| grep 'influx' | "
               "awk '{print $2}') >> ~/un-installation_details.log 2>&1")
-    os.system("kill $(ps aux | grep -v grep| grep 'grafana' | "
+    os.system("sudo kill $(ps aux | grep -v grep| grep 'grafana' | "
               "awk '{print $2}') >> ~/un-installation_details.log 2>&1")
 
     # print "Removing Files and Folder related to jenkins"
