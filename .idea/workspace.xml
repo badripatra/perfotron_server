@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4948e33-5116-47f9-b7df-4fff827a7b38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +49,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="805">
-                <caret line="102" column="3" lean-forward="true" selection-start-line="102" selection-start-column="3" selection-end-line="102" selection-end-column="3" />
+              <first_editor relative-caret-position="391">
+                <caret line="79" column="94" lean-forward="false" selection-start-line="79" selection-start-column="94" selection-end-line="79" selection-end-column="94" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -667,8 +666,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="805">
-            <caret line="102" column="3" lean-forward="true" selection-start-line="102" selection-start-column="3" selection-end-line="102" selection-end-column="3" />
+          <first_editor relative-caret-position="391">
+            <caret line="79" column="94" lean-forward="false" selection-start-line="79" selection-start-column="94" selection-end-line="79" selection-end-column="94" />
             <folding />
           </first_editor>
           <second_editor />

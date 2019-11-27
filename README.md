@@ -77,7 +77,7 @@ How to convert your Jmeter Script to be shown in PerfoTron Dashboard :
 
 ```bash
 Pre-rquisite. Perfotron Dashboard should be installed
-Step 1. To convert your jmx to run in this env, hit "http://[perfoTron_server_ip]/convert_jmx
+Step 1. To convert your jmx to run in this env, hit "http://[perfoTron_server_ip]/convert_jmx"
 Step 2. Select your jmx
 Step 3. Click Convert.
 Step 4. The converted jmx will be downloaded to your local system
