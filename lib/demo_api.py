@@ -90,19 +90,19 @@ def homepage():
 
 
 @FLASK_APP.route('/demo_api_get')
-def demo_rest_api():
+def demo_api_get():
     """ This function is responsible to deploy a GET API """
     return "demo rest api"
 
 
 @FLASK_APP.route('/demo_api_post', methods=['POST'])
-def api_message():
+def demo_api_post():
     """ This function is responsible to deploy a POST API """
     return request.data
 
 
 @FLASK_APP.route('/convert_jmx', methods=['GET', 'POST'])
-def upload_file():
+def convert_jmx():
 
     if request.method == 'POST':
 
@@ -111,7 +111,7 @@ def upload_file():
         if file:
 
             if allowed_file(file_object.filename):
-                
+
                 content = file_object.read()
                 modified_jmx_file = add_backend_listner(content)
 
@@ -126,7 +126,7 @@ def upload_file():
         else:
             return render_template('empty_file.html')
 
-    return render_template('upload.html')
+    return render_template('convert.html')
 
 
 sys.exit(FLASK_APP.run(host='0.0.0.0', port=PORT, processes=2, threaded=False))
