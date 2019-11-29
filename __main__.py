@@ -277,7 +277,6 @@ def native_initiator(install_jenkins, cloud_vendor):
     os.system("sudo chown -R `id -un`:`id -gn` ~/installation_launchpad/")
 
 
-
 if __name__ == '__main__':
 
     signal.signal(signal.SIGINT, sigint_handler)
@@ -352,8 +351,7 @@ if __name__ == '__main__':
 
         jmx_validity = get_jmxchecker_output(
             "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx " + ARGS.jmx)
-        print "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx " + ARGS.jmx
-        print jmx_validity
+ 
 
         if "JMX is fine" not in jmx_validity:
             print "The Jmeter Script is not valid. Please correct it and Retry"
