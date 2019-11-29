@@ -274,7 +274,8 @@ def native_initiator(install_jenkins, cloud_vendor):
         os.system("sudo python ~/installation_launchpad/native.py install_jekins:" + install_jenkins +
                   " cloud_vendor:"+cloud_vendor)
 
-    os.system("sudo chown `id -un`:`id -gn` ~/installation_launchpad/*.*")
+    os.system("sudo chown -R `id -un`:`id -gn` ~/installation_launchpad/")
+
 
 
 if __name__ == '__main__':
