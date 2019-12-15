@@ -103,10 +103,10 @@ def install_aws():
     return render_template('install_aws.html')
 
 
-@FLASK_APP.route('/install_azurue')
-def install_azurue():
+@FLASK_APP.route('/install_azure')
+def install_azure():
     """ This function is responsible to deploy Home Page"""
-    return render_template('install_azurue.html')
+    return render_template('install_azure.html')
 
 
 @FLASK_APP.route('/explain_usage')
