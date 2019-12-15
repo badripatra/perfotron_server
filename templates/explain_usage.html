@@ -1,0 +1,97 @@
+<html>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+      body {
+      font-family: "Lato", sans-serif;
+      }
+      .sidenav {
+      height: 100%;
+      width: 240px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      }
+      .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 15px;
+      color: #818181;
+      display: block;
+      }
+      .sidenav a:hover {
+      color: #f1f1f1;
+      }
+      .main {
+      margin-left: 240px; /* Same as the width of the sidenav */
+      font-size: 13px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+      }
+      @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+      }
+   </style>
+   </head>
+   <body>
+      <div class="sidenav">
+         <a href="{{ url_for('home') }}">About</a>
+         <a href="{{ url_for('system_requirement') }}">System Requirement</a>
+         <a href="{{ url_for('install_onprem') }}">Express Setup - On Premises</a>
+         <a href="{{ url_for('install_gcp') }}">Express Setup - Google Cloud</a>
+         <a href="{{ url_for('install_aws') }}">Express Setup - AWS</a>
+         <a href="{{ url_for('install_azurue') }}">Express Setup - Azurue</a>
+         <a href="{{ url_for('explain_usage') }}">How to Use </a>
+      </div>
+      <div class="main">
+         <h1 class="code-line" data-line-start="0" data-line-end="1">PerfoTron(Load &amp; Performance Testing Platform)</h1>
+         <ol>
+      <li><code class="has-line-data" data-line-start="9" data-line-end="50">Convert and run your existing jmeter script in PerfoTron server by using --jmx option -&nbsp;"python perfotron --jmx &lt;Jmeter_TestPlan_Complete Path&gt;"</code></li>
+      <li><code class="has-line-data" data-line-start="9" data-line-end="50">The converted jmx &amp; test results are is stored in '~/user_jmx_run_results/&lt;Current_Date_Time_Stamp_Folder&gt;</code></li>
+      <li><code class="has-line-data" data-line-start="9" data-line-end="50">You can do live monitoring @&nbsp; "http://[perfoTron_server_ip]:3000/d/sample_dashboard/performance-dashboard?orgId=1"</code></li>
+   </ol>
+   <ul>   
+   <img src="jmx_convert_run.png" alt="perfotron" width="600" height="300" align="center">
+   </ul>
+   
+   <p>&nbsp;</p>
+   <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR</p>
+   <ol>
+      <li><code class="has-line-data" data-line-start="9" data-line-end="50">Convert your jmx from your desktop / laptop using <a href="{{ url_for('home') }}" target="_blank" rel="noopener">convert_jmx</a> link</code></li>
+      <li><code class="has-line-data" data-line-start="9" data-line-end="50">Trigger the test from your Local System Jmeter</code></li>
+      <li><code class="has-line-data" data-line-start="9" data-line-end="50">You can do live monitoring @&nbsp; "http://[perfoTron_server_ip]:3000/d/sample_dashboard/performance-dashboard?orgId=1"</code></li>
+   </ol>
+      <ul>   
+   <img src="convert_jmx.png" alt="perfotron" width="600" height="150" align="center">
+   </ul>
+   <h3>&nbsp;</h3>
+   <h3>How to interpreat the Perftron Dashboard :</h3>
+   <p>The dashboard has 5 sections :</p>
+   <ul>
+      <li>Header</li>
+      <li>Summary</li>
+      <li>Errors</li>
+      <li>Individual Transaction Details</li>
+      <li>PerfoTron Server Stats</li>
+   </ul>
+
+   <h4>Details on Header section:</h4>
+   <ul>   
+   <img src="header_dashboard.png" alt="perfotron" width="600" height="100" align="center">
+   </ul>
+   <ul>
+      <li>Clock - India Time/ PST Time</li>
+      <li>Received / Sent Bytes - Total bytes sent / receveid for the Load Test</li>
+      <li>Over All Error Count - Total Errors (HTTP + Asserstion Errors)</li>
+      <li>Error Indicator - Indicates&nbsp; Errors are in&nbsp; Acceptable / Non Acceptable range based on threhold set. (Acceptable &lt;= 7 % , Not Acceptable &gt; 7%)&nbsp;</li>
+      <li>Overall Response Time - Average response time of all transaction in milliseconds</li>
+      <li>Response Time Indicator -&nbsp;Indicates&nbsp; average response time of all transactions are in&nbsp; Acceptable / Non Acceptable range based on threhold set (With in SLA&nbsp; = 0 - 3000 ms,&nbsp;Breaching SLA = 3000&nbsp;- 5000 ms,&nbsp;High Response &gt; 5000 ms )</li>
+   </ul>
+      </div>
+	  
+	  
+   </body>
+</html>

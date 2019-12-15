@@ -1,0 +1,80 @@
+<html>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+      body {
+      font-family: "Lato", sans-serif;
+      }
+      .sidenav {
+      height: 100%;
+      width: 240px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      }
+      .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 15px;
+      color: #818181;
+      display: block;
+      }
+      .sidenav a:hover {
+      color: #f1f1f1;
+      }
+      .main {
+      margin-left: 240px; /* Same as the width of the sidenav */
+      font-size: 13px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+      }
+      @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+      }
+	  .note {
+      margin-left: 240px; /* Same as the width of the sidenav */
+      font-size: 13px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+      }
+   </style>
+   </head>
+   <body>
+      <div class="sidenav">
+          <a href="{{ url_for('home') }}">About</a>
+         <a href="{{ url_for('system_requirement') }}">System Requirement</a>
+         <a href="{{ url_for('install_onprem') }}">Express Setup - On Premises</a>
+         <a href="{{ url_for('install_gcp') }}">Express Setup - Google Cloud</a>
+         <a href="{{ url_for('install_aws') }}">Express Setup - AWS</a>
+         <a href="{{ url_for('install_azurue') }}">Express Setup - Azurue</a>
+         <a href="{{ url_for('explain_usage') }}">How to Use </a>
+      </div>
+      <div class="main">
+         <h1 class="code-line" data-line-start="0" data-line-end="1">PerfoTron(Load &amp; Performance Testing Platform)</h1>
+		 
+<p>Pre-requisites:</p>
+	<ul>
+	   <li>git</li>
+	   <li>python 2.7</li>
+	   <li>ec2 instance(t2.large)</li>
+	   <li>aws cli installed and configured</li>
+	</ul>
+	<p>Installation Steps :</p>
+	<ol>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Login to your cloud instance where you would like to install PerfoTron</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Switch to sudo user</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Update your system with "sudo apt-get update" or "sudo yum update" based on unix / linux flavor</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Clone the Repo - "git clone https://badri_patra@bitbucket.org/badri_patra/perfotron.git"</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Start the setup - "python perfotron"</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation details</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Access the Grafana URL printed on console for Live Monitoring of Load Test</code></li>
+	</ol>
+    </div>
+	<div class="note">
+		<p>Note : PerfoTron will open 3000, 8086, 9003 ports during installation. You can open this ports manually incase, you wish to before installtion takes place and tag it your instance.</p>
+	</div>
+	<img src="perfotronsetup.png" alt="perfotron" width="1000" height="500" align="right">
+   </body>
+</html>

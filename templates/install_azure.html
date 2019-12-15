@@ -34,6 +34,7 @@
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
       }
+
    </style>
    </head>
    <body>
@@ -48,31 +49,27 @@
       </div>
       <div class="main">
          <h1 class="code-line" data-line-start="0" data-line-end="1">PerfoTron(Load &amp; Performance Testing Platform)</h1>
-         <p class="has-line-data" data-line-start="2" data-line-end="3">The Tool offers E2E Platform for Performance Testing by integrating Jmeter with Influx DB and Grafana.</p>
-         
+		 
+<p>Pre-requisites:</p>
 	<ul>
-	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Target Audience&nbsp; &nbsp; &nbsp; &nbsp;: Individual / group using Jmeter for Performance Testing </code></li>
-	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">           
-		  How it helps&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Live Monitoring of Performance Tests triggered by Jmeter</code>
-	   </li
-	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">                                   
-		  Grafana Version&nbsp; &nbsp; &nbsp; &nbsp;: 6.0.1</code>
-	   </li>
-	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">            
-		  Influx Version&nbsp; &nbsp; &nbsp; &nbsp; : 1.7.4</code>
-	   </li>
-	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">            
-		  Jmeter Version&nbsp; &nbsp; &nbsp; &nbsp; : 5.1.1</code>
-	   </li>
-	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">            
-		  Programming Language&nbsp; : Python 2.7, Shell Scripting</code>
-	   </li>
-	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Supported Envs&nbsp; &nbsp; &nbsp; &nbsp; : Unix (Ubuntu,CentOS, RHEL) for Hosting</code></li>
+	   <li>git</li>
+	   <li>python 2.7</li>
+	   <li>virtual instance with 2 vcpus, 8 GiB memory</li>
+	   <li>open  3000 port (inbound & outbound) - For Grafana</li>
+	   <li>open  9003 port (inbound & outbound) - For Demo API</li>
+	   <li>open  8086 port (inbound) - For Influx DB</li>
 	</ul>
-	 <p class="has-line-data" data-line-start="2" data-line-end="3">&nbsp;</p>
-
-      </div>
-	  
-	  <img src="perfotron.png" alt="perfotron" width="1000" height="400" align="right">
+	<p>Installation Steps :</p>
+	<ol>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Login to your cloud instance where you would like to install PerfoTron</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Switch to sudo user</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Update your system with "sudo apt-get update" or "sudo yum update" based on unix / linux flavor</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Clone the Repo - "git clone https://badri_patra@bitbucket.org/badri_patra/perfotron.git"</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Start the setup - "python perfotron"</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation details</code></li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Access the Grafana URL printed on console for Live Monitoring of Load Test</code></li>
+	</ol>
+    </div>
+	<img src="perfotronsetup.png" alt="perfotron" width="1000" height="500" align="right">
    </body>
 </html>

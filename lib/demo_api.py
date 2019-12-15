@@ -74,9 +74,45 @@ def allowed_file(filename):
 
 
 @FLASK_APP.route('/')
-def homepage():
+def home():
     """ This function is responsible to deploy Home Page"""
     return render_template('home.html')
+
+
+@FLASK_APP.route('/system_requirement')
+def system_requirement():
+    """ This function is responsible to deploy Home Page"""
+    return render_template('system_requirement.html')
+
+
+@FLASK_APP.route('/install_onprem')
+def install_onprem():
+    """ This function is responsible to deploy Home Page"""
+    return render_template('install_onprem.html')
+
+
+@FLASK_APP.route('/install_gcp')
+def install_gcp():
+    """ This function is responsible to deploy Home Page"""
+    return render_template('install_gcp.html')
+
+
+@FLASK_APP.route('/install_aws')
+def install_aws():
+    """ This function is responsible to deploy Home Page"""
+    return render_template('install_aws.html')
+
+
+@FLASK_APP.route('/install_azurue')
+def install_azurue():
+    """ This function is responsible to deploy Home Page"""
+    return render_template('install_azurue.html')
+
+
+@FLASK_APP.route('/explain_usage')
+def explain_usage():
+    """ This function is responsible to deploy Home Page"""
+    return render_template('explain_usage.html')
 
 
 @FLASK_APP.route('/demo_api_get')
