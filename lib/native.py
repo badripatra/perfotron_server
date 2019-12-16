@@ -428,8 +428,12 @@ def setup(root_project_directory, input_map):
     convertor_url = CONFIG_OBJECT.get('API', 'CONVERTER_URL')
     convertor_url = convertor_url.replace("ip_address", ip_address)
 
+    home_url = CONFIG_OBJECT.get('API', 'HOME_PAGE')
+    home_url = home_url.replace("ip_address", ip_address)
+
+    print "For all documentation, please refer " + home_url
     print "To run your own Jmeter Script in PerfoTron Platform ,  use --jmx option from cli"
-    print "To only convet your Jmeter Script, use "+ convertor_url
+    print "To only convert your Jmeter Script, use " + convertor_url
     print "\n"
 # ---------------------------Functions----------------------------------------------------
 

@@ -21,4 +21,5 @@ INSTANCE_DETAILS_CMD = gcloud compute instances list --filter="ip AND http-serve
 
 [API]
 CONVERTER_URL = http://ip_address:9003/convert_jmx
+HOME_PAGE = http://ip_address:9003/
 
