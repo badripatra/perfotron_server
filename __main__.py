@@ -248,13 +248,13 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp lib/config/config.cnf ~/installation_launchpad")
 
-    os.system("mkdir -p ~/installation_launchpad/templates")
+    os.system("mkdir -p ~/installation_launchpad/static")
 
     os.system("cp templates/*.html ~/installation_launchpad/templates")
 
     os.system("cp templates/*.png ~/installation_launchpad/templates")
 
-    os.system("cp templates/*.png ~/installation_launchpad/")
+    os.system("cp templates/*.png ~/installation_launchpad/static/")
 
     os.system("cp templates/backend_listner.jmx ~/installation_launchpad/")
 
