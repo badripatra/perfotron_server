@@ -1933,7 +1933,7 @@
         {
           "columns": [],
           "datasource": "$data_source",
-          "fontSize": "100%",
+          "fontSize": "80%",
           "gridPos": {
             "h": 7,
             "w": 24,
