@@ -431,6 +431,10 @@ def setup(root_project_directory, input_map):
     home_url = CONFIG_OBJECT.get('API', 'HOME_PAGE')
     home_url = home_url.replace("ip_address", ip_address)
 
+    perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
+    perf_dashboard_url = perf_dashboard_url.replace("ip_address", ip_address)
+
+    print "PerfoTron Dashboard :"+ perf_dashboard_url
     print "For all documentation, please refer " + home_url
     print "To run your own Jmeter Script in PerfoTron Platform ,  use --jmx option from cli"
     print "To only convert your Jmeter Script, use " + convertor_url
