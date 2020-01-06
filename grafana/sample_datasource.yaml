@@ -6,8 +6,8 @@ datasources:
    url: http://localhost:8086
    database: jmeter
    basicAuth: true
-   user: lnp_automation
-   password: lnp_automation
+   user: perfotron_influx
+   password: perfotron_influx
    version: 1
    editable: true
    isDefault: true

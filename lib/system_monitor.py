@@ -42,7 +42,7 @@ def push_data_influx(measurement_name, counter_name, counter_value, current_time
 CONFIG = ConfigParser.ConfigParser()
 CONFIG.read('server_stats.ini')
 
-CLIENT = InfluxDBClient(host='localhost', port=8086, username='lnp_automation',password='lnp_automation')
+CLIENT = InfluxDBClient(host='localhost', port=8086, username='perfotron_influx',password='perfotron_influx')
 CLIENT.switch_database('jmeter')
 
 
