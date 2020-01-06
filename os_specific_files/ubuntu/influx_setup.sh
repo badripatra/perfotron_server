@@ -15,7 +15,7 @@ sudo influxd -config /etc/influxdb/influxdb.conf
 sudo sed -i -e 's/  # Determines whether HTTP endpoint is enabled.\n  # enabled = true/  # Determines whether HTTP endpoint is enabled.\n  enabled = true/g' /etc/influxdb/influxdb.conf
 sudo sed -i -e 's/auth-enabled = false/auth-enabled = true/g' /etc/influxdb/influxdb.conf
 sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE DATABASE jmeter"
-sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE USER lnp_automation WITH PASSWORD 'lnp_automation' WITH ALL PRIVILEGES"
+sudo curl -G "http://localhost:8086/query" --data-urlencode "q=CREATE USER perfotron_influx WITH PASSWORD 'perfotron_influx' WITH ALL PRIVILEGES"
 sudo service influxdb restart
 else
     echo "Skipping Step : Influx Setup as as installer identified a existing Influx DB Setup. "
