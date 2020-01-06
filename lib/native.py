@@ -438,7 +438,7 @@ def setup(root_project_directory, input_map):
     print "-------------------References------------------------------------------"
     print "PerfoTron Dashboard                : " + perf_dashboard_url
     print "For all documentation              : " + home_url
-    print "Convert your Jmeter Script         : " + convertor_url + "From (Browser)"
+    print "Convert your Jmeter Script         : " + convertor_url + " From (Browser)"
     print "                                   OR                                   "
     print "Convert and run your Jmeter Script :  use --jmx option from cli"
     print "-------------------References------------------------------------------"

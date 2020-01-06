@@ -8,7 +8,7 @@
             </elementProp>
             <elementProp name="influxdbUrl" elementType="Argument">
               <stringProp name="Argument.name">influxdbUrl</stringProp>
-              <stringProp name="Argument.value">http://[IP]:8086/write?u=lnp_automation&amp;p=lnp_automation&amp;db=jmeter</stringProp>
+              <stringProp name="Argument.value">http://[IP]:8086/write?u=perfotron_influx&amp;p=perfotron_influx&amp;db=jmeter</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="application" elementType="Argument">
