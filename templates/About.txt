@@ -20,7 +20,7 @@ Sequence of steps performed for setting up the environment
 1. Enabling Required Ports ( 3000 for Grafana, 8086 & 8088 for Influx, 9003 for demo api)
 2. Installing influx
 3. Installing and setting up Grafana Server (Including setting up default data source and dashboard)
-4. Setting up demo_jmeter script
+4. Setting up demo jmeter script
 5. Deploying a sample api for load testing
 6. Deploying stats collector collecting and plotting vital stats like cpu, memory, disk usage of the Grafana Server
 7. Triggering a Demo run

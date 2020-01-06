@@ -9,8 +9,8 @@ Influx:
   port: 8086
   database: jmeter
   measurement: jmeter
-  user: lnp_automation
-  password: lnp_automation
+  user: perfotron_influx
+  password: perfotron_influx
 
 Sample_API:
 - Built_on: Python-Flask
