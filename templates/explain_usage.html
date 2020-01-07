@@ -91,11 +91,11 @@
       <li>Transaction - Enables users to select a specific request type. This populates data in 'Individual Transaction Details' section</li>
       <li>server - Displays Perfotron server name</li>
       <li>Clock - India Time/ PST Time</li>
-      <li>Received / Sent Bytes - Total bytes sent / receveid for the Load Test</li>
-      <li>Over All Error Count - Total Errors (HTTP + Asserstion Errors)</li>
-      <li>Error Indicator - Indicates&nbsp; Errors are in&nbsp; Acceptable / Non Acceptable range based on threhold set. (Acceptable &lt;= 7 % , Not Acceptable &gt; 7%)&nbsp;</li>
+      <li>Received / Sent Bytes - Total bytes sent / received for the Load Test</li>
+      <li>Over All Error Count - Total Errors (HTTP + Assertion Errors)</li>
+      <li>Error Indicator - Indicates&nbsp; Errors are in&nbsp; Acceptable / Non Acceptable range based on threshold set. (Acceptable &lt;= 7 % , Not Acceptable &gt; 7%)&nbsp;</li>
       <li>Overall Response Time - Average response time of all transaction in milliseconds</li>
-      <li>Response Time Indicator -&nbsp;Indicates&nbsp; average response time of all transactions are in&nbsp; Acceptable / Non Acceptable range based on threhold set (With in SLA&nbsp; = 0 - 3000 ms,&nbsp;Breaching SLA = 3000&nbsp;- 5000 ms,&nbsp;High Response &gt; 5000 ms )</li>
+      <li>Response Time Indicator -&nbsp;Indicates&nbsp; average response time of all transactions are in&nbsp; Acceptable / Non Acceptable range based on threshold set (With in SLA&nbsp; = 0 - 3000 ms,&nbsp;Breaching SLA = 3000&nbsp;- 5000 ms,&nbsp;High Response &gt; 5000 ms )</li>
    </ul>
    <p>&nbsp;</p>
    <h4>Details on Summary section(Graphical):</h4>
@@ -108,9 +108,10 @@
        <li>Total Requests - Total requests</li>
        <li>Failed Requests - Failed requests</li>
        <li>Total Throughput - Number of requests per second</li>
-       <li>Total Erros - Number of Erros occured (HTTP and Assertion Points)</li>
+       <li>Total Errors - Number of Errors occurred (HTTP and Assertion Points)</li>
        <li>Active Users - Number of Threads</li>
-       <li>Transaction Response Time Average - Average respnse of each type fo request in milli seconds</li>
+       <li>Transaction Response Time Average - Average response of each type fo request in milli seconds</li>
+       <li>Stats - Response Time(Min/Max/Average/90th Percentile) in secs and Received Bytes</li>
        <li>Network Traffic Sent Bytes - Bytes sent during load test</li>
        <li>Network Traffic Received Bytes - Bytes received during load test</li>
    </ul>
@@ -132,9 +133,9 @@
        <li>Total Requests - Total requests made of&nbsp;request type selected</li>
        <li>Failed Requests - Failed requests made of&nbsp;request type selected</li>
        <li>Total Throughput - Number of requests per second of&nbsp;request type selected</li>
-       <li>Total Erros - Number of Erros occured (HTTP and Assertion Points)&nbsp;request type selected</li>
+       <li>Total Errors - Number of Errors occurred (HTTP and Assertion Points)&nbsp;request type selected</li>
        <li>Active Users - Number of Threads of&nbsp;request type selected</li>
-       <li>Transaction Response Time Average - Average respnse in milli seconds of&nbsp;request type selected</li>
+       <li>Transaction Response Time Average - Average response in milli seconds of&nbsp;request type selected</li>
        <li>Network Traffic Sent Bytes - Bytes sent during load test of&nbsp;request type selected</li>
        <li>Network Traffic Received Bytes - Bytes received during load test of&nbsp;request type selected</li>
    </ul>
@@ -143,8 +144,8 @@
     <img src="/static/perfotron_server_stats.png" alt="perfortron server statistics" width="500" height="200" align="center">
    </ul>
    <ul>
-       <li>Disk Usage % - Percentage of Disk space available (Idenfied using df command)</li>
-       <li>CPU Used% - Percentage of CPU used (Idenfied using top command)</li>
+       <li>Disk Usage % - Percentage of Disk space available (Identified using df command)</li>
+       <li>CPU Used% - Percentage of CPU used (Identified using top command)</li>
        <li>Available Memory - Memory(RAM) left in MB (Identified using free command)</li>
        <li>USED Memory - Memory(RAM) used in MB (Identified using free command)</li>
    </ul>
