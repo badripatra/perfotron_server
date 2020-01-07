@@ -1965,11 +1965,11 @@
                 "rgba(237, 129, 40, 0.89)",
                 "rgba(50, 172, 45, 0.97)"
               ],
-              "decimals": 2,
+              "decimals": 0,
               "pattern": "/.*/",
               "thresholds": [],
               "type": "number",
-              "unit": "short"
+              "unit": "none"
             }
           ],
           "targets": [
@@ -2018,7 +2018,7 @@
           ],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Transactions Response Times (Min, Max, Average)",
+          "title": "Stats (Min, Max, Average, 90th Percentile, Received Bytes)",
           "transform": "table",
           "type": "table"
         },
