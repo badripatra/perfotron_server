@@ -1987,7 +1987,7 @@
               "measurement": "jmeter",
               "orderByTime": "ASC",
               "policy": "default",
-              "query": "SELECT last(\"min\") as Min, last(\"max\") as Max, last(\"avg\") as Avg FROM \"jmeter\" WHERE (\"statut\" = 'ok' AND \"application\" =~ /^$application$/) AND $timeFilter GROUP BY \"transaction\"",
+              "query": "SELECT last(\"min\") AS Min, last(\"max\") AS Max, last(\"avg\") AS Avg, last(\"pct90.0\") AS pct_90, sum(\"rb\") as Received_Byte FROM \"jmeter\" WHERE (\"statut\" = 'all' AND \"application\" =~ /^$application$/) AND $timeFilter GROUP BY \"transaction\"",
               "rawQuery": true,
               "refId": "B",
               "resultFormat": "table",
