@@ -2,9 +2,9 @@ cd "$(dirname "$(realpath "$0")")";
 service=`ps -ef|grep grafana-server |grep -v grep`
 if [ -z "$service" ]
 then
-	wget https://dl.grafana.com/oss/release/grafana_6.0.1_amd64.deb
+	wget https://dl.grafana.com/oss/release/grafana_6.5.2_amd64.deb
 	sudo apt-get install -y adduser libfontconfig1
-	sudo dpkg -i grafana_6.0.1_amd64.deb
+	sudo dpkg -i grafana_6.5.2_amd64.deb
 	sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
 	curl -s https://packages.grafana.com/gpg.key | sudo apt-key add -
 	sudo apt-get update

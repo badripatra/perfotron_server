@@ -2,7 +2,7 @@ cd "$(dirname "$(realpath "$0")")";
 service=`ps -ef|grep grafana-server |grep -v grep`
 if [ -z "$service" ]
 then
-    sudo yum -y install https://dl.grafana.com/oss/release/grafana-6.0.1-1.x86_64.rpm
+    sudo yum -y install https://dl.grafana.com/oss/release/grafana-6.5.2-1.x86_64.rpm
     sudo yum -y install grafana
     sudo service grafana-server start
     sudo /sbin/chkconfig --add grafana-server
