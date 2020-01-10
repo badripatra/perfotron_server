@@ -376,7 +376,7 @@ def demorun_local(project_dir, ip_address):
     os.system("mv jmeter_transactions.log " + result_folder)
     os.system("mv jmeter.log " + result_folder)
 
-    print "\nTest Result is stored in  '"+result_folder+"' folder"
+    print "\nTest Result is stored in  '~/installation_launchpad/"+result_folder+"' folder"
     print "Test Results folder contains below :"
     print "* csv files for each demo api transactions"
     print "* index.html to access Test Stats and Charts"
