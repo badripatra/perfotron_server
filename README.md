@@ -9,7 +9,7 @@ It also facilitate setting up Jenkins to run Jmeter Tests.
 ```            
             Target Audience      : Any individual / group using Jmeter for Performance Testing            
             How it helps         : Setting up Performance Testing environment End to End                                   
-            Visualization        : Grafana (6.0.1)            
+            Visualization        : Grafana (6.5.2)            
             Datasource           : Influx (1.7.4)            
             Load Test Tool       : Apache Jmeter (5.1.1)            
             Programming Language : Python 2.7, Shell Scripting            
