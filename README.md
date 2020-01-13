@@ -54,7 +54,7 @@ Technology/Tools used:
 How to run  the Tool and set up PerfoTron dashboard for Live Monitoring :
 
 ```bash
-Step 1. Clone the Repo : git clone https://badri_patra@bitbucket.org/badri_patra/perfotron.git
+Step 1. Clone the Repo : git clone https://github.com/badripatra/perfotron.git
 Step 2. To start the setup : python perfotron
 Step 3. Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation details
 Step 4. Check the Grafana URL for Live Monitoring of Load Test
