@@ -348,7 +348,7 @@ def demorun_jenkins(project_dir, ip_address):
     perf_dashboard_url = perf_dashboard_url.replace("ip_address", ip_address)
 
     print "          For Live Monitoring Use Perfotron dashboard"
-    print "          Perfotron dashboard URL : " + perf_dashboard_url
+    print "          Perfotron dashboard URL : " + perf_dashboard_url + " (credentials : admin/admin)"
 
     demo_run_jenkins(ip_address)
 
@@ -360,10 +360,10 @@ def demorun_local(project_dir, ip_address):
     jtl_file = "jmeter_transactions.log"
     result_folder = str(datetime.datetime.now()).replace(" ", "_").replace(":", "-")
 
-    print "For Live Monitoring Use Perfotron dashboard"
+    print "For Live Monitoring Use Perfotron dashboard "
     perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
     perf_dashboard_url = perf_dashboard_url.replace("ip_address", ip_address)
-    print "Perfotron dashboard  URL : " + perf_dashboard_url
+    print "Perfotron dashboard  URL : " + perf_dashboard_url + " (credentials : admin/admin)"
     print "\n"
 
     print "Starting Demo Load Test."
@@ -435,7 +435,7 @@ def setup(root_project_directory, input_map):
 
 
     print "-------------------References------------------------------------------"
-    print "PerfoTron Dashboard                : " + perf_dashboard_url
+    print "PerfoTron Dashboard                : " + perf_dashboard_url + " (credentials : admin/admin)"
     print "For all documentation              : " + home_url
     print "Convert your Jmeter Script         : " + convertor_url + " From (Browser)"
     print "                                   OR                                   "
