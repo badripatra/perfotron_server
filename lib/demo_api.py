@@ -126,6 +126,11 @@ def demo_api_post():
     """ This function is responsible to deploy a POST API Route"""
     return request.data
 
+@FLASK_APP.route('/sample_jmx')
+def sample_jmx_download ():
+    path = "sample_jmeter_script.jmx"
+    return send_file(path, as_attachment=True)
+
 
 @FLASK_APP.route('/convert_jmx', methods=['GET', 'POST'])
 def convert_jmx():

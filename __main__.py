@@ -232,6 +232,8 @@ def native_initiator(install_jenkins, cloud_vendor):
     os.system('sed -i -e "s/IP_ADDRESS/'+IP+'/g" ~/installation_launchpad'
                                             '/actual_demo_jmeter_script.jmx')
 
+    os.system("cp -r templates/sample_jmeter_script.jmx ~/installation_launchpad")
+
     os.system("cp lib/demo_api.py ~/installation_launchpad")
 
     os.system("cp demo_api/invoke_restapis.sh ~/installation_launchpad")
