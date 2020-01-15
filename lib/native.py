@@ -9,7 +9,6 @@ __status__ = "Testing"
 import datetime
 import os
 from time import sleep
-import socket
 import subprocess
 import sys
 import ConfigParser
@@ -41,8 +40,8 @@ def get_ip(cloud_vendor):
     if cloud_vendor != "NA":
         ip_address = get_command_output("curl -s ifconfig.me")
     else:
-        hostname = socket.gethostname()
-        ip_address = socket.gethostbyname(hostname)
+        ip_address = get_command_output("hostname -I|cut -d " " -f1")
+
 
     return ip_address
 

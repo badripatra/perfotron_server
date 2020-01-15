@@ -10,7 +10,6 @@ import os
 import signal
 import sys
 import subprocess
-import socket
 import argparse
 import datetime
 from xml.etree import ElementTree as ET
@@ -67,8 +66,7 @@ def get_ip(cloud_vendor):
     if cloud_vendor != "NA":
         ip_address = get_command_output("curl -s ifconfig.me")
     else:
-        hostname = socket.gethostname()
-        ip_address = socket.gethostbyname(hostname)
+        ip_address = get_command_output("hostname -I|cut -d " " -f1")
 
     return ip_address
 
