@@ -66,7 +66,7 @@ def get_ip(cloud_vendor):
     if cloud_vendor != "NA":
         ip_address = get_command_output("curl -s ifconfig.me")
     else:
-        ip_address = get_command_output("hostname -I|cut -d " " -f1")
+        ip_address = get_command_output('hostname -I|cut -d " " -f1')
 
     return ip_address
 
