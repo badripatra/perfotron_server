@@ -66,7 +66,7 @@ def get_ip(cloud_vendor):
     if cloud_vendor != "NA":
         ip_address = get_command_output("curl -s ifconfig.me")
     else:
-        ip_address = get_command_output("hostname -I|cut -d " " -f1")
+        ip_address = get_command_output('hostname -I|cut -d " " -f1')
 
     return ip_address
 
@@ -231,6 +231,8 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system('sed -i -e "s/IP_ADDRESS/'+IP+'/g" ~/installation_launchpad'
                                             '/actual_demo_jmeter_script.jmx')
+
+    os.system("cp -r templates/sample_jmeter_script.jmx ~/installation_launchpad")
 
     os.system("cp lib/demo_api.py ~/installation_launchpad")
 
