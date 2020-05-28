@@ -25,7 +25,7 @@
   "panels": [
     {
       "bgColor": "rgb(48, 87, 64)",
-      "clockType": "24 hour",
+      "clockType": "12 hour",
       "countdownSettings": {
         "customFormat": null,
         "endCountdownTime": "2019-03-07T13:17:00.000Z",
@@ -49,7 +49,28 @@
       "mode": "time",
       "offsetFromUtc": "",
       "offsetFromUtcMinutes": "330",
-      "options": {},
+      "options": {
+        "bgColor": "",
+        "clockType": "12 hour",
+        "dateSettings": {
+          "dateFormat": "YYYY-MM-DD",
+          "fontSize": "20px",
+          "fontWeight": "normal",
+          "showDate": true
+        },
+        "mode": "time",
+        "timeSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal"
+        },
+        "timezone": "Asia/Calcutta",
+        "timezoneSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "showTimezone": false,
+          "zoneFormat": "offsetAbbv"
+        }
+      },
       "refreshSettings": {
         "syncWithDashboard": false
       },
@@ -99,7 +120,7 @@
         "fontWeight": "bold"
       },
       "timeShift": null,
-      "timezone": null,
+      "timezone": "Asia/Calcutta",
       "timezoneSettings": {
         "fontSize": "12px",
         "fontWeight": "normal",
@@ -675,7 +696,7 @@
     },
     {
       "bgColor": "rgb(119, 146, 217)",
-      "clockType": "24 hour",
+      "clockType": "12 hour",
       "countdownSettings": {
         "customFormat": null,
         "endCountdownTime": "2019-03-07T13:20:00.000Z",
@@ -699,7 +720,26 @@
       "mode": "time",
       "offsetFromUtc": "-8",
       "offsetFromUtcMinutes": "",
-      "options": {},
+      "options": {"bgColor": "",
+        "clockType": "12 hour",
+        "dateSettings": {
+          "dateFormat": "YYYY-MM-DD",
+          "fontSize": "20px",
+          "fontWeight": "normal",
+          "showDate": true
+        },
+        "mode": "time",
+        "timeSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal"
+        },
+        "timezone": "America/Los_Angeles",
+        "timezoneSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "showTimezone": false,
+          "zoneFormat": "offsetAbbv"
+        }},
       "refreshSettings": {
         "syncWithDashboard": false
       },
@@ -747,7 +787,7 @@
         "fontWeight": "bold"
       },
       "timeShift": null,
-      "timezone": null,
+      "timezone": "America/Los_Angeles",
       "timezoneSettings": {
         "fontSize": "12px",
         "fontWeight": "normal",
