@@ -150,11 +150,11 @@ def convert_jmx():
                 if modified_jmx_file == "Invalid JMX":
                     render_template('Invalid_jmx.html')
 
-                elif Auth_Code != "secret":
-                    render_template('Invalid_Auth_Code.html')
-
                 else:
-                    return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
+                    if Auth_Code != "secret":
+                        render_template('Invalid_Auth_Code.html')
+                    else:
+                        return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
 
             else:
                 return render_template('file_extension_not_allowed.html')
