@@ -150,7 +150,7 @@ def convert_jmx():
                 if modified_jmx_file == "Invalid JMX":
                     render_template('Invalid_jmx.html')
 
-                elif Auth_Code == "secret":
+                elif Auth_Code != "secret":
                     render_template('Invalid_Auth_Code.html')
 
                 else:
