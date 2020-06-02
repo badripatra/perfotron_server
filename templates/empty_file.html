@@ -1,7 +1,19 @@
- <!doctype html>
-    <title>PerfoTron File Convertor</title>
-    <h1>No File Selected.<br>Convert your Jmeter script to align with PerfoTron format</h1>
-    <form method=post enctype=multipart/form-data>
-      <input type=file name=file>
-      <input type=submit value=Convert>
-    </form>
+<!DOCTYPE html>
+<html>
+<title>PerfoTron JMX Convertor</title>
+<body>
+
+<h1>No File Selected.<br>Convert your Jmeter script to align with PerfoTron format</h1>
+
+<form method=post enctype=multipart/form-data>
+  <label for="file">Select your Jmeter Script:</label>
+  <input type=file name=file><br><br>
+  <label for="secret_code">Enter the Auth Code:</label> &nbsp; &emsp;
+  <input type="text" id="secret_code" name="secret_code"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and get converted JMX which can be used in PerfoTron Environment.</p>
+
+</body>
+</html>
