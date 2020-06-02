@@ -140,7 +140,8 @@ def convert_jmx():
 
         file_object = request.files['file']
         Auth_Code = request.form['secret_code']
-        if file:
+
+        if file_object:
 
             if allowed_file(file_object.filename):
 
@@ -148,13 +149,15 @@ def convert_jmx():
                 modified_jmx_file = add_backend_listner(content)
 
                 if modified_jmx_file == "Invalid JMX":
-                    render_template('Invalid_jmx.html')
+                    return render_template('Invalid_jmx.html')
 
                 else:
-                    if Auth_Code != "secret":
-                        render_template('Invalid_Auth_Code.html')
-                    else:
+                    if Auth_Code == "secret":
+                        render_template('File_Uploaded.html')
                         return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
+                    else:
+                        return render_template('Invalid_Auth_Code.html')
+
 
             else:
                 return render_template('file_extension_not_allowed.html')
