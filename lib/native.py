@@ -433,11 +433,13 @@ def setup(root_project_directory, input_map):
     perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
     perf_dashboard_url = perf_dashboard_url.replace("ip_address", ip_address)
 
+    token = get_command_output("cat token.txt")
+
 
     print "-------------------References------------------------------------------"
     print "PerfoTron Dashboard                : " + perf_dashboard_url + " (credentials : admin/admin)"
     print "For all documentation              : " + home_url
-    print "Convert your Jmeter Script         : " + convertor_url + " From (Browser)"
+    print "Convert your Jmeter Script         : " + convertor_url + " From (Browser) using token :" + token
     print "                                   OR                                   "
     print "Convert and run your Jmeter Script :  use --jmx option from cli"
     print "-------------------References------------------------------------------"

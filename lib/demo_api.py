@@ -19,6 +19,8 @@ PORT = int("9003")
 ALLOWED_EXTENSIONS = {'jmx'}
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+with open("token.txt", "r") as token_file:
+    token = str(token_file.read().strip())
 
 def get_jmxchecker_output(command):
     """ This function is responsible for running a command on Shell & return output"""
@@ -139,7 +141,7 @@ def convert_jmx():
     if request.method == 'POST':
 
         file_object = request.files['file']
-        Auth_Code = request.form['secret_code']
+        user_input_token = request.form['token']
 
         if file_object:
 
@@ -152,11 +154,12 @@ def convert_jmx():
                     return render_template('Invalid_jmx.html')
 
                 else:
-                    if Auth_Code == "secret":
+
+                    if user_input_token == token:
                         render_template('File_Uploaded.html')
                         return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
                     else:
-                        return render_template('Invalid_Auth_Code.html')
+                        return render_template('Invalid_token.html')
 
 
             else:

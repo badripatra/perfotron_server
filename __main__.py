@@ -262,6 +262,8 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/installation_launchpad/backend_listner.jmx")
 
+    os.system("echo `openssl rand -hex 12` > ~/installation_launchpad/token.txt")
+
     if install_jenkins == "true":
         os.system("cp jenkins/jenkins_job_setup.sh ~/installation_launchpad")
         os.system("cp jenkins/config.xml ~/installation_launchpad")
