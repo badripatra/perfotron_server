@@ -50,30 +50,7 @@
       </div>
       <div class="main">
          <h1 class="code-line" data-line-start="0" data-line-end="1">PerfoTron(Load &amp; Performance Testing Platform)</h1>
-          <h3>STEP 1 : Convert your existing Jmeter Script to run in PerfoTron Environment</h3>
-          <h5>&nbsp; &nbsp; &nbsp;OPTION 1 : Convert and Run your existing Jmeter Script from PerfoTron Server (using CLI)</h5>
-         <ol>
-      <li><code class="has-line-data" data-line-start="9" data-line-end="50">Convert and run your existing jmeter script in PerfoTron server by using --jmx option -&nbsp;"python perfotron --jmx &lt;Jmeter_TestPlan_Complete Path&gt;"</code></li>
-      <li><code class="has-line-data" data-line-start="9" data-line-end="50">The converted jmx &amp; test results are is stored in '~/user_jmx_run_results/&lt;Current_Date_Time_Stamp_Folder&gt;</code></li>
-      <li><code class="has-line-data" data-line-start="9" data-line-end="50">You can do live monitoring @&nbsp; "http://[perfoTron_server_ip]:3000/d/sample_dashboard/performance-dashboard?orgId=1"</code></li>
-   </ol>
-   <ul>   
-   <img src="/static/jmx_convert_run.png" alt="convert and run user  jmeter script thru cli" width="600" height="300" align="center">
-   </ul>
-   
-   <p>&nbsp;</p>
-   <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR </p>
-   <h5>&nbsp; &nbsp; &nbsp;OPTION 2 : Convert your existing Jmeter Script from your own system (Using Browser)</h5>
-   <ol>
-      <li><code class="has-line-data" data-line-start="9" data-line-end="50">Convert your jmx from your desktop / laptop using <a href="{{ url_for('convert_jmx') }}" target="_blank" rel="noopener">convert_jmx</a> link</code></li>
-      <li><code class="has-line-data" data-line-start="9" data-line-end="50">Trigger the test from your Local System Jmeter</code></li>
-      <li><code class="has-line-data" data-line-start="9" data-line-end="50">You can do live monitoring @&nbsp; "http://[perfoTron_server_ip]:3000/d/sample_dashboard/performance-dashboard?orgId=1"</code></li>
-   </ol>
-      <ul>   
-   <img src="/static/convert_jmx.png" alt="convert user  jmeter script from browser" width="600" height="150" align="center">
-   </ul>
-   <h3>&nbsp;</h3>
-   <h3>STEP 2 : Monitor Load Test run from PerfTron Dashboard :</h3>
+   <h3>STEP 1 : Monitor Load Test run from PerfTron Dashboard :</h3>
    <p>The dashboard has 5 sections :</p>
    <ul>
       <li>Header</li>
