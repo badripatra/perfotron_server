@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {
+         font-family: "Lato", sans-serif;
+         }
+         .sidenav {
+         height: 100%;
+         width: 240px;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         background-color: #111;
+         overflow-x: hidden;
+         padding-top: 20px;
+         }
+         .sidenav a {
+         padding: 6px 8px 6px 16px;
+         text-decoration: none;
+         font-size: 15px;
+         color: #818181;
+         display: block;
+         }
+         .sidenav a:hover {
+         color: #f1f1f1;
+         }
+         .main {
+         margin-left: 240px; /* Same as the width of the sidenav */
+         font-size: 13px; /* Increased text to enable scrolling */
+         padding: 0px 10px;
+         }
+         @media screen and (max-height: 450px) {
+         .sidenav {padding-top: 15px;}
+         .sidenav a {font-size: 18px;}
+         }
+         .note {
+         margin-left: 240px; /* Same as the width of the sidenav */
+         font-size: 13px; /* Increased text to enable scrolling */
+         padding: 0px 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <title>PerfoTron JMX Convertor</title>
+      <div class="sidenav">
+         <a href="{{ url_for('home') }}">About</a>
+         <a href="{{ url_for('system_requirement') }}">System Requirement</a>
+         <a href="{{ url_for('install_onprem') }}">Express Setup - On Premises</a>
+         <a href="{{ url_for('install_gcp') }}">Express Setup - Google Cloud</a>
+         <a href="{{ url_for('install_aws') }}">Express Setup - AWS</a>
+         <a href="{{ url_for('install_azure') }}">Express Setup - Azurue</a>
+         <a href="{{ url_for('explain_usage') }}">Explain Perf Dashboard</a>
+         <a href="{{ url_for('convert_jmx') }}">Convert Jmeter Script</a>
+      </div>
+      <div class="main">
 
-<body>
-    <title>Empty File </title>
-    <font color="red"><h4> No input file </h4> </font>
+         <h4>Empty File </h4>
+         <font color="red"><h4> No input file </h4> </font>
 
-<form method=post enctype=multipart/form-data>
-  <label for="file">Select your Jmeter Script:</label>
-  <input type=file name=file><br><br>
-  <label for="token">Enter the Token:</label> &nbsp; &emsp;
-  <input type="text" id="token" name="token"><br><br>
-  <input type="submit" value="Submit">
-</form>
-
-<p>Click the "Submit" button and get converted JMX which can be used in PerfoTron Environment.</p>
-
-</body>
+         <form method=post enctype=multipart/form-data>
+            <label for="file">Select your Jmeter Script:</label>
+            <input type=file name=file><br><br>
+            <label for="token">Enter the Token:</label> &nbsp; &emsp;
+            <input type="text" id="token" name="token"><br><br>
+            <input type="submit" value="Submit">
+         </form>
+         <p>Click the "Submit" button and get converted JMX which can be used in PerfoTron Environment.</p>
+      </div>
+   </body>
 </html>
