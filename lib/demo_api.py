@@ -135,7 +135,7 @@ def sample_jmx_download ():
 
 
 @FLASK_APP.route('/download_jmx/<filename>')
-def database_download(filename):
+def download_jmx(filename):
     return send_file(filename, mimetype='text/jmx', as_attachment=True)
 
 @FLASK_APP.route('/convert_jmx', methods=['GET', 'POST'])
