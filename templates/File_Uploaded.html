@@ -3,7 +3,8 @@
 <title>PerfoTron JMX Convertor</title>
 <body>
 
-<h4>Input JMeter is sucessfully converted and downloaded</h4>
+<h4>Input JMeter is sucessfully converted and downloaded.</h4>
+<h4><a href="{{ url_for('download_jmx', filename=filename) }}">Download</a></h4>
 
 <form method=post enctype=multipart/form-data>
   <label for="file">Select your Jmeter Script:</label>

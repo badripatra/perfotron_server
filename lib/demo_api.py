@@ -134,6 +134,10 @@ def sample_jmx_download ():
     return send_file(path, as_attachment=True)
 
 
+@FLASK_APP.route('/download_jmx/<filename>')
+def database_download(filename):
+    return send_file(filename, mimetype='text/jmx', as_attachment=True)
+
 @FLASK_APP.route('/convert_jmx', methods=['GET', 'POST'])
 def convert_jmx():
     """ This function is responsible to deploy a Convert JMX Route """
@@ -156,8 +160,8 @@ def convert_jmx():
                 else:
 
                     if user_input_token == token:
-                        render_template('File_Uploaded.html')
-                        return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
+                        return render_template('File_Uploaded.html', filename=modified_jmx_file)
+                        #return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
                     else:
                         return render_template('Invalid_token.html')
 
