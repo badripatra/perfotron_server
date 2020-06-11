@@ -1,70 +1,104 @@
 <html>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <style>
-      body {
-      font-family: "Lato", sans-serif;
-      }
-      .sidenav {
-      height: 100%;
-      width: 240px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 20px;
-      }
-      .sidenav a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 15px;
-      color: #818181;
-      display: block;
-      }
-      .sidenav a:hover {
-      color: #f1f1f1;
-      }
-      .main {
-      margin-left: 240px; /* Same as the width of the sidenav */
-      font-size: 13px; /* Increased text to enable scrolling */
-      padding: 0px 10px;
-      }
-      @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-      }
-   </style>
-   </head>
-   <body>
-   <title>Setup PerfoTron on On Premises</title>
-      <div class="sidenav">
-         <a href="{{ url_for('home') }}">About</a>
-         <a href="{{ url_for('system_requirement') }}">System Requirement</a>
-         <a href="{{ url_for('install_onprem') }}">Express Setup - On Premises</a>
-         <a href="{{ url_for('install_gcp') }}">Express Setup - Google Cloud</a>
-         <a href="{{ url_for('install_aws') }}">Express Setup - AWS</a>
-         <a href="{{ url_for('install_azure') }}">Express Setup - Azurue</a>
-         <a href="{{ url_for('explain_usage') }}">Explain Perf Dashboard</a>
-         <a href="{{ url_for('convert_jmx') }}">Convert Jmeter Script</a>
-      </div>
-      <div class="main">
-         <h1 class="code-line" data-line-start="0" data-line-end="1">PerfoTron(Load &amp; Performance Testing Platform)</h1>		 
-		 <p>Pre-requisites: git , python2.7</p>
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <style>
+            * {box-sizing: border-box;}
+            body { 
+            margin: 0; 
+            font-size:14;			
+            }
+            .header {
+            overflow: hidden;
+            color:white;
+            background-color: black;
+            font-size:45;
+            text-align:justify;
+            margin-left: 0;
+            border-color: black;
+            border-style:solid   
+            }
+            .row {
+            display:flex;
+            flex-wrap:flex;
+            }
+            /* Sidebar/left column */
+            .sidebar {
+			height:700px;
+            flex: 20%;
+            background-color: DimGray;
+            font-size:14;
+            font-family: Verdana 
+		
+            }
+            /* Main column */
+            .main {   
+            flex: 80%;
+            background-color: white;
+            padding: 8px;
+            font-family: Verdana 
+            }
+            .sidebar ul li{
+            padding:14px;
+            border-bottom: 1px solid rgba(0,0,0,0,.05);
+            border-top: 1px solid rgba(25,25,25,0,.05);
+            }
+            .sidebar ul li a{
+            text-decoration:None;
+            color:black;
+            display:block;
+            }
+            .sidebar ul li:hover{
+            background:#594f8d
+            }
+            .sidebar ul li:hover a{
+            color:#fff;
+            }
+            div.ex1 {
+            margin: 0;
+            outline-offset: 5px;
+            font-size:20;
+            width:100%;
+            height:4%
+            } 
+         </style>
+      </head>
+      <body>
+         <div class="header">
+            <img src="perfotron.png" alt="logo" style="width:128px;height:90px; />
+            <h1 style="text-align:center" "background-color:black>PerfoTron(Load &amp; Performance Testing Platform)</h1>
+         </div>
+         <div class= "row">
+            <div class="sidebar">
+               <ul style="list-style-type:none;">
+                  <li> <a href="{{ url_for('home') }}">Overview</a> </li>
+                  <li><a href="{{ url_for('install_onprem') }}">On Premise Setup</a></li>
+                  <li><a href="{{ url_for('install_gcp') }}">GCloud Setup</a></li>
+                  <li><a href="{{ url_for('install_aws') }}">AWS Setup</a></li>
+                  <li><a href="{{ url_for('install_azure') }}">Azurue Setup</a></li>
+                  <li><a href="{{ url_for('convert_jmx') }}">Get Started </a></li>
+                  <li><a href="{{ url_for('explain_usage') }}">Dashboard Details </a></li>
+               </ul>
+            </div>
+			 
+            <div class="main">
+			<div class="ex1"> Installation </div>
+               <p>Pre-requisites: git , python2.7</p>
+			   <p>Suppoted Env: Unix (4 Core , 8 GB RAM)</p>
 
-		<p>Installation Steps :</p>
-		<ol>
-		   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Login as sudo user to your unix/linux box where you would like to install PerfoTron</code></li>
-		   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Update your system with "sudo apt-get update" or "sudo yum update" based on unix / linux flavor</code></li>
-		   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Clone the Repo - "git clone https://badri_patra@bitbucket.org/badri_patra/perfotron.git"</code></li>
-		   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Start the setup - "python perfotron"</code></li>
-		   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation details</code></li>
-		   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Access the Grafana URL printed on console for Live Monitoring of Load Test</code></li>
-		</ol>
-	<ul>
-		<img src="/static/perfotronsetup.png" alt="perfotron setup" width="1000" height="500" align="center">
-	 </ul>
+				
+               <p>Steps :</p>
+               <ol>
+                  <li><code class="has-line-data" data-line-start="9" data-line-end="50">Login as sudo user to your unix/linux box where you would like to install PerfoTron</code></li>
+                  <li><code class="has-line-data" data-line-start="9" data-line-end="50">Update your system with "sudo apt-get update" or "sudo yum update" based on unix / linux flavor</code></li>
+                  <li><code class="has-line-data" data-line-start="9" data-line-end="50">Clone the Repo - "git clone https://badri_patra@bitbucket.org/badri_patra/perfotron.git"</code></li>
+                  <li><code class="has-line-data" data-line-start="9" data-line-end="50">Start the setup - "python perfotron"</code></li>
+                  <li><code class="has-line-data" data-line-start="9" data-line-end="50">Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation details</code></li>
+                  <li><code class="has-line-data" data-line-start="9" data-line-end="50">Access the Grafana URL printed on console for Live Monitoring of Load Test</code></li>
+               </ol>
 
-      </div>
-   </body>
-</html>
+            </div>
+         </div>
+      </body>
+   </html>

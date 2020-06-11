@@ -1,134 +1,165 @@
 <html>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <style>
-      body {
-      font-family: "Lato", sans-serif;
-      }
-      .sidenav {
-      height: 100%;
-      width: 240px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 20px;
-      }
-      .sidenav a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 15px;
-      color: #818181;
-      display: block;
-      }
-      .sidenav a:hover {
-      color: #f1f1f1;
-      }
-      .main {
-      margin-left: 240px; /* Same as the width of the sidenav */
-      font-size: 13px; /* Increased text to enable scrolling */
-      padding: 0px 10px;
-      }
-      @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-      }
-   </style>
-   </head>
-   <body>
-   <title>How to Use</title>
-      <div class="sidenav">
-         <a href="{{ url_for('home') }}">About</a>
-         <a href="{{ url_for('system_requirement') }}">System Requirement</a>
-         <a href="{{ url_for('install_onprem') }}">Express Setup - On Premises</a>
-         <a href="{{ url_for('install_gcp') }}">Express Setup - Google Cloud</a>
-         <a href="{{ url_for('install_aws') }}">Express Setup - AWS</a>
-         <a href="{{ url_for('install_azure') }}">Express Setup - Azurue</a>
-         <a href="{{ url_for('explain_usage') }}">Explain Perf Dashboard</a>
-         <a href="{{ url_for('convert_jmx') }}">Convert Jmeter Script</a>
-      </div>
-      <div class="main">
-         <h1 class="code-line" data-line-start="0" data-line-end="1">PerfoTron(Load &amp; Performance Testing Platform)</h1>
-   <h3>STEP 1 : Monitor Load Test run from PerfTron Dashboard :</h3>
-   <p>The dashboard has 5 sections :</p>
-   <ul>
-      <li>Header</li>
-      <li>Summary</li>
-      <li>Errors</li>
-      <li>Individual Transaction Details</li>
-      <li>PerfoTron Server Stats</li>
-   </ul>
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <style>
+            * {box-sizing: border-box;}
+            body { 
+            margin: 0; 
+            font-size:14;			
+            }
+            .header {
+            overflow: hidden;
+            color:white;
+            background-color: black;
+            font-size:45;
+            text-align:justify;
+            margin-left: 0;
+            border-color: black;
+            border-style:solid   
+            }
+            .row {
+            display:flex;
+            flex-wrap:flex;
+            }
+            /* Sidebar/left column */
+            .sidebar {
+			height:700px;
+            flex: 20%;
+            background-color: DimGray;
+            font-size:14;
+            font-family: Verdana 
+		
+            }
+            /* Main column */
+            .main {   
+            flex: 80%;
+            background-color: white;
+            padding: 8px;
+            font-family: Verdana 
+            }
+            .sidebar ul li{
+            padding:14px;
+            border-bottom: 1px solid rgba(0,0,0,0,.05);
+            border-top: 1px solid rgba(25,25,25,0,.05);
+            }
+            .sidebar ul li a{
+            text-decoration:None;
+            color:black;
+            display:block;
+            }
+            .sidebar ul li:hover{
+            background:#594f8d
+            }
+            .sidebar ul li:hover a{
+            color:#fff;
+            }
+            div.ex1 {
+            margin: 0;
+            outline-offset: 5px;
+            font-size:20;
+            width:100%;
+            height:4%
+            } 
+         </style>
+      </head>
+      <body>
+         <div class="header">
+            <img src="perfotron.png" alt="logo" style="width:128px;height:90px; />
+            <h1 style="text-align:center" "background-color:black>PerfoTron(Load &amp; Performance Testing Platform)</h1>
+         </div>
+         <div class= "row">
+            <div class="sidebar">
+               <ul style="list-style-type:none;">
+                  <li> <a href="{{ url_for('home') }}">Overview</a> </li>
+                  <li><a href="{{ url_for('install_onprem') }}">On Premise Setup</a></li>
+                  <li><a href="{{ url_for('install_gcp') }}">GCloud Setup</a></li>
+                  <li><a href="{{ url_for('install_aws') }}">AWS Setup</a></li>
+                  <li><a href="{{ url_for('install_azure') }}">Azurue Setup</a></li>
+				  <li><a href="{{ url_for('convert_jmx') }}">Get Started </a></li>
+                  <li><a href="{{ url_for('explain_usage') }}">Dashboard Details </a></li>
+               </ul>
+            </div>
+			 
+            <div class="main">
+			<h3>Monitor Load Test run from PerfTron Dashboard :</h3>
+		   <p>The dashboard has 5 sections :</p>
+		   <ul>
+			  <li>Header</li>
+			  <li>Summary</li>
+			  <li>Errors</li>
+			  <li>Individual Transaction Details</li>
+			  <li>PerfoTron Server Stats</li>
+		   </ul>
 
-   <h4>Details on Header section:</h4>
-   <ul>   
-   <img src="/static/header_dashboard.png" alt="headers" width="600" height="100" align="center">
-   </ul>
-   <ul>
-      <li>application - Enables users to select AUT (Application Under Test) to see related graphs</li>
-      <li>Transaction - Enables users to select a specific request type. This populates data in 'Individual Transaction Details' section</li>
-      <li>server - Displays Perfotron server name</li>
-      <li>Clock - India Time/ PST Time</li>
-      <li>Received / Sent Bytes - Total bytes sent / received for the Load Test</li>
-      <li>Over All Error Count - Total Errors (HTTP + Assertion Errors)</li>
-      <li>Error Indicator - Indicates&nbsp; Errors are in&nbsp; Acceptable / Non Acceptable range based on threshold set. (Acceptable &lt;= 7 % , Not Acceptable &gt; 7%)&nbsp;</li>
-      <li>Overall Response Time - Average response time of all transaction in milliseconds</li>
-      <li>Response Time Indicator -&nbsp;Indicates&nbsp; average response time of all transactions are in&nbsp; Acceptable / Non Acceptable range based on threshold set (With in SLA&nbsp; = 0 - 3000 ms,&nbsp;Breaching SLA = 3000&nbsp;- 5000 ms,&nbsp;High Response &gt; 5000 ms )</li>
-   </ul>
-   <p>&nbsp;</p>
-   <h4>Details on Summary section(Graphical):</h4>
-   <ul>
-    <img src="/static/summary1.png" alt="summary" width="500" height="200" align="center">
-   </ul>
-   <ul>
-       <li>Success Rate %- Success Percentage of requests</li>
-       <li>Error Rate % - Failure Percentage of requests</li>
-       <li>Total Requests - Total requests</li>
-       <li>Failed Requests - Failed requests</li>
-       <li>Total Throughput - Number of requests per second</li>
-       <li>Total Errors - Number of Errors occurred (HTTP and Assertion Points)</li>
-       <li>Active Users - Number of Threads</li>
-       <li>Transaction Response Time Average - Average response of each type fo request in milli seconds</li>
-       <li>Stats - Response Time(Min/Max/Average/90th Percentile) in secs and Received Bytes</li>
-       <li>Network Traffic Sent Bytes - Bytes sent during load test</li>
-       <li>Network Traffic Received Bytes - Bytes received during load test</li>
-   </ul>
-   <h4>Details on Errors section(Graphical):</h4>
-   <ul>
-     <img src="/static/errors.png" alt="errors" width="500" height="110" align="center">
-   </ul>
-   <ul>
-       <li>Errors per Transaction - Count of error for each type of request</li>
-       <li>Error Info - Error details like response code, response message,&nbsp; request type, total count</li>
-   </ul>
-   <h4>Details on Individual Transaction section(Graphical):</h4>
-   <ul>
-     <img src="/static/individual_transaction1.png" alt="individual transactions" width="500" height="200" align="center">
-   </ul>
-   <ul>
-       <li>Success Rate %- Success Percentage of request type selected</li>
-       <li>Error Rate % - Failure Percentage of request type selected</li>
-       <li>Total Requests - Total requests made of&nbsp;request type selected</li>
-       <li>Failed Requests - Failed requests made of&nbsp;request type selected</li>
-       <li>Total Throughput - Number of requests per second of&nbsp;request type selected</li>
-       <li>Total Errors - Number of Errors occurred (HTTP and Assertion Points)&nbsp;request type selected</li>
-       <li>Active Users - Number of Threads of&nbsp;request type selected</li>
-       <li>Transaction Response Time Average - Average response in milli seconds of&nbsp;request type selected</li>
-       <li>Network Traffic Sent Bytes - Bytes sent during load test of&nbsp;request type selected</li>
-       <li>Network Traffic Received Bytes - Bytes received during load test of&nbsp;request type selected</li>
-   </ul>
-   <h4>Details on PerfoTron Server stats section(Graphical):</h4>
-   <ul>
-    <img src="/static/perfotron_server_stats.png" alt="perfortron server statistics" width="500" height="200" align="center">
-   </ul>
-   <ul>
-       <li>Disk Usage % - Percentage of Disk space available (Identified using df command)</li>
-       <li>CPU Used% - Percentage of CPU used (Identified using top command)</li>
-       <li>Available Memory - Memory(RAM) left in MB (Identified using free command)</li>
-       <li>USED Memory - Memory(RAM) used in MB (Identified using free command)</li>
-   </ul>
-      </div>
-	  
-	  
-   </body>
-</html>
+		   <h4>Details on Header section:</h4>
+		   <ul>   
+		   <img src="/static/header_dashboard.png" alt="headers" width="600" height="100" align="center">
+		   </ul>
+		   <ul>
+			  <li>application - Enables users to select AUT (Application Under Test) to see related graphs</li>
+			  <li>Transaction - Enables users to select a specific request type. This populates data in 'Individual Transaction Details' section</li>
+			  <li>server - Displays Perfotron server name</li>
+			  <li>Clock - India Time/ PST Time</li>
+			  <li>Received / Sent Bytes - Total bytes sent / received for the Load Test</li>
+			  <li>Over All Error Count - Total Errors (HTTP + Assertion Errors)</li>
+			  <li>Error Indicator - Indicates&nbsp; Errors are in&nbsp; Acceptable / Non Acceptable range based on threshold set. (Acceptable &lt;= 7 % , Not Acceptable &gt; 7%)&nbsp;</li>
+			  <li>Overall Response Time - Average response time of all transaction in milliseconds</li>
+			  <li>Response Time Indicator -&nbsp;Indicates&nbsp; average response time of all transactions are in&nbsp; Acceptable / Non Acceptable range based on threshold set (With in SLA&nbsp; = 0 - 3000 ms,&nbsp;Breaching SLA = 3000&nbsp;- 5000 ms,&nbsp;High Response &gt; 5000 ms )</li>
+		   </ul>
+		   <p>&nbsp;</p>
+		   <h4>Details on Summary section(Graphical):</h4>
+		   <ul>
+			<img src="/static/summary1.png" alt="summary" width="500" height="200" align="center">
+		   </ul>
+		   <ul>
+			   <li>Success Rate %- Success Percentage of requests</li>
+			   <li>Error Rate % - Failure Percentage of requests</li>
+			   <li>Total Requests - Total requests</li>
+			   <li>Failed Requests - Failed requests</li>
+			   <li>Total Throughput - Number of requests per second</li>
+			   <li>Total Errors - Number of Errors occurred (HTTP and Assertion Points)</li>
+			   <li>Active Users - Number of Threads</li>
+			   <li>Transaction Response Time Average - Average response of each type fo request in milli seconds</li>
+			   <li>Stats - Response Time(Min/Max/Average/90th Percentile) in secs and Received Bytes</li>
+			   <li>Network Traffic Sent Bytes - Bytes sent during load test</li>
+			   <li>Network Traffic Received Bytes - Bytes received during load test</li>
+		   </ul>
+		   <h4>Details on Errors section(Graphical):</h4>
+		   <ul>
+			 <img src="/static/errors.png" alt="errors" width="500" height="110" align="center">
+		   </ul>
+		   <ul>
+			   <li>Errors per Transaction - Count of error for each type of request</li>
+			   <li>Error Info - Error details like response code, response message,&nbsp; request type, total count</li>
+		   </ul>
+		   <h4>Details on Individual Transaction section(Graphical):</h4>
+		   <ul>
+			 <img src="/static/individual_transaction1.png" alt="individual transactions" width="500" height="200" align="center">
+		   </ul>
+		   <ul>
+			   <li>Success Rate %- Success Percentage of request type selected</li>
+			   <li>Error Rate % - Failure Percentage of request type selected</li>
+			   <li>Total Requests - Total requests made of&nbsp;request type selected</li>
+			   <li>Failed Requests - Failed requests made of&nbsp;request type selected</li>
+			   <li>Total Throughput - Number of requests per second of&nbsp;request type selected</li>
+			   <li>Total Errors - Number of Errors occurred (HTTP and Assertion Points)&nbsp;request type selected</li>
+			   <li>Active Users - Number of Threads of&nbsp;request type selected</li>
+			   <li>Transaction Response Time Average - Average response in milli seconds of&nbsp;request type selected</li>
+			   <li>Network Traffic Sent Bytes - Bytes sent during load test of&nbsp;request type selected</li>
+			   <li>Network Traffic Received Bytes - Bytes received during load test of&nbsp;request type selected</li>
+		   </ul>
+		   <h4>Details on PerfoTron Server stats section(Graphical):</h4>
+		   <ul>
+			<img src="/static/perfotron_server_stats.png" alt="perfortron server statistics" width="500" height="200" align="center">
+		   </ul>
+		   <ul>
+			   <li>Disk Usage % - Percentage of Disk space available (Identified using df command)</li>
+			   <li>CPU Used% - Percentage of CPU used (Identified using top command)</li>
+			   <li>Available Memory - Memory(RAM) left in MB (Identified using free command)</li>
+			   <li>USED Memory - Memory(RAM) used in MB (Identified using free command)</li>
+		   </ul>
+         </div>
+      </body>
+   </html>
