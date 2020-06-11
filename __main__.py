@@ -236,6 +236,8 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp lib/demo_api.py ~/installation_launchpad")
 
+    os.system("cp lib/generate_jmx.py ~/installation_launchpad")
+
     os.system("cp demo_api/invoke_restapis.sh ~/installation_launchpad")
 
     os.system("cp setup_details/details_template.yaml ~/installation_launchpad")
@@ -254,7 +256,7 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp templates/*.html ~/installation_launchpad/templates")
 
-    os.system("cp templates/*.png ~/installation_launchpad/templates")
+    os.system("cp templates/samplers/*.* ~/installation_launchpad/")
 
     os.system("cp templates/*.png ~/installation_launchpad/static/")
 
