@@ -150,6 +150,8 @@ def convert_csv():
         converted_jmx_file = create_jmx_obj.form_jmx_file()
         return send_file(converted_jmx_file, mimetype='text/jmx', as_attachment=True)
 
+    return render_template('generate_jmeter_script.html')
+
 
 @FLASK_APP.route('/convert_jmx', methods=['GET', 'POST'])
 def convert_jmx():
