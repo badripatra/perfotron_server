@@ -13,6 +13,7 @@ from flask import request
 from xml.etree import ElementTree as ET
 import subprocess
 import time
+import generate_jmx
 
 FLASK_APP = Flask(__name__)
 PORT = int("9003")
@@ -138,6 +139,18 @@ def sample_jmx_download ():
 def download_jmx(filename):
     return send_file(filename, mimetype='text/jmx', as_attachment=True)
 
+@FLASK_APP.route('/convert_csv', methods=['GET', 'POST'])
+def convert_csv():
+    """ This function is responsible to deploy a Convert CSV Route """
+
+    if request.method == 'POST':
+        file_object = request.files['file']
+        content = file_object.read()
+        create_jmx_obj = generate_jmx.create_jmx_scenario(content)
+        converted_jmx_file = create_jmx_obj.form_jmx_file()
+        return send_file(converted_jmx_file, mimetype='text/jmx', as_attachment=True)
+
+
 @FLASK_APP.route('/convert_jmx', methods=['GET', 'POST'])
 def convert_jmx():
     """ This function is responsible to deploy a Convert JMX Route """
@@ -147,30 +160,24 @@ def convert_jmx():
         file_object = request.files['file']
         user_input_token = request.form['token']
 
-        if file_object:
+        if allowed_file(file_object.filename):
 
-            if allowed_file(file_object.filename):
+            content = file_object.read()
+            modified_jmx_file = add_backend_listner(content)
 
-                content = file_object.read()
-                modified_jmx_file = add_backend_listner(content)
-
-                if modified_jmx_file == "Invalid JMX":
-                    return render_template('Invalid_jmx.html')
-
-                else:
-
-                    if user_input_token == token:
-                        return render_template('File_Uploaded.html', filename=modified_jmx_file)
-                        #return send_file(modified_jmx_file, mimetype='text/jmx', as_attachment=True)
-                    else:
-                        return render_template('Invalid_token.html')
-
+            if modified_jmx_file == "Invalid JMX":
+                return render_template('Invalid_jmx.html')
 
             else:
-                return render_template('file_extension_not_allowed.html')
+
+                if user_input_token == token:
+                    return render_template('File_Uploaded.html', filename=modified_jmx_file)
+                else:
+                    return render_template('Invalid_token.html')
 
         else:
-            return render_template('empty_file.html')
+            return render_template('file_extension_not_allowed.html')
+
 
     return render_template('convert.html')
 
