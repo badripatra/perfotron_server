@@ -1,0 +1,136 @@
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+
+  
+}
+
+.header {
+  overflow: hidden;
+  color:white;
+  background-color: black;
+  font-size:45;
+  text-align:justify;
+  margin-left: 0;
+  border-color: black;
+  border-style:solid
+  
+  
+  
+  
+}
+
+
+
+.row {
+		display:flex;
+		flex-wrap:flex;
+}
+/* Sidebar/left column */
+.sidebar {
+		
+		flex: 22%;
+		background-color: DimGray;
+		font-size:16;
+		font-family: Verdana 
+		
+				}
+
+/* Main column */
+.main {   
+  flex: 78%;
+  background-color: white;
+  padding: 20px;
+  font-family: Verdana 
+}
+
+
+		.sidebar ul li{
+			padding:15px;
+			border-bottom: 1px solid rgba(0,0,0,0,.05);
+			border-top: 1px solid rgba(25,25,25,0,.05);
+			}
+			.sidebar ul li a{
+			text-decoration:None;
+				color:black;
+				display:block;
+			}
+			
+			.sidebar ul li:hover{
+				background:#594f8d
+				}
+		
+				.sidebar ul li:hover a{
+				color:#fff;
+				}
+div.ex1 {
+  margin: 0;
+	outline-offset: 15px;
+  font-size:25;
+  width:100%;
+  height:10%
+} 
+
+			
+   </style>
+ 
+ </head>
+ 
+<body>
+<div class="header">
+<img src="perfotron.png" alt="logo" style="width:128px;height:90px; />
+	<h1 style="text-align:center" "background-color:black>PerfoTron(Load &amp; Performance Testing Platform)</h1>
+</div>  
+<div class= "row">
+	<div class="sidebar">
+		<ul style="list-style-type:none;">
+			<li><a href="#">Overview</a></li>
+			<li> <a href="{{ url_for('home') }}">About</a> </li> 
+	        <li><a href="{{ url_for('system_requirement') }}">System Requirement</a></li>
+			<li><a href="{{ url_for('install_onprem') }}">Express Setup - On Premises</a></li>
+			<li><a href="{{ url_for('install_gcp') }}">Express Setup - Google Cloud</a></li>
+			<li><a href="{{ url_for('install_aws') }}">Express Setup - AWS</a></li>
+			<li><a href="{{ url_for('install_azure') }}">Express Setup - Azurue</a></li>
+			<li><a href="{{ url_for('explain_usage') }}">How to Use </a></li>
+		 </ul>
+	</div>
+	<div class="main">
+		<div class="ex1">Overview</div>
+	
+		<p>The Tool offers E2E Platform for Performance Testing by integrating Jmeter with Influx DB and Grafana.</p>
+		<ul>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">  
+	   Target Audience&nbsp; &nbsp; &nbsp; &nbsp;: Individual / group using Jmeter for Performance Testing </li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">           
+		  How it helps&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Live Monitoring of Performance Tests triggered by Jmeter</code>
+	   </li
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">                                   
+		  Grafana Version&nbsp; &nbsp; &nbsp; &nbsp;: 6.5.2</code>
+	   </li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">            
+		  Influx Version&nbsp; &nbsp; &nbsp; &nbsp; : 1.7.4</code>
+	   </li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">            
+		  Jmeter Version&nbsp; &nbsp; &nbsp; &nbsp; : 5.1.1</code>
+	   </li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">            
+		  Programming Language&nbsp; : Python 2.7, Shell Scripting</code>
+	   </li>
+	   <li><code class="has-line-data" data-line-start="9" data-line-end="50">Supported Envs&nbsp; &nbsp; &nbsp; &nbsp; : Unix (Ubuntu,CentOS, RHEL) for Hosting</code></li>
+	</ul>
+	 <p class="has-line-data" data-line-start="2" data-line-end="3">&nbsp;</p>
+
+	  <ul>
+	  	  <img src="perfotron_usage.png" alt="perfotron setup" width="1000" height="400" align="center">
+	  </ul>
+	  </div>        
+		 </div>
+	 </body>
+</html>
