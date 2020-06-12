@@ -134,6 +134,11 @@ def sample_jmx_download ():
     path = "sample_jmeter_script.jmx"
     return send_file(path, as_attachment=True)
 
+@FLASK_APP.route('/sample_csv')
+def sample_jmx_download ():
+    path = "sample_scenario_file.csv"
+    return send_file(path, as_attachment=True)
+
 
 @FLASK_APP.route('/download_jmx/<filename>')
 def download_jmx(filename):

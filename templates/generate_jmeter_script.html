@@ -93,10 +93,11 @@
 			  <p>Upload Performance Scenario CSV </p>
 			 <form method=post enctype=multipart/form-data>
 				<label for="file">Select your Performance Scenario:</label>
-				<input type=file name=file accept=".jmx" required><br><br>
+				<input type=file name=file accept=".csv" required><br><br>
 				<input type="submit" value="Submit">
 			 </form>
 			 <p>Click the "Submit" button and  converted your Performance Scenario File, which can be used in PerfoTron Environment.</p>
+             <p> <a href="{{ url_for('sample_csv') }}"> Sample Performance Scenario</a> </p>
 			 
 			 </div>
          </div>
