@@ -151,9 +151,15 @@ def convert_csv():
     if request.method == 'POST':
         file_object = request.files['file']
         content = file_object.read()
-        file_name = file_object.filename
-        create_jmx_obj = generate_jmx.create_jmx_scenario(content, file_name)
-        converted_jmx_file = file_name.replace(".csv",".jmx")
+        epoch_time = str(int(time.time()))
+
+        input_file_name = file_object.filename
+        fileName, fileExtension = os.path.splitext(input_file_name)
+        converted_csv_file = fileName+epoch_time+fileExtension
+        converted_jmx_file = converted_csv_file.replace(".csv", ".jmx")
+
+        create_jmx_obj = generate_jmx.create_jmx_scenario(content, converted_csv_file)
+
         create_jmx_obj.form_jmx_file()
         return send_file(converted_jmx_file, mimetype='text/jmx', as_attachment=True)
 
