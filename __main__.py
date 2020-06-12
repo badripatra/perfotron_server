@@ -256,7 +256,7 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp templates/*.html ~/installation_launchpad/templates")
 
-    os.system("cp templates/samplers/*.* ~/installation_launchpad/")
+    os.system("cp templates/samplers/* ~/installation_launchpad/")
 
     os.system("cp templates/*.png ~/installation_launchpad/static/")
 
