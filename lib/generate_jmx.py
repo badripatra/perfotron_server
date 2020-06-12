@@ -15,7 +15,7 @@ sys.setdefaultencoding('utf8')
 
 # -----------------------------------------Functions--------------------------------------------------------------------
 
-def convert_csv_to_json(content, format):  # Convert csv data into json and write it
+def convert_csv_to_json(content, user_csv_file, format):  # Convert csv data into json and write it
 
     csv_row = collections.OrderedDict()
     csv_rows_list = []
@@ -24,7 +24,7 @@ def convert_csv_to_json(content, format):  # Convert csv data into json and writ
     user_csv_name = 'original_user_' + epoch_time + '.csv'
     converted_json_name = 'converted_user_' + epoch_time + '.json'
 
-    with open(user_csv_name, "w") as user_csv:
+    with open(user_csv_file, "w") as user_csv:
         user_csv.write(content)
 
     with open(user_csv_name) as csvfile:
@@ -53,8 +53,8 @@ def write_json(data, json_file, format):  # write file as json
             json_testcase.write(json.dumps(data))
 
 
-def generate_performance_scenario_json(content):  # Generate Performance_scenario json from csv
-    output_file_name = convert_csv_to_json(content, 'pretty')
+def generate_performance_scenario_json(content, user_csv_file):  # Generate Performance_scenario json from csv
+    output_file_name = convert_csv_to_json(content, user_csv_file, 'pretty')
     return output_file_name
 
 
@@ -85,11 +85,11 @@ def get_command_output(command):
 
 class create_jmx_scenario():  # Initialization class
 
-    def __init__(self, content, file_name):
+    def __init__(self, content, user_csv_file, file_name):
 
-        output_file_name = generate_performance_scenario_json(content)
+        output_json_name = generate_performance_scenario_json(content, user_csv_file)
 
-        with open(output_file_name, 'r') as json_data:
+        with open(output_json_name, 'r') as json_data:
             performance_testcases_input = json.load(json_data)
 
         self.output_jmx_name = file_name

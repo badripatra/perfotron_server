@@ -155,10 +155,10 @@ def convert_csv():
 
         input_file_name = file_object.filename
         fileName, fileExtension = os.path.splitext(input_file_name)
-        converted_csv_file = fileName+epoch_time+fileExtension
-        converted_jmx_file = converted_csv_file.replace(".csv", ".jmx")
+        user_csv_file = fileName+"_"+epoch_time+fileExtension
+        converted_jmx_file = user_csv_file.replace(".csv", ".jmx")
 
-        create_jmx_obj = generate_jmx.create_jmx_scenario(content, converted_csv_file)
+        create_jmx_obj = generate_jmx.create_jmx_scenario(content, user_csv_file, converted_jmx_file)
 
         create_jmx_obj.form_jmx_file()
         return send_file(converted_jmx_file, mimetype='text/jmx', as_attachment=True)
