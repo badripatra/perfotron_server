@@ -151,8 +151,10 @@ def convert_csv():
     if request.method == 'POST':
         file_object = request.files['file']
         content = file_object.read()
-        create_jmx_obj = generate_jmx.create_jmx_scenario(content)
-        converted_jmx_file = create_jmx_obj.form_jmx_file()
+        file_name = file_object.filename
+        create_jmx_obj = generate_jmx.create_jmx_scenario(content, file_name)
+        converted_jmx_file = file_name.replace(".csv",".jmx")
+        create_jmx_obj.form_jmx_file()
         return send_file(converted_jmx_file, mimetype='text/jmx', as_attachment=True)
 
     return render_template('generate_jmeter_script.html')

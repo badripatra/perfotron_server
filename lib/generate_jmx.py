@@ -85,14 +85,14 @@ def get_command_output(command):
 
 class create_jmx_scenario():  # Initialization class
 
-    def __init__(self, content):
+    def __init__(self, content, file_name):
 
         output_file_name = generate_performance_scenario_json(content)
 
         with open(output_file_name, 'r') as json_data:
             performance_testcases_input = json.load(json_data)
 
-        self.output_jmx_name = output_file_name.replace(".json",".jmx")
+        self.output_jmx_name = file_name
 
         self.performance_testcases_input = performance_testcases_input
         self.pattern_to_identify_jmx_input_fields = r'(?<=\[).+?(?=\])'
@@ -184,7 +184,7 @@ class create_jmx_scenario():  # Initialization class
         with open(self.output_jmx_name, "w") as user_jmx:
             user_jmx.write(testplan_content)
 
-        return self.output_jmx_name
+
 
 
 # ------------------------------Generate test case jmx by substituting values in sample jmx ----------------------------
