@@ -21,13 +21,13 @@ def convert_csv_to_json(content, user_csv_file, format):  # Convert csv data int
     csv_rows_list = []
 
     epoch_time = str(int(time.time()))
-    user_csv_name = 'original_user_' + epoch_time + '.csv'
-    converted_json_name = 'converted_user_' + epoch_time + '.json'
+
+    converted_json_name = user_csv_file.replace(".csv", ".json")
 
     with open(user_csv_file, "w") as user_csv:
         user_csv.write(content)
 
-    with open(user_csv_name) as csvfile:
+    with open(user_csv_file) as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
