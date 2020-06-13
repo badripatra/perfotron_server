@@ -403,7 +403,7 @@ def setup(root_project_directory, input_map):
     install_jekins = input_map["install_jekins"]
 
 
-    if install_jekins == "true":
+    '''if install_jekins == "true":
         demorun_jenkins(root_project_directory, ip_address)
     elif install_jekins == "false":
         demorun_local(root_project_directory, ip_address)
@@ -413,8 +413,8 @@ def setup(root_project_directory, input_map):
     print "* All the files used for installation"
     print "* Installation Logs"
     print "* Environment details "
-    print "\n"
-    env_details_file(root_project_directory,cloud_vendor)
+    print "\n" 
+    env_details_file(root_project_directory,cloud_vendor) '''
 
     print "-------------------Progress------------------------------------------"
 
@@ -426,6 +426,9 @@ def setup(root_project_directory, input_map):
 
     convertor_url = CONFIG_OBJECT.get('API', 'CONVERTER_URL')
     convertor_url = convertor_url.replace("ip_address", ip_address)
+
+    jmx_generator_url = CONFIG_OBJECT.get('API', 'GENERATE_JMX_URL')
+    jmx_generator_url = convertor_url.replace("ip_address", ip_address)
 
     home_url = CONFIG_OBJECT.get('API', 'HOME_PAGE')
     home_url = home_url.replace("ip_address", ip_address)
@@ -439,9 +442,11 @@ def setup(root_project_directory, input_map):
     print "-------------------References------------------------------------------"
     print "PerfoTron Dashboard                : " + perf_dashboard_url + " (credentials : admin/admin)"
     print "For all documentation              : " + home_url
-    print "Convert your Jmeter Script         : " + convertor_url + " From (Browser) using token :" + token
+    print "Users familiar with Jmeter, to get started use 'PerfoTron JMX Convertor'."
+    print "PerfoTron JMX Convertor            : " + convertor_url + ". Token : " + token
     print "                                   OR                                   "
-    print "Convert and run your Jmeter Script :  use --jmx option from cli"
+    print "Users familiar with Jmeter, to get started use 'PerfoTron JMX Generator'."
+    print "PerfoTron JMX Generator            : " + jmx_generator_url
     print "-------------------References------------------------------------------"
 # ---------------------------Functions----------------------------------------------------
 

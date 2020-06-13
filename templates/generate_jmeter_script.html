@@ -87,17 +87,26 @@
             </div>
 			 
             <div class="main">
+            <div class="ex1"> PerfoTron JMX Generator</div>
 
 			 <div class="note">
-			 
-			  <p>Upload Performance Scenario CSV </p>
-			 <form method=post enctype=multipart/form-data>
+             </br>
+             <p>How to use PerfoTron JMX Generator :</p>
+				<ul>
+				   <li>Download <a href="{{ url_for('sample_csv_download') }}"> Sample Performance Scenario</a></li>
+				   <li>Fill up Details like Thread Group Name, HTTP Request , Method etc. Details on each field mentioned below </li>
+					<li>Upload it and Click Submit. PerfoTron will convert your scenario to Jmeter Script (.jmx) and download to your local system</li>
+                    <li> Download Jmeter and test the above Jmeter Script. </li>
+                    <li> Once you validation is over  use <a href="{{ url_for('convert_jmx') }}">PerfoTron JMX Convertor </a></li>
+				</ul>
+                 <br>
+              <p> JMX Generator :</p>
+              <form method=post enctype=multipart/form-data>
 				<label for="file">Select your Performance Scenario:</label>
 				<input type=file name=file accept=".csv" required><br><br>
 				<input type="submit" value="Submit">
 			 </form>
-			 <p>Click the "Submit" button and  converted your Performance Scenario File, which can be used in PerfoTron Environment.</p>
-             <p> <a href="{{ url_for('sample_csv_download') }}"> Sample Performance Scenario</a> </p>
+			 <p>Click the "Submit" button and  convert your Performance Scenario File to a Jmeter Script.</p>
 			 
 			 </div>
          </div>

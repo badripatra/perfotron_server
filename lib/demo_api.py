@@ -35,7 +35,7 @@ def get_jmxchecker_output(command):
     return cmd_value
 
 
-def add_backend_listner(jmx_string):
+def add_backend_listner(jmx_string, application_name):
     """ This function is responsible for adding back end listener to a existing jmx"""
 
     epoch_time = str(int(time.time()))
@@ -54,7 +54,7 @@ def add_backend_listner(jmx_string):
         return "Invalid JMX"
 
     else:
-
+        os.system("sed -i -e 's/\[app\]/" + application_name + "/g' backend_listner.jmx")
         backend_listener = ET.parse("backend_listner.jmx")
 
         base_script = ET.parse(user_jmx_name)
@@ -174,11 +174,12 @@ def convert_jmx():
 
         file_object = request.files['file']
         user_input_token = request.form['token']
+        application_name = request.form['AUT']
 
         if allowed_file(file_object.filename):
 
             content = file_object.read()
-            modified_jmx_file = add_backend_listner(content)
+            modified_jmx_file = add_backend_listner(content, application_name)
 
             if modified_jmx_file == "Invalid JMX":
                 return render_template('Invalid_jmx.html')
