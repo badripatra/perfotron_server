@@ -167,7 +167,7 @@ def native_initiator(cloud_vendor):
     """ This function is responsible for copying required files to
     installation directory and start the run"""
 
-    os.system("mkdir -p ~/installation_launchpad")
+    os.system("mkdir -p ~/.installation_launchpad")
 
     os.system("cp -r os_specific_files/"+OS_TYPE+"/*.* ~/installation_launchpad")
 
