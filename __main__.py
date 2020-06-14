@@ -250,7 +250,7 @@ if __name__ == '__main__':
     if not PERF_DASHBOARD:
 
         if ARGS.uninstall:
-            print "\033[1;33;40m  or '--uninstall' " \
+            print "\033[1;33;40m  '--uninstall' " \
                   "option is  only possible after Perfotron Dashboard is installed"
 
             print " Run 'python perfotron' command to install the Perfotron Dashboard"

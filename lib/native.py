@@ -64,7 +64,7 @@ def invoke_rest_api(project_dir):
 
     command = file_name + " >> " + file_name.replace(".sh", ".log") + " 2>&1"
     os.system(command)
-    print "Command Triggered : " + command
+    #print "Command Triggered : " + command
 
 
 def invoke_stats_collector(project_dir):
@@ -77,7 +77,7 @@ def invoke_stats_collector(project_dir):
 
     command = file_name + " >> " + file_name.replace(".sh", ".log") + " 2>&1"
     os.system(command)
-    print "Command Triggered : " + command
+    #print "Command Triggered : " + command
 
 
 def enable_ports(project_dir):
@@ -96,7 +96,7 @@ def enable_ports(project_dir):
     end_time = datetime.datetime.now()
     timer_logger(start_time, end_time, "PORTS", "Enabling Ports 3000 8086 9003")
 
-    print "Command Triggered : " + command
+    #print "Command Triggered : " + command
     print "\n"
 
 
@@ -116,7 +116,7 @@ def influx_setup(project_dir):
     end_time = datetime.datetime.now()
     timer_logger(start_time, end_time, "INFLUX", "Installing INFLUX")
 
-    print "Command Triggered : " + command
+    #print "Command Triggered : " + command
     print "\n"
 
 
@@ -136,7 +136,7 @@ def grafana_setup(project_dir):
     end_time = datetime.datetime.now()
     timer_logger(start_time, end_time, "GRAFANA", "Installing GRAFANA")
 
-    print "Command Triggered : " + command
+    #print "Command Triggered : " + command
     print "\n"
 
 
@@ -156,7 +156,7 @@ def grafana_add_datasource(project_dir):
     end_time = datetime.datetime.now()
     timer_logger(start_time, end_time, "GRAFANA", "Add Datasource for GRAFANA")
 
-    print "Command Triggered : " + command
+    #print "Command Triggered : " + command
     print "\n"
 
 
@@ -176,7 +176,7 @@ def grafana_add_dashboard(project_dir):
     end_time = datetime.datetime.now()
     timer_logger(start_time, end_time, "GRAFANA", "Add Perfotron Dashboard")
 
-    print "Command Triggered : " + command
+    #print "Command Triggered : " + command
     print "\n"
 
 
