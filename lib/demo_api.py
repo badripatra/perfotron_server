@@ -55,7 +55,7 @@ def add_backend_listner(jmx_string, application_name):
 
     else:
         os.system("sed -i -e 's/\[app\]/" + application_name + "/g' backend_listner.jmx")
-        backend_listener = ET.parse("backend_listner.jmx")
+        backend_listener = ET.parse("/jmx/backend_listner.jmx")
 
         base_script = ET.parse(user_jmx_name)
         existing_struct = base_script.find("./hashTree/hashTree")

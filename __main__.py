@@ -121,7 +121,7 @@ def sigint_handler(signum, frame):
 def add_backend_listner():
     """ This function is responsible for adding back end listener to a existing jmx"""
 
-    with open(os.path.join(CURRENT_DIR, 'templates',
+    with open(os.path.join(CURRENT_DIR, 'templates','jmx',
                            'backend_listner.jmx')) as backend_listner:
         backend_listner_data = str(backend_listner.read()).replace("[IP]", IP)
 
@@ -256,7 +256,7 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp templates/static/*.png ~/installation_launchpad/static/")
 
-    os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/installation_launchpad/backend_listner.jmx")
+    os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/installation_launchpad/jmx/backend_listner.jmx")
 
     os.system("echo `openssl rand -hex 12` > ~/installation_launchpad/token.txt")
 
