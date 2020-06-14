@@ -4348,7 +4348,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Performance Dashboard",
+  "title": "perfoTron-dashboard",
   "uid": "sample_dashboard",
   "version": 1
 }
