@@ -211,6 +211,10 @@ def native_initiator(cloud_vendor):
 
     os.system("sudo chown -R `id -un`:`id -gn` ~/installation_launchpad/")
 
+    os.system("cp lib/native.py  ~/installation_launchpad")
+    os.chdir(HOME)
+    os.system("sudo python ~/installation_launchpad/native.py " + " cloud_vendor:" + cloud_vendor)
+
 
 if __name__ == '__main__':
 
