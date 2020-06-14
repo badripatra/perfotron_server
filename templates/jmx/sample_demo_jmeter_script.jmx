@@ -332,7 +332,7 @@
           </elementProp>
           <elementProp name="IP" elementType="Argument">
             <stringProp name="Argument.name">IP</stringProp>
-            <stringProp name="Argument.value">IP_ADDRESS</stringProp>
+            <stringProp name="Argument.value">[IP]</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>

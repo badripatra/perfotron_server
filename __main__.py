@@ -226,13 +226,7 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp -r grafana/*.* ~/installation_launchpad")
 
-    os.system("cp templates/sample_demo_jmeter_script.jmx "
-              "~/installation_launchpad/actual_demo_jmeter_script.jmx")
-
-    os.system('sed -i -e "s/IP_ADDRESS/'+IP+'/g" ~/installation_launchpad'
-                                            '/actual_demo_jmeter_script.jmx')
-
-    os.system("cp -r templates/sample_jmeter_script.jmx ~/installation_launchpad")
+    os.system("cp templates/jmx/*.jmx ~/installation_launchpad/jmx/")
 
     os.system("cp lib/demo_api.py ~/installation_launchpad")
 
@@ -254,13 +248,11 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("mkdir -p ~/installation_launchpad/static")
 
-    os.system("cp templates/*.html ~/installation_launchpad/templates")
+    os.system("cp templates/htmls/*.html ~/installation_launchpad/templates")
 
     os.system("cp templates/samplers/* ~/installation_launchpad/")
 
-    os.system("cp templates/*.png ~/installation_launchpad/static/")
-
-    os.system("cp templates/backend_listner.jmx ~/installation_launchpad/")
+    os.system("cp templates/static/*.png ~/installation_launchpad/static/")
 
     os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/installation_launchpad/backend_listner.jmx")
 

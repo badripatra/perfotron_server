@@ -9,9 +9,9 @@ It also facilitate setting up Jenkins to run Jmeter Tests.
 ```            
             Target Audience      : Any individual / group using Jmeter for Performance Testing            
             How it helps         : Setting up Performance Testing environment End to End                                   
-            Visualization        : Grafana (6.5.2)            
-            Datasource           : Influx (1.7.4)            
-            Load Test Tool       : Apache Jmeter (5.1.1)            
+            Visualization        : Grafana           
+            Datasource           : Influx            
+            Load Test Tool       : Apache Jmeter          
             Programming Language : Python 2.7, Shell Scripting            
             Hosting Servers      : Grafana and Influx for Hosting Performance Dashboard                                                                     
             Supported Envs       : Unix (Ubuntu,CentOS, RHEL) for Hosting Server                                   
@@ -60,34 +60,14 @@ Step 3. Select 'Yes' or 'No' to proceed after reading Tool Usage and Instllation
 Step 4. Check the Grafana URL for Live Monitoring of Load Test
 Step 5. Check Env Details from env_details.yaml
 ```
-How to run your Jmeter Script in PerfoTron Platform :
+How to use PerfoTron Platform :
 
 ```bash
 Pre-rquisite. Perfotron Dashboard should be installed
-Step 1. To run your jmx to run in this env, use the command "python perfotron --jmx <Jmeter_TestPlan_Complete Path>"
-Step 2. The converted jmx & test results are is stored in '~/user_jmx_run_results/<Current_Date_Time_Stamp_Folder>
+Step 1. For users with Jmeter Knowledge , use 'PerfoTron JMX Convertor' - http://<perfoTron_server_Ip>:9003/convert_jmx
+Step 2. For users with no Jmeter Knowledge , use 'PerfoTron JMX Generator' - http://<perfoTron_server_Ip>:9003/convert_csv
 
-How this option internally works :
-1. Perfotron adds influxdb back-end listner to your Script
-2. Save it as a new script in ~/user_jmx_run_results/<Current_Date_Time_Stamp_Folder> location
-3. Triggers the Load Test and stores results in the same folder
 ```
-
-How to convert your Jmeter Script to be shown in PerfoTron Dashboard :
-
-```bash
-Pre-rquisite. Perfotron Dashboard should be installed
-Step 1. To convert your jmx to run in this env, hit "http://[perfoTron_server_ip]/convert_jmx"
-Step 2. Select your jmx
-Step 3. Click Convert.
-Step 4. The converted jmx will be downloaded to your local system
-
-
-How this option internally works :
-1. Perfotron adds influxdb back-end listner to your Script
-2. Sends the updated script back to user using http
-```
-
 
 How to uninstall Perfotron Dashboard :
 

@@ -428,7 +428,7 @@ def setup(root_project_directory, input_map):
     convertor_url = convertor_url.replace("ip_address", ip_address)
 
     jmx_generator_url = CONFIG_OBJECT.get('API', 'GENERATE_JMX_URL')
-    jmx_generator_url = convertor_url.replace("ip_address", ip_address)
+    jmx_generator_url = jmx_generator_url.replace("ip_address", ip_address)
 
     home_url = CONFIG_OBJECT.get('API', 'HOME_PAGE')
     home_url = home_url.replace("ip_address", ip_address)
@@ -445,7 +445,7 @@ def setup(root_project_directory, input_map):
     print "Users familiar with Jmeter, to get started use 'PerfoTron JMX Convertor'."
     print "PerfoTron JMX Convertor            : " + convertor_url + ". Token : " + token
     print "                                   OR                                   "
-    print "Users familiar with Jmeter, to get started use 'PerfoTron JMX Generator'."
+    print "Users not familiar with Jmeter, to get started use 'PerfoTron JMX Generator'."
     print "PerfoTron JMX Generator            : " + jmx_generator_url
     print "-------------------References------------------------------------------"
 # ---------------------------Functions----------------------------------------------------
