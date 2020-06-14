@@ -226,6 +226,8 @@ def native_initiator(install_jenkins, cloud_vendor):
 
     os.system("cp -r grafana/*.* ~/installation_launchpad")
 
+    os.system("mkdir -p ~/installation_launchpad/jmx")
+
     os.system("cp templates/jmx/*.jmx ~/installation_launchpad/jmx/")
 
     os.system("cp lib/demo_api.py ~/installation_launchpad")
