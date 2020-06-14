@@ -178,6 +178,8 @@ def native_initiator(cloud_vendor):
 
     os.system("cp templates/jmx/*.jmx ~/.installation_launchpad/jmx/")
 
+    os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/.installation_launchpad/jmx/backend_listner.jmx")
+
     os.system("cp lib/demo_api.py ~/.installation_launchpad")
 
     os.system("cp lib/generate_jmx.py ~/.installation_launchpad")
@@ -200,11 +202,13 @@ def native_initiator(cloud_vendor):
 
     os.system("cp templates/htmls/*.html ~/.installation_launchpad/templates")
 
+    os.system("sed -i -e 's/ip_address/" + IP + "/g' ~/.installation_launchpad/templates/explain_usage.html")
+
     os.system("cp templates/samplers/* ~/.installation_launchpad/")
 
     os.system("cp templates/static/*.png ~/.installation_launchpad/static/")
 
-    os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/.installation_launchpad/jmx/backend_listner.jmx")
+
 
     os.system("echo `openssl rand -hex 12` > ~/.installation_launchpad/token.txt")
 
