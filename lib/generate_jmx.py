@@ -150,15 +150,17 @@ class create_jmx_scenario():  # Initialization class
                     Url = str(each_testcase['url'])
 
                     concurrent_users_tc = str(each_testcase['Number of Users'])
-                    concurrent_users = concurrent_users + concurrent_users_tc
+                    concurrent_users = concurrent_users + int(concurrent_users_tc)
 
-                    ramp_up_in_seconds_tc = str(each_testcase['Ramp-up_period_seconds'])
-                    ramp_up_in_seconds = ramp_up_in_seconds + ramp_up_in_seconds_tc
+                    ramp_up_in_seconds_tc = str(each_testcase['Ramp-up_period_Seconds'])
+                    ramp_up_in_seconds = ramp_up_in_seconds + int(ramp_up_in_seconds_tc)
 
                     duration_in_seconds_tc = str(each_testcase['Duration_in_Seconds'])
-                    duration_in_seconds = duration_in_seconds + duration_in_seconds_tc
+                    duration_in_seconds = duration_in_seconds + int(duration_in_seconds_tc)
 
                     POST_params = str(each_testcase['POST_params'])
+
+                    responsetime_threshold_in_ms = str(each_testcase["Duration_Assertion_Milliseconds"])
 
                     header_tags = re.findall(self.pattern_to_identify_jmx_input_fields,
                                              str(each_testcase['Header_Manager']))

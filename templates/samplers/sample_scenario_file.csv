@@ -1,4 +1,4 @@
-Thread_Group_Name,HTTP_Request,Method,Header_Manager,url,Duration Assertion,POST_params,Number of Users,Duration_in_Seconds,Ramp-up_period_seconds,Execution_Control
+Thread_Group_Name,HTTP_Request,Method,Header_Manager,url,Duration_Assertion_Milliseconds,POST_params,Number of Users,Duration_in_Seconds,Ramp-up_period_Seconds,Execution_Control
 List_Users,List_All_Users,GET,[content-type:application/json],https://reqres.in/api/users/,1000,,1,120,60,yes
 List_Users,List_Single_Users,GET,[content-type:application/json],https://reqres.in/api/users/2,1000,,1,120,60,yes
 Create_Users,Create_New_User,POST,,https://reqres.in/api/users,1000,"{name: ""morpheus"", job: ""leader""}",1,120,60,yes
