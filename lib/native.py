@@ -242,9 +242,6 @@ def setup(root_project_directory, input_map):
     perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
     perf_dashboard_url = perf_dashboard_url.replace("ip_address", ip_address)
 
-    dashboard_html = os.path.join(root_project_directory, "templates", "explain_usage.html")
-    os.system("sed -i -e 's/perf_dashboard_url/" + perf_dashboard_url + "/g' "+ dashboard_html)
-
     token = get_command_output("cat token.txt")
 
 
