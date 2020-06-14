@@ -119,8 +119,6 @@ def uninstall_perftool(package_manager):
         os.system("sudo yum -y remove influxdb >> ~/un-installation_details.log 2>&1")
         print "Removed Influx DB"
 
-        # os.system("sudo yum -y remove jenkins >> ~/un-installation_details.log 2>&1")
-        # print "Removed Jenkins"
 
         os.system("sudo yum clean all >> ~/un-installation_details.log 2>&1")
 
@@ -132,8 +130,6 @@ def uninstall_perftool(package_manager):
         os.system("sudo apt-get purge remove influxdb >> ~/un-installation_details.log 2>&1")
         print "Removed Influx DB"
 
-        # os.system("sudo apt-get purge remove jenkins >> ~/un-installation_details.log 2>&1")
-        # print "Removed Jenkins"
 
         os.system("sudo apt-get clean >> ~/un-installation_details.log 2>&1")
 
@@ -145,9 +141,7 @@ def uninstall_perftool(package_manager):
     os.system("sudo kill -9 `ps -ef|grep -v grep|grep 'python system_monitor.py'"
               "|awk '{print $2}'` > /dev/null 2>&1")
 
-    # print "Killing existing instances of jenkins"
-    ''' os.system("sudo kill $(ps aux | grep -v grep| grep 'jenkins' | "
-                  "awk '{print $2}') >> ~/un-installation_details.log 2>&1") '''
+
 
     print "Killing existing instances of influx, grafana"
     os.system("sudo kill $(ps aux | grep -v grep| grep 'influx' | "
@@ -155,8 +149,6 @@ def uninstall_perftool(package_manager):
     os.system("sudo kill $(ps aux | grep -v grep| grep 'grafana' | "
               "awk '{print $2}') >> ~/un-installation_details.log 2>&1")
 
-    # print "Removing Files and Folder related to jenkins"
-    # os.system("sudo rm -rf /var/lib/jenkins >> ~/un-installation_details.log 2>&1")
 
     print "Removing Files and Folder related to influx, grafana"
     os.system("sudo rm -rf /var/lib/grafana >> ~/un-installation_details.log 2>&1")
@@ -171,7 +163,7 @@ def uninstall_perftool(package_manager):
     print "\n"
 
 
-def native_initiator(install_jenkins, cloud_vendor):
+def native_initiator(cloud_vendor):
     """ This function is responsible for copying required files to
     installation directory and start the run"""
 
@@ -216,24 +208,6 @@ def native_initiator(install_jenkins, cloud_vendor):
     os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/installation_launchpad/jmx/backend_listner.jmx")
 
     os.system("echo `openssl rand -hex 12` > ~/installation_launchpad/token.txt")
-
-    if install_jenkins == "true":
-        os.system("cp jenkins/jenkins_job_setup.sh ~/installation_launchpad")
-        os.system("cp jenkins/config.xml ~/installation_launchpad")
-        os.system("cp lib/native.py  ~/installation_launchpad")
-        os.system("cp lib/selenium_jenkins.py  ~/installation_launchpad")
-        os.system("cp jenkins/unlock_jenkins.sh ~/installation_launchpad")
-        os.system("cp setup_details/details_template.yaml ~/installation_launchpad")
-        os.system("sudo python ~/installation_launchpad/native.py install_jekins:true")
-    else:
-        os.system("cp lib/native.py  ~/installation_launchpad")
-        os.system("cp apache-jmeter-5.1.1.tgz ~/installation_launchpad")
-        os.system("sudo tar -xf  ~/installation_launchpad/apache-jmeter-5.1.1.tgz"
-                  " -C ~/installation_launchpad")
-
-        os.chdir(HOME)
-        os.system("sudo python ~/installation_launchpad/native.py install_jekins:" + install_jenkins +
-                  " cloud_vendor:"+cloud_vendor)
 
     os.system("sudo chown -R `id -un`:`id -gn` ~/installation_launchpad/")
 
@@ -306,12 +280,7 @@ if __name__ == '__main__':
 
         USER_INPUT_DATA = get_user_input.user_input_installation()
 
-        if USER_INPUT_DATA["jenkins"] == "yes":
-            INSTALL_JENKINS = "true"
-        else:
-            INSTALL_JENKINS = "false"
-
-        native_initiator(INSTALL_JENKINS, cloud_provider)
+        native_initiator(cloud_provider)
 
     else:
         print "\033[1;31;40m Perfotron Dashboard is already installed. " \

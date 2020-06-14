@@ -34,16 +34,6 @@ def user_input_installation():
         print "Exiting, as you selected not to proceed with installation."
         sys.exit()
 
-    # Commented Code as Jenkins Integrationw will be provided Later. Currently default is set to "no"
-    '''sample_run_jenkins = [inquirer.List('jenkins',
-                                        message="Do you want the demo be triggered from jenkins ?",
-                                        choices=['yes', 'no'])]
-
-    user_selection_jenkins_vs_local = inquirer.prompt(sample_run_jenkins)
-    user_choice["jenkins"] = user_selection_jenkins_vs_local["jenkins"]'''
-
-    user_choice["jenkins"] = "no"
-
 
     # -------------------------------------------------------------------------------------------- #
 

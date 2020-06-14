@@ -23,18 +23,6 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 with open("token.txt", "r") as token_file:
     token = str(token_file.read().strip())
 
-def get_jmxchecker_output(command):
-    """ This function is responsible for running a command on Shell & return output"""
-    cmd = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    try:
-        cmd_value = str(cmd.stdout.readlines()).strip()  # Read command output
-        sys.stdout.flush()
-    except IndexError:
-        cmd_value = ""
-
-    return cmd_value
-
-
 def add_backend_listner(jmx_string, application_name):
     """ This function is responsible for adding back end listener to a existing jmx"""
 
@@ -45,31 +33,22 @@ def add_backend_listner(jmx_string, application_name):
     with open(user_jmx_name, "w") as user_jmx:
         user_jmx.write(jmx_string)
 
-    jmx_validity = get_jmxchecker_output(
-        "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx "+ user_jmx_name)
-
-    if "JMX is fine" not in jmx_validity:
-
-        print "The Jmeter Script is not valid. Please correct it and Retry"
-        return "Invalid JMX"
-
-    else:
-        os.system("sed -i -e 's/\[app\]/" + application_name + "/g' backend_listner.jmx")
+    os.system("sed -i -e 's/\[app\]/" + application_name + "/g' backend_listner.jmx")
 
 
-        backend_listener = ET.parse(os.path.join(CURRENT_DIR, 'jmx','backend_listner.jmx'))
+    backend_listener = ET.parse(os.path.join(CURRENT_DIR, 'jmx','backend_listner.jmx'))
 
-        base_script = ET.parse(user_jmx_name)
-        existing_struct = base_script.find("./hashTree/hashTree")
-        new_condition = backend_listener.getroot()
-        existing_struct.append(new_condition)
+    base_script = ET.parse(user_jmx_name)
+    existing_struct = base_script.find("./hashTree/hashTree")
+    new_condition = backend_listener.getroot()
+    existing_struct.append(new_condition)
 
-        file_name = 'converted_user_'+epoch_time+'.jmx'
+    file_name = 'converted_user_'+epoch_time+'.jmx'
 
-        with open(file_name, "w") as user_jmx:
-            user_jmx.write(ET.tostring(base_script.getroot()))
+    with open(file_name, "w") as user_jmx:
+        user_jmx.write(ET.tostring(base_script.getroot()))
 
-        return file_name
+    return file_name
 
 
 def allowed_file(filename):
