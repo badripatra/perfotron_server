@@ -132,6 +132,10 @@ class create_jmx_scenario():  # Initialization class
             threadgroup_content = self.get_content("threadgroup_sampler")
             threadgroup_content = threadgroup_content.replace("[testscenario_name]", each_scenario)
 
+            concurrent_users = 0
+            ramp_up_in_seconds = 0
+            duration_in_seconds = 0
+
             Data = ""
 
             for each_testcase in testscenario_json[each_scenario]:
@@ -144,9 +148,16 @@ class create_jmx_scenario():  # Initialization class
 
                 if (execution_control == 'yes'):
                     Url = str(each_testcase['url'])
-                    concurrent_users = str(each_testcase['Number of Users'])
-                    ramp_up_in_seconds = str(each_testcase['Ramp-up_period_seconds'])
-                    duration_in_seconds = str(each_testcase['Duration_in_Seconds'])
+
+                    concurrent_users_tc = str(each_testcase['Number of Users'])
+                    concurrent_users = concurrent_users + concurrent_users_tc
+
+                    ramp_up_in_seconds_tc = str(each_testcase['Ramp-up_period_seconds'])
+                    ramp_up_in_seconds = ramp_up_in_seconds + ramp_up_in_seconds_tc
+
+                    duration_in_seconds_tc = str(each_testcase['Duration_in_Seconds'])
+                    duration_in_seconds = duration_in_seconds + duration_in_seconds_tc
+
                     POST_params = str(each_testcase['POST_params'])
 
                     header_tags = re.findall(self.pattern_to_identify_jmx_input_fields,
@@ -175,7 +186,14 @@ class create_jmx_scenario():  # Initialization class
                     Data = Data + JMX_ThreadGroup_Content
 
             threadgroup_content = threadgroup_content.replace("[sampler_data]", Data)
-            threadgroup_content = threadgroup_content.replace("[sampler_data]", "")
+
+            input_jmx_tags = re.findall(self.pattern_to_identify_jmx_input_fields,
+                                        threadgroup_content)
+
+            for each_jmx_tag in input_jmx_tags:
+                # Replace the input tags in jmx with variable values
+                threadgroup_content = threadgroup_content.replace("[" + each_jmx_tag + "]",
+                                                                          eval(each_jmx_tag))
 
             threadgroup_content_list = threadgroup_content_list + threadgroup_content
 

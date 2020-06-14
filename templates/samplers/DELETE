@@ -30,5 +30,10 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion" enabled="true">
+              <stringProp name="DurationAssertion.duration">[responsetime_threshold_in_ms]</stringProp>
+              <stringProp name="Assertion.scope">all</stringProp>
+          </DurationAssertion>
+          <hashTree/>
         </hashTree>
 
