@@ -48,10 +48,9 @@ def dependency_resolution():
     cmd = dependency_details + " > /dev/null 2>&1"
 
     print "1. pip"
-    print "2. jdk (8)"
-    print "3. flask (python module)"
-    print "4. inquirer (python module)"
-    print "5. influxdb (python module)"
+    print "2. flask (python module)"
+    print "3. inquirer (python module)"
+    print "4. influxdb (python module)"
 
     os.system(cmd)
 

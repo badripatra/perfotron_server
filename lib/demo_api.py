@@ -33,9 +33,6 @@ def add_backend_listner(jmx_string, application_name):
     with open(user_jmx_name, "w") as user_jmx:
         user_jmx.write(jmx_string)
 
-    os.system("sed -i -e 's/\[app\]/" + application_name + "/g' /jmx/backend_listner.jmx")
-
-
     backend_listener = ET.parse(os.path.join(CURRENT_DIR, 'jmx','backend_listner.jmx'))
 
     base_script = ET.parse(user_jmx_name)
@@ -47,6 +44,8 @@ def add_backend_listner(jmx_string, application_name):
 
     with open(file_name, "w") as user_jmx:
         user_jmx.write(ET.tostring(base_script.getroot()))
+
+    os.system("sed -i -e 's/\[app\]/" + application_name + "/g' "+file_name)
 
     return file_name
 

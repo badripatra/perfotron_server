@@ -10,7 +10,7 @@
             Supported Envs       : Unix (Ubuntu,CentOS, RHEL) for Hosting Server
             System Configuration : Minimum 8 GB RAM for Hosting Server
             Tested with          : 2 Thread Group - 1000 threads each
-            Approx. Set Up Time  : 5 - 10 Minutes
+            Approx. Set Up Time  : 1 - 2 Minutes
 ---------------------------------------------ABOUT-----------------------------------------------------------------
 
 -------------------------------------Installation Details ---------------------------------------------------------
