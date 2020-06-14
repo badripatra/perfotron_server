@@ -249,9 +249,12 @@ def setup(root_project_directory, input_map):
     print "-------------------References------------------------------------------"
     print "PerfoTron Dashboard                : " + perf_dashboard_url + " (credentials : admin/admin)"
     print "For all documentation              : " + home_url
+    print "\n"
     print "Users familiar with Jmeter, to get started use 'PerfoTron JMX Convertor'."
     print "PerfoTron JMX Convertor            : " + convertor_url + " .Token : " + token
+    print "\n"
     print "                                   OR                                   "
+    print "\n"
     print "Users not familiar with Jmeter, to get started use 'get_jmxchecker_output'."
     print "PerfoTron JMX Generator            : " + jmx_generator_url
     print "-------------------References------------------------------------------"
