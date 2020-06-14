@@ -55,7 +55,9 @@ def add_backend_listner(jmx_string, application_name):
 
     else:
         os.system("sed -i -e 's/\[app\]/" + application_name + "/g' backend_listner.jmx")
-        backend_listener = ET.parse("/jmx/backend_listner.jmx")
+
+
+        backend_listener = ET.parse(os.path.join(CURRENT_DIR, 'jmx','backend_listner.jmx'))
 
         base_script = ET.parse(user_jmx_name)
         existing_struct = base_script.find("./hashTree/hashTree")
@@ -131,7 +133,8 @@ def demo_api_post():
 
 @FLASK_APP.route('/sample_jmx')
 def sample_jmx_download ():
-    path = "/jmx/sample_jmeter_script.jmx"
+
+    path = os.path.join(CURRENT_DIR, 'jmx', 'backend_listner.jmx')
     return send_file(path, as_attachment=True)
 
 @FLASK_APP.route('/sample_csv_download')
