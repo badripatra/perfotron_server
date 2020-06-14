@@ -154,7 +154,7 @@ def uninstall_perftool(package_manager):
     os.system("sudo rm -rf /var/lib/grafana >> ~/un-installation_details.log 2>&1")
     os.system("sudo rm -rf /etc/grafana/ >> ~/un-installation_details.log 2>&1")
     os.system("sudo rm -rf ~/installation_logs >> ~/un-installation_details.log 2>&1")
-    os.system("sudo rm -rf ~/installation_launchpad >> ~/un-installation_details.log 2>&1")
+    os.system("sudo rm -rf ~/.installation_launchpad >> ~/un-installation_details.log 2>&1")
     os.system("sudo rm -rf ~/Desktop/ >> ~/un-installation_details.log 2>&1")
     print "Deleted Corresponding Folders"
 
@@ -169,51 +169,51 @@ def native_initiator(cloud_vendor):
 
     os.system("mkdir -p ~/.installation_launchpad")
 
-    os.system("cp -r os_specific_files/"+OS_TYPE+"/*.* ~/installation_launchpad")
+    os.system("cp -r os_specific_files/"+OS_TYPE+"/*.* ~/.installation_launchpad")
 
-    os.system ("cp requirements.txt ~/installation_launchpad")
+    os.system ("cp requirements.txt ~/.installation_launchpad")
 
-    os.system("cp -r grafana/*.* ~/installation_launchpad")
+    os.system("cp -r grafana/*.* ~/.installation_launchpad")
 
-    os.system("mkdir -p ~/installation_launchpad/jmx")
+    os.system("mkdir -p ~/.installation_launchpad/jmx")
 
-    os.system("cp templates/jmx/*.jmx ~/installation_launchpad/jmx/")
+    os.system("cp templates/jmx/*.jmx ~/.installation_launchpad/jmx/")
 
-    os.system("cp lib/demo_api.py ~/installation_launchpad")
+    os.system("cp lib/demo_api.py ~/.installation_launchpad")
 
-    os.system("cp lib/generate_jmx.py ~/installation_launchpad")
+    os.system("cp lib/generate_jmx.py ~/.installation_launchpad")
 
-    os.system("cp demo_api/invoke_restapis.sh ~/installation_launchpad")
+    os.system("cp demo_api/invoke_restapis.sh ~/.installation_launchpad")
 
-    os.system("cp setup_details/details_template.yaml ~/installation_launchpad")
+    os.system("cp setup_details/details_template.yaml ~/.installation_launchpad")
 
-    os.system("cp server_stats/invoke_serverstats.sh ~/installation_launchpad")
+    os.system("cp server_stats/invoke_serverstats.sh ~/.installation_launchpad")
 
-    os.system("cp server_stats/server_stats.ini ~/installation_launchpad")
+    os.system("cp server_stats/server_stats.ini ~/.installation_launchpad")
 
-    os.system("cp lib/system_monitor.py ~/installation_launchpad")
+    os.system("cp lib/system_monitor.py ~/.installation_launchpad")
 
-    os.system("cp lib/config/config.cnf ~/installation_launchpad")
+    os.system("cp lib/config/config.cnf ~/.installation_launchpad")
 
-    os.system("mkdir -p ~/installation_launchpad/templates")
+    os.system("mkdir -p ~/.installation_launchpad/templates")
 
-    os.system("mkdir -p ~/installation_launchpad/static")
+    os.system("mkdir -p ~/.installation_launchpad/static")
 
-    os.system("cp templates/htmls/*.html ~/installation_launchpad/templates")
+    os.system("cp templates/htmls/*.html ~/.installation_launchpad/templates")
 
-    os.system("cp templates/samplers/* ~/installation_launchpad/")
+    os.system("cp templates/samplers/* ~/.installation_launchpad/")
 
-    os.system("cp templates/static/*.png ~/installation_launchpad/static/")
+    os.system("cp templates/static/*.png ~/.installation_launchpad/static/")
 
-    os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/installation_launchpad/jmx/backend_listner.jmx")
+    os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/.installation_launchpad/jmx/backend_listner.jmx")
 
-    os.system("echo `openssl rand -hex 12` > ~/installation_launchpad/token.txt")
+    os.system("echo `openssl rand -hex 12` > ~/.installation_launchpad/token.txt")
 
-    os.system("sudo chown -R `id -un`:`id -gn` ~/installation_launchpad/")
+    os.system("sudo chown -R `id -un`:`id -gn` ~/.installation_launchpad/")
 
-    os.system("cp lib/native.py  ~/installation_launchpad")
+    os.system("cp lib/native.py  ~/.installation_launchpad")
     os.chdir(HOME)
-    os.system("sudo python ~/installation_launchpad/native.py " + " cloud_vendor:" + cloud_vendor)
+    os.system("sudo python ~/.installation_launchpad/native.py " + " cloud_vendor:" + cloud_vendor)
 
 
 if __name__ == '__main__':
