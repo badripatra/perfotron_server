@@ -52,8 +52,6 @@ def dependency_resolution():
     print "3. flask (python module)"
     print "4. inquirer (python module)"
     print "5. influxdb (python module)"
-    print "6. selenium (python module)"
-    print "7. pyvirtualdisplay (python module)"
 
     os.system(cmd)
 
@@ -69,18 +67,6 @@ def get_ip(cloud_vendor):
         ip_address = get_command_output('hostname -I|cut -d " " -f1')
 
     return ip_address
-
-
-def get_jmxchecker_output(command):
-    """ This function is responsible for running a command on Shell & return output"""
-    cmd = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    try:
-        cmd_value = str(cmd.stdout.readlines()).strip()  # Read command output
-        sys.stdout.flush()
-    except IndexError:
-        cmd_value = ""
-
-    return cmd_value
 
 
 def get_command_output(command):
@@ -116,35 +102,6 @@ def sigint_handler(signum, frame):
     """ This function is responsible for handling user abort scenarios"""
     print '\nExiting now'
     sys.exit(1)
-
-
-def add_backend_listner():
-    """ This function is responsible for adding back end listener to a existing jmx"""
-
-    with open(os.path.join(CURRENT_DIR, 'templates','jmx',
-                           'backend_listner.jmx')) as backend_listner:
-        backend_listner_data = str(backend_listner.read()).replace("[IP]", IP)
-
-    with open('backend_listner.jmx', "w") as backend_listner:
-        backend_listner.write(backend_listner_data)
-
-    backend_listener = ET.parse("backend_listner.jmx")
-
-    base_script = ET.parse(ARGS.jmx)
-    existing_struct = base_script.find("./hashTree/hashTree")
-    new_condition = backend_listener.getroot()
-    existing_struct.append(new_condition)
-
-    os.system("mkdir -p ~/user_jmx_run_results")
-
-    file_name = os.path.join(HOME, "user_jmx_run_results", os.path.basename(ARGS.jmx))
-
-    with open(file_name, "w") as user_jmx:
-        user_jmx.write(ET.tostring(base_script.getroot()))
-
-    os.system("rm -rf backend_listner.jmx")
-
-    return file_name
 
 
 def uninstall_perftool(package_manager):
@@ -287,9 +244,7 @@ if __name__ == '__main__':
 
     PARSER = argparse.ArgumentParser()
     PARSER.add_argument("--uninstall", help="Uninstall Software Stack", action="store_true")
-    PARSER.add_argument("--jmx",
-                        help="Jmeter Test Plan name with complete path to be executed."
-                             " Example: python perfenv_e2e --jmx sample_user_testplan.jmx")
+
     ARGS = PARSER.parse_args()
 
     cloud_provider = identify_onprem_or_cloud()
@@ -316,9 +271,9 @@ if __name__ == '__main__':
 
     if not PERF_DASHBOARD:
 
-        if ARGS.jmx or ARGS.uninstall:
-            print "\033[1;33;40m '--jmx' or '--uninstall' " \
-                  "options are only possible after Perfotron Dashboard is installed"
+        if ARGS.uninstall:
+            print "\033[1;33;40m  or '--uninstall' " \
+                  "option is  only possible after Perfotron Dashboard is installed"
 
             print " Run 'python perfotron' command to install the Perfotron Dashboard"
             print " Exiting now\033[0;37;40m"
@@ -329,60 +284,6 @@ if __name__ == '__main__':
                 print About.read()
 
             dependency_resolution()  # Install all dependent modules
-
-    if ARGS.jmx and ARGS.uninstall:
-
-        print "\033[1;33;40m '--jmx' and '--uninstall' options can not selected together."
-        print " Select '--uninstall' to remove the tool from your system"
-        print " Select '--jmx' to enable your Jmeter Script to run and reflect in Perfotron Dashboard"
-        print " Exiting Now\033[0;37;40m"
-
-        sys.exit()
-
-    if ARGS.jmx:
-
-        if "/" not in ARGS.jmx:
-            ARGS.jmx = os.path.join(os.getcwd(), "..", ARGS.jmx)
-
-        if not os.path.exists(ARGS.jmx):
-            print "\033[1;31;40m Input JMX : "+ARGS.jmx+" does not exist.\033[5;37;40m"
-
-            print "Check the location of the path and then retry.Exiting now."
-
-            sys.exit()
-
-        print "------------------Started Executing Jmeter Script ------------------------------"
-
-        jmx_validity = get_jmxchecker_output(
-            "~/installation_launchpad/apache-jmeter-5.1.1/bin/TestPlanCheck.sh --jmx " + ARGS.jmx)
- 
-
-        if "JMX is fine" not in jmx_validity:
-            print "The Jmeter Script is not valid. Please correct it and Retry"
-            sys.exit()
-
-        JMX_FILE = add_backend_listner()
-
-        RESULT_FOLDER = str(datetime.datetime.now())
-        RESULT_FOLDER = RESULT_FOLDER.replace(" ", "_")
-        RESULT_FOLDER = RESULT_FOLDER.replace(":", "-")
-        RESULT_FOLDER = RESULT_FOLDER.replace(".", "-")
-
-        RESULT_FOLDER = HOME + "/user_jmx_run_results/"+RESULT_FOLDER
-
-        os.system("mkdir -p " + RESULT_FOLDER)
-        os.chdir(RESULT_FOLDER)
-
-        CMD_JMX = "~/installation_launchpad/apache-jmeter-5.1.1/bin/jmeter -n -t " + JMX_FILE
-
-        print "Command Triggered :" + CMD_JMX
-        print "Perfdashboard URL : "\
-              + "http://" + IP + ":3000/d/sample_dashboard/performance-dashboard?orgId=1\n"
-
-        os.system("~/installation_launchpad/apache-jmeter-5.1.1/bin/jmeter -n -t " + JMX_FILE)
-        print "\nJmeter Test result location : " + RESULT_FOLDER + "\n"
-        print "---------------------Finished Executing Jmeter Script -----------------------------"
-        sys.exit()
 
     import get_user_input   # Import user input lib
 

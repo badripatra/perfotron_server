@@ -1,10 +1,10 @@
-""" ===Main Scripts to install influx, grafana, jenkins and set up env==
+""" ===Main Scripts to install influx, grafana set up env==
 __author__ = "Badri Patra"
 __credits__ = ["Badri Patra"]
 __version__ = "1.0.0"
 __email__ = "badri.patra@gmail.com"
 __status__ = "Testing"
-===Main Scripts to install influx, grafana, jenkins and set up env=="""
+===Main Scripts to install influx, grafana, set up env=="""
 
 import datetime
 import os
@@ -203,184 +203,6 @@ def deploy_stats_collector(project_dir):
 
     print "\n"
 
-
-def enable_jenkins_port(project_dir):
-    """ This function is responsible for enable jenkins port 8080"""
-    print "Step 8. : Live Demo  : Jenkins - > Jmeter -> Perfotron Dashboard "
-    print "\n"
-    print "          Enabling Jenkins Port :- "
-    file_name = os.path.join(project_dir, "enable_jenkins_ports.sh")
-    log_file_name = os.path.join(project_dir, "Installation_details.log")
-
-    current_time = str(datetime.datetime.now())
-    detailed_logger(current_time, "Enable Jenkins Ports", log_file_name)
-
-    command = file_name + " >> " + log_file_name + " 2>&1"
-
-    start_time = datetime.datetime.now()
-    os.system(command)
-    end_time = datetime.datetime.now()
-    timer_logger(start_time, end_time, "JENKINS", "EnablingF Jenkins Port 8080")
-
-    print "          Command Triggered : " + command
-    print "\n"
-
-
-def jenkins_installation(project_dir):
-    """ This function is responsible for jenkins installation  """
-    print "          Jenkins Installation :- "
-    file_name = os.path.join(project_dir, "jenkins_installation.sh")
-    log_file_name = os.path.join(project_dir, "Installation_details.log")
-
-    current_time = str(datetime.datetime.now())
-    detailed_logger(current_time, "Jenkins Installation", log_file_name)
-
-    command = file_name + " >> " + log_file_name + " 2>&1"
-
-    start_time = datetime.datetime.now()
-    os.system(command)
-    end_time = datetime.datetime.now()
-    timer_logger(start_time, end_time, "JENKINS", "Installing JENKINS")
-
-    print "          Command Triggered : " + command
-    print "\n"
-
-
-def setup_adminuser_jenkins(project_dir):
-    """ This function is responsible for set up admin user for jenkins"""
-    sleep(90)
-    print "          Unlock Jenkins :- "
-    file_name = os.path.join(project_dir, "unlock_jenkins.sh")
-    log_file_name = os.path.join(project_dir, "Installation_details.log")
-
-    current_time = str(datetime.datetime.now())
-    detailed_logger(current_time, "Unlock Jenkins", log_file_name)
-
-    command = file_name + " >> " + log_file_name + " 2>&1"
-
-    start_time = datetime.datetime.now()
-    os.system(command)
-    end_time = datetime.datetime.now()
-    timer_logger(start_time, end_time, "JENKINS", "Set-up Admin User")
-
-    print "          Command Triggered : " + command
-    print "\n"
-
-
-def jenkins_job_setup(project_dir):
-    """ This function is responsible for set up demo jenkins job"""
-    print "          Jenkins Job Set up :- "
-    file_name = os.path.join(project_dir, "jenkins_job_setup.sh")
-    log_file_name = os.path.join(project_dir, "Installation_details.log")
-
-    current_time = str(datetime.datetime.now())
-    detailed_logger(current_time, "Demo Job Set up", log_file_name)
-
-    command = file_name + " >> " + log_file_name + " 2>&1"
-
-    start_time = datetime.datetime.now()
-    os.system(command)
-    end_time = datetime.datetime.now()
-    timer_logger(start_time, end_time, "JENKINS", "Demo job set-up")
-
-    print "          Command Triggered : " + command
-    print "\n"
-
-
-def demo_run_jenkins(jenkins_ip):
-    """ This function is responsible for triggering demo jenkins job for Perfotron dashboard"""
-    sleep(90)
-    print "          Triggering Jenkins Job for ingesting load on demo api"
-    jenkins_job_trigger_url = CONFIG_OBJECT.get('JENKINS', 'JOB_TRIGGER_URL')
-    jenkins_job_trigger_url = jenkins_job_trigger_url.replace("jenkins_ip", jenkins_ip)
-
-    start_time = datetime.datetime.now()
-    os.system(jenkins_job_trigger_url)
-    end_time = datetime.datetime.now()
-    timer_logger(start_time, end_time, "JENKINS", "Demo Run")
-
-    print "\n"
-    print "Please wait for 2 Minutes till the Jenkins Run gets over"
-
-    print "INFO : "
-    jenkins_job_url = CONFIG_OBJECT.get('JENKINS', 'JOB_URL')
-    jenkins_job_url = jenkins_job_url.replace("jenkins_ip", jenkins_ip)
-    print "Jenkins Run Details : "+jenkins_job_url
-
-
-def env_details_file(project_dir, cloud_vendor):
-    """ Generating env details files for reference"""
-
-    ip_address = get_ip(cloud_vendor)
-
-    with open(os.path.join(project_dir, "details_template.yaml"), "r") as details_file:
-        details = details_file.read()
-
-    details = details.replace("[grafana_ip]", str(ip_address))
-    details = details.replace("[influx_ip]", str(ip_address))
-    details = details.replace("[hosting_server_ip]", str(ip_address))
-    if jenkins_installation == "true":
-        details = details.replace("[jenkins_ip]", str(ip_address))
-
-    details_file = os.path.join(project_dir, "env_details.yaml")
-
-    with open(details_file, "w") as env_details:
-        env_details.write(details)
-
-    print "** Env details contains below info : "
-    print "1. Perfrotron Dashboard URL, Credentials "
-    print "2. Influx DB Host name, Port, Database, Mesaurement Name"
-    print "3. Sample API (which is used for demo load test) details"
-
-
-def demorun_jenkins(project_dir, ip_address):
-    """ Generating env details like url, default credentials etc.."""
-
-    enable_jenkins_port(project_dir)
-
-    jenkins_installation(project_dir)
-
-    setup_adminuser_jenkins(project_dir)
-
-    jenkins_job_setup(project_dir)
-
-    perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
-    perf_dashboard_url = perf_dashboard_url.replace("ip_address", ip_address)
-
-    print "          For Live Monitoring Use Perfotron dashboard"
-    print "          Perfotron dashboard URL : " + perf_dashboard_url + " (credentials : admin/admin)"
-
-    demo_run_jenkins(ip_address)
-
-
-def demorun_local(project_dir, ip_address):
-    """ This function is responsible for Perfotron dashboard demo run from local"""
-    jmeter_executable = os.path.join(project_dir, "apache-jmeter-5.1.1", "bin", "jmeter")
-    jmx_file = os.path.join(project_dir, "actual_demo_jmeter_script.jmx")
-    jtl_file = "jmeter_transactions.log"
-    result_folder = str(datetime.datetime.now()).replace(" ", "_").replace(":", "-")
-
-    print "For Live Monitoring Use Perfotron dashboard "
-    perf_dashboard_url = CONFIG_OBJECT.get('DASHBOARD', 'URL')
-    perf_dashboard_url = perf_dashboard_url.replace("ip_address", ip_address)
-    print "Perfotron dashboard  URL : " + perf_dashboard_url + " (credentials : admin/admin)"
-    print "\n"
-
-    print "Starting Demo Load Test."
-    jmeter_cmd = jmeter_executable + " -n -t " + jmx_file + " -l "+jtl_file+" -e -o "+result_folder
-    print "Jmeter Command : " + jmeter_cmd
-    print "\n"
-    os.system(jmeter_executable + " -n -t " + jmx_file + " -l "+jtl_file+" -e -o "+result_folder)
-    os.system("mv *.csv " + result_folder)
-    os.system("mv jmeter_transactions.log " + result_folder)
-    os.system("mv jmeter.log " + result_folder)
-
-    print "\nTest Result is stored in  '~/installation_launchpad/"+result_folder+"' folder"
-    print "Test Results folder contains below :"
-    print "* csv files for each demo api transactions"
-    print "* index.html to access Test Stats and Charts"
-
-
 def setup(root_project_directory, input_map):
     """ Main Function"""
 
@@ -399,22 +221,6 @@ def setup(root_project_directory, input_map):
     grafana_add_dashboard(root_project_directory)
     deploy_demo_api(root_project_directory)
     deploy_stats_collector(root_project_directory)
-
-    install_jekins = input_map["install_jekins"]
-
-
-    '''if install_jekins == "true":
-        demorun_jenkins(root_project_directory, ip_address)
-    elif install_jekins == "false":
-        demorun_local(root_project_directory, ip_address)
-
-    print "\n"
-    print "Installation details can be found in 'installation_launchpad' folder :"
-    print "* All the files used for installation"
-    print "* Installation Logs"
-    print "* Environment details "
-    print "\n" 
-    env_details_file(root_project_directory,cloud_vendor) '''
 
     print "-------------------Progress------------------------------------------"
 
@@ -445,7 +251,7 @@ def setup(root_project_directory, input_map):
     print "Users familiar with Jmeter, to get started use 'PerfoTron JMX Convertor'."
     print "PerfoTron JMX Convertor            : " + convertor_url + ". Token : " + token
     print "                                   OR                                   "
-    print "Users not familiar with Jmeter, to get started use 'PerfoTron JMX Generator'."
+    print "Users not familiar with Jmeter, to get started use 'get_jmxchecker_output'."
     print "PerfoTron JMX Generator            : " + jmx_generator_url
     print "-------------------References------------------------------------------"
 # ---------------------------Functions----------------------------------------------------
