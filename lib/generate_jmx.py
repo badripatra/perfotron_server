@@ -195,7 +195,7 @@ class create_jmx_scenario():  # Initialization class
             for each_jmx_tag in input_jmx_tags:
                 # Replace the input tags in jmx with variable values
                 threadgroup_content = threadgroup_content.replace("[" + each_jmx_tag + "]",
-                                                                          eval(each_jmx_tag))
+                                                                          str(eval(each_jmx_tag)))
 
             threadgroup_content_list = threadgroup_content_list + threadgroup_content
 
