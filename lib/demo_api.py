@@ -112,7 +112,7 @@ def demo_api_post():
 @FLASK_APP.route('/sample_jmx')
 def sample_jmx_download ():
 
-    path = os.path.join(CURRENT_DIR, 'jmx', 'sample_demo_jmeter_script.jmx')
+    path = os.path.join(CURRENT_DIR, 'jmx', 'DEMO_API.jmx')
     return send_file(path, as_attachment=True)
 
 @FLASK_APP.route('/sample_csv_download')
