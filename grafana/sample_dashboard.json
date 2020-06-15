@@ -2562,9 +2562,7 @@
           "colorBackground": false,
           "colorValue": true,
           "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "#e5ac0e",
-            "rgba(50, 172, 45, 0.97)"
+            "#299c46"
           ],
           "datasource": "$data_source",
           "decimals": 0,
@@ -2998,7 +2996,7 @@
               "measurement": "jmeter",
               "orderByTime": "ASC",
               "policy": "default",
-              "query": "SELECT sum(\"count\") FROM \"$measurement_name\" WHERE (\"application\" =~ /^$application$/ AND \"responseCode\" !~ /^$/ AND \"transaction\" =~ /^$transaction$/ ) AND $timeFilter GROUP BY \"transaction\",\"responseCode\",\"responseMessage\",\"transaction\"",
+              "query": "SELECT sum(\"count\") FROM \"$measurement_name\" WHERE (\"application\" =~ /^$application$/ AND \"responseCode\" =~ /.*/ AND \"transaction\" =~ /^$transaction$/ ) AND $timeFilter GROUP BY \"transaction\",\"responseCode\",\"responseMessage\",\"transaction\"",
               "rawQuery": true,
               "refId": "A",
               "resultFormat": "table",
