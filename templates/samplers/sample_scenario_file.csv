@@ -1,5 +1,5 @@
-Thread_Group_Name,HTTP_Request,Method,POST_params,Header_Manager,url,Number of Users,Duration_Assertion_Milliseconds,Ramp-up_period_Seconds,Duration_in_Seconds,Execution_Control
-List_Users,List_All_Users,GET,,[content-type:application/json],https://reqres.in/api/users/,1,1000,5,30,yes
-List_Users,List_Single_Users,GET,,[content-type:application/json],https://reqres.in/api/users/2,1,1000,,,yes
-Create_Users,Create_New_User,POST,"{name: ""morpheus"", job: ""leader""}",,https://reqres.in/api/users,1,1000,5,30,yes
-Update_Users,Update_Existing_User,PUT,"{name: ""morpheus"", job: ""zion resident""} ",,https://reqres.in/api/users/2,1,1000,5,30,yes
+Thread Group,HTTP Request Name,Method,Body Data,HTTP Header Manager,HTTP URL,Number of Users,Duration (seconds),Ramp-up period(seconds),Duration Assertion (milliseconds),Execution_Control
+List_Users,List_All_Users,GET,,[content-type:application/json],https://reqres.in/api/users/,1,30,5,1000,yes
+List_Users,List_Single_Users,GET,,[content-type:application/json],https://reqres.in/api/users/2,1,,,1000,yes
+Create_Users,Create_New_User,POST,"{name: ""morpheus"", job: ""leader""}",,https://reqres.in/api/users,1,30,5,1000,yes
+Update_Users,Update_Existing_User,PUT,"{name: ""morpheus"", job: ""zion resident""} ",,https://reqres.in/api/users/2,1,30,5,1000,yes

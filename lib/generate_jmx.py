@@ -106,10 +106,10 @@ class create_jmx_scenario():  # Initialization class
 
         testscenario_list = []
 
-        performance_testcases = sorted(self.performance_testcases_input, key=itemgetter('Thread_Group_Name'))
+        performance_testcases = sorted(self.performance_testcases_input, key=itemgetter('Thread Group'))
 
         for each_row in performance_testcases:
-            testscenario_name = each_row["Thread_Group_Name"]
+            testscenario_name = each_row["Thread Group"]
             if testscenario_name not in testscenario_list:
                 testscenario_list.append(testscenario_name)
 
@@ -118,7 +118,7 @@ class create_jmx_scenario():  # Initialization class
         for testscenario in testscenario_list:
             testscenario_steps = []
             for each_row in self.performance_testcases_input:
-                testscenario_name = each_row["Thread_Group_Name"]
+                testscenario_name = each_row["Thread Group"]
                 if testscenario_name == testscenario:
                     testscenario_steps.append(each_row)
 
@@ -142,31 +142,31 @@ class create_jmx_scenario():  # Initialization class
 
                 header_values_collective = ""
                 loop_tag = ""
-                testcase_name = str(each_testcase['HTTP_Request'])
+                testcase_name = str(each_testcase['HTTP Request Name'])
                 jmeter_component_type = str(each_testcase['Method'])
                 execution_control = str(each_testcase['Execution_Control'])
 
                 if (execution_control == 'yes'):
-                    Url = str(each_testcase['url'])
+                    Url = str(each_testcase['HTTP URL'])
 
                     concurrent_users_tc = str(each_testcase['Number of Users'])
                     if concurrent_users_tc:
                         concurrent_users = concurrent_users + int(concurrent_users_tc)
 
-                    ramp_up_in_seconds_tc = str(each_testcase['Ramp-up_period_Seconds'])
+                    ramp_up_in_seconds_tc = str(each_testcase['Ramp-up period(seconds)'])
                     if ramp_up_in_seconds_tc:
                         ramp_up_in_seconds = ramp_up_in_seconds + int(ramp_up_in_seconds_tc)
 
-                    duration_in_seconds_tc = str(each_testcase['Duration_in_Seconds'])
+                    duration_in_seconds_tc = str(each_testcase['Duration (seconds)'])
                     if duration_in_seconds_tc:
                         duration_in_seconds = duration_in_seconds + int(duration_in_seconds_tc)
 
-                    POST_params = str(each_testcase['POST_params'])
+                    POST_params= str(each_testcase['Body Data'])
 
-                    responsetime_threshold_in_ms = str(each_testcase["Duration_Assertion_Milliseconds"])
+                    responsetime_threshold_in_ms = str(each_testcase["Duration Assertion (milliseconds)"])
 
                     header_tags = re.findall(self.pattern_to_identify_jmx_input_fields,
-                                             str(each_testcase['Header_Manager']))
+                                             str(each_testcase['HTTP Header Manager']))
 
                     for each_header in header_tags:
                         header_values = self.get_content("element_property_sampler")
