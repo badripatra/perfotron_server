@@ -180,6 +180,8 @@ def native_initiator(cloud_vendor):
 
     os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/.installation_launchpad/jmx/backend_listner.jmx")
 
+    os.system("sed -i -e 's/\[IP\]/" + IP + "/g' ~/.installation_launchpad/jmx/DEMO_API.jmx")
+
     os.system("cp lib/demo_api.py ~/.installation_launchpad")
 
     os.system("cp lib/generate_jmx.py ~/.installation_launchpad")

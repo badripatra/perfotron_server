@@ -383,12 +383,12 @@
                 "id": 1,
                 "operator": "",
                 "text": "Acceptable",
-                "to": "7",
+                "to": "1",
                 "type": 2,
                 "value": ""
               },
               {
-                "from": "7",
+                "from": "1",
                 "id": 2,
                 "operator": "",
                 "text": "Not Acceptable",
@@ -406,7 +406,7 @@
               },
               {
                 "color": "#C4162A",
-                "value": 7
+                "value": 1
               }
             ],
             "unit": "none"
@@ -1157,8 +1157,6 @@
           "colorBackground": false,
           "colorValue": true,
           "colors": [
-            "#299c46",
-            "#e24d42",
             "#d44a3a"
           ],
           "datasource": "$data_source",

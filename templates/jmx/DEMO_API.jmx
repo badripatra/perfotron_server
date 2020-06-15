@@ -35,7 +35,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding">iso-8859-1</stringProp>
-          <stringProp name="HTTPSampler.path">http://${IP}:9003/demo_api_get</stringProp>
+          <stringProp name="HTTPSampler.path">http://[IP]:9003/demo_api_get</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -297,7 +297,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding">iso-8859-1</stringProp>
-          <stringProp name="HTTPSampler.path">http://${IP}:9003/demo_api_post</stringProp>
+          <stringProp name="HTTPSampler.path">http://[IP]:9003/demo_api_post</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
