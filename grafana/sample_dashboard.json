@@ -2500,7 +2500,7 @@
               "measurement": "jmeter",
               "orderByTime": "ASC",
               "policy": "default",
-              "query": "SELECT sum(\"count\") FROM \"$measurement_name\" WHERE (\"application\" =~ /^$application$/ AND \"responseCode\" !~ /^$/) AND $timeFilter GROUP BY \"responseCode\",\"responseMessage\",\"transaction\"",
+              "query": "SELECT sum(\"count\") FROM \"$measurement_name\" WHERE (\"application\" =~ /^$application$/ AND \"responseCode\" =~ /.*/) AND $timeFilter GROUP BY \"responseCode\",\"responseMessage\",\"transaction\"",
               "rawQuery": true,
               "refId": "A",
               "resultFormat": "table",
