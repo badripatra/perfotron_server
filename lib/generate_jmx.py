@@ -150,13 +150,16 @@ class create_jmx_scenario():  # Initialization class
                     Url = str(each_testcase['url'])
 
                     concurrent_users_tc = str(each_testcase['Number of Users'])
-                    concurrent_users = concurrent_users + int(concurrent_users_tc)
+                    if concurrent_users_tc:
+                        concurrent_users = concurrent_users + int(concurrent_users_tc)
 
                     ramp_up_in_seconds_tc = str(each_testcase['Ramp-up_period_Seconds'])
-                    ramp_up_in_seconds = ramp_up_in_seconds + int(ramp_up_in_seconds_tc)
+                    if ramp_up_in_seconds_tc:
+                        ramp_up_in_seconds = ramp_up_in_seconds + int(ramp_up_in_seconds_tc)
 
                     duration_in_seconds_tc = str(each_testcase['Duration_in_Seconds'])
-                    duration_in_seconds = duration_in_seconds + int(duration_in_seconds_tc)
+                    if duration_in_seconds_tc:
+                        duration_in_seconds = duration_in_seconds + int(duration_in_seconds_tc)
 
                     POST_params = str(each_testcase['POST_params'])
 
