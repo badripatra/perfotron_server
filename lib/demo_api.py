@@ -19,6 +19,7 @@ FLASK_APP = Flask(__name__)
 PORT = int("9003")
 ALLOWED_EXTENSIONS = {'jmx'}
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(CURRENT_DIR)  # Switch to Script Directory. Setting for the cron to run
 
 with open("token.txt", "r") as token_file:
     token = str(token_file.read().strip())
