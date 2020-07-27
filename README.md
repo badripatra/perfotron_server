@@ -9,9 +9,9 @@ It also facilitate setting up Jenkins to run Jmeter Tests.
 ```            
             Target Audience      : Any individual / group using Jmeter for Performance Testing            
             How it helps         : Setting up Performance Testing environment End to End                                   
-            Visualization        : Grafana (6.5.2)            
-            Datasource           : Influx (1.7.4)            
-            Load Test Tool       : Apache Jmeter (5.1.1)            
+            Visualization        : Grafana             
+            Datasource           : Influx           
+            Load Test Tool       : Apache Jmeter           
             Programming Language : Python 2.7, Shell Scripting            
             Hosting Servers      : Grafana and Influx for Hosting Performance Dashboard                                                                     
             Supported Envs       : Unix (Ubuntu,CentOS, RHEL) for Hosting Server                                   
