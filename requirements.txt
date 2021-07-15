@@ -1,3 +1,11 @@
-Flask==1.1.1
+Werkzeug==1.0.1
+Jinja2==2.11.2
+itsdangerous==1.1.0
+MarkupSafe==1.1.1
+click==7.1.2
+colorama==0.4.4
+importlib-metadata==2.1.1
+dataclasses==0.8
+Flask==1.0
 influxdb==5.2.3
 inquirer==2.6.3
